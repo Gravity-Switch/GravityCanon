@@ -1,0 +1,82 @@
+/*--------------------------------------------------------------
+# Lists - Base styling
+--------------------------------------------------------------*/
+ul,
+ol {
+  margin: rem(20) 0 rem(20) rem(12);
+  padding: 0;
+  list-style: none;
+  @include brkpnt-xs {
+    margin-left: rem(32);
+    margin-right: rem(50);
+  }
+}
+
+li {
+  margin-bottom: rem(8);
+  position: relative;
+  padding-left: rem(20);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+ul li:before {
+  content: "\002022";
+  position: absolute;
+  color: $teal;
+  top: rem(-7);
+  left: 0;
+  font-size: rem(24);
+}
+
+ol {
+  li {
+    counter-increment: step-counter;
+    padding-left: rem(24);
+
+    ol {
+      counter-reset: step-counter;
+
+      li {
+        &:before {
+          content: counter(step-counter, lower-alpha) ".";
+        }
+
+        ol li:before {
+          content: counter(step-counter, lower-roman) ".";
+        }
+      }
+    }
+
+    &:before {
+      content: counter(step-counter) ".";
+      position: absolute;
+      color: $teal;
+      top: 0;
+      left: 0;
+      font-size: rem(16);
+      font-weight: 700;
+
+      @include brkpnt-xs {
+        font-size: rem(18);
+      }
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+# Lists - Dividers
+--------------------------------------------------------------*/
+.list {
+  &__item--dividers {
+    border-bottom: rem(1) solid $charcoal-lighter;
+    padding: rem(12) 0;
+    margin-bottom: 0;
+
+    &::before {
+      content: none;
+    }
+  }
+}

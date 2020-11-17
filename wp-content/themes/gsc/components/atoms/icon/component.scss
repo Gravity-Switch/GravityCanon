@@ -1,0 +1,41 @@
+/*--------------------------------------------------------------
+# Icons in circles
+--------------------------------------------------------------*/
+.ico {
+  &--circle {
+    background-color: $orange;
+    border-radius: 100%;
+    width: rem(90);
+    height: rem(90);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .ico__path {
+      stroke: $white;
+    }
+  }
+
+  &__path {
+    fill: none;
+    stroke: $teal-darkest;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: rem(1.5);
+  }
+
+  @media print {
+    &, svg {
+      max-width: 2em;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+# Close icon
+--------------------------------------------------------------*/
+.btn--close {
+  .ico__path {
+    stroke: $white;
+  }
+}

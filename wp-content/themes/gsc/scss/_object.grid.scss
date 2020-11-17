@@ -1,0 +1,56 @@
+.grid {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-gap: rem(24);
+
+  // Responsively resizes & adjusts grid w/o breakpoints
+  grid-template-columns: repeat(auto-fit, minmax(rem(288), 1fr));
+
+  &__item {
+    margin: 0;
+    padding: 0;
+    max-width: rem(608);
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+/* ------------------------------------------------------------ *\
+	IE 11 Solution (inline-block) for its inability to support full CSS Grid awesomeness
+\* ------------------------------------------------------------ */
+_:-ms-lang(x),
+.grid {
+  display: block;
+  margin: 0;
+  text-align: center;
+
+  @include brkpnt-xs {
+    margin: 0 rem(-8);
+  }
+}
+
+_:-ms-lang(x),
+.grid__item {
+  display: block;
+  margin-bottom: rem(28);
+  width: 100%;
+  text-align: left;
+
+  @include brkpnt-xs {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 rem(12) rem(28);
+    width: 45%;
+  }
+
+  @include brkpnt-sm {
+    width: 30%;
+  }
+
+  @include brkpnt-lg {
+    width: 31%;
+  }
+}

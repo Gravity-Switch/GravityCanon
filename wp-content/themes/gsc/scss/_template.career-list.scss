@@ -1,0 +1,27 @@
+.career-list {
+  &__header {
+    @include row;
+    padding-top: rem(96);
+  }
+  &__body {
+    @include row;
+    .title--border-left {
+      margin-bottom: rem(32);
+      @include brkpnt-md {
+        max-width: 66%;
+        margin-left: 33%;
+      }
+    }
+  }
+
+}
+
+.menu__controls {
+  button + button {
+    margin-left: rem(18);
+  }
+}
+
+.is-loading {
+  opacity: inherit !important; // This removes a bug where the checkbox would go single-column for a sec
+}

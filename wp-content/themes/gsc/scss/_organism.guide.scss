@@ -1,0 +1,233 @@
+.guide {
+  padding-bottom: rem(124);
+
+  @include brkpnt-xs {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  &__title {
+    margin-top: rem(32);
+    margin-bottom: rem(32);
+  }
+  // .guide .tabs
+  .tabs {
+    &__link-content {
+      pointer-events: none; // Allows contents inside button to be selectable
+    }
+
+    &--guide {
+      background-color: $tan-lightest;
+      @include brkpnt-xs {
+        padding: rem(40) 0;
+      }
+    }
+
+    &__list {
+      @include brkpnt-xs {
+        flex-direction: column;
+        max-width: rem(300);
+        margin-right: rem(28);
+      }
+      @include brkpnt-sm {
+        max-width: rem(544);
+      }
+    }
+
+    &__thmbnl {
+      position: relative;
+      display: none;
+
+      @include brkpnt-xs {
+        display: block;
+        width: 100%;
+        margin-bottom: rem(8);
+      }
+
+      @include brkpnt-sm {
+        width: auto;
+        margin-bottom: rem(0);
+      }
+    }
+
+    //.tabs__link
+    &__link {
+      @include font-settings($src-sans-pro, 600);
+      @include typesetting(16, 20);
+      text-transform: uppercase;
+      text-align: left;
+      padding: rem(28) rem(28) rem(28) 0;
+      color: $teal-darkest;
+      border-bottom: rem(1) solid $charcoal-light;
+      transition: color $timing $easing, transform $timing $easing;
+
+      @include brkpnt-xs {
+        padding: rem(28) 0;
+        @include typesetting(16, 20);
+      }
+
+      @include brkpnt-sm {
+        padding: rem(28) rem(28) rem(28) 0;
+      }
+
+      .ico__path {
+        stroke: $teal-darkest;
+        transition: stroke $timing $easing;
+      }
+
+      &-content {
+        display: flex;
+        transition: transform $timing $easing;
+
+        @include brkpnt-xs {
+          flex-wrap: wrap;
+        }
+
+        @include brkpnt-sm {
+          flex-wrap: nowrap;
+        }
+      }
+
+      &-txt {
+        border-right: rem(1) solid $charcoal-light;
+        padding: 0 rem(24);
+        margin-right: rem(24);
+        width: 92%;
+
+        @include brkpnt-xs {
+          align-self: stretch;
+          padding-left: 0;
+          width: 74%;
+        }
+
+        @include brkpnt-sm {
+          padding: 0 rem(24);
+          width: 100%;
+        }
+      }
+
+      &-ico {
+        align-self: center;
+        transition: transform $timing $easing;
+      }
+
+      // Creates overlay on thumbnail
+      .tabs__thmbnl:after {
+        content: "";
+        position: absolute;
+        width: rem(120);
+        height: rem(75);
+        background-color: rgba(211, 70, 0, 0.8);
+        top: 0;
+        left: 0;
+        opacity: 0;
+        border-left: rem(8) solid $teal-darker;
+        transition: opacity $timing $easing;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        .tabs__link-content {
+          @include brkpnt-xs {
+            transform: translateX(28px);
+          }
+        }
+      }
+
+      &.is-active {
+        color: $white;
+        background-color: $orange;
+        border-bottom: rem(1) solid $charcoal-light;
+
+        @include brkpnt-xs {
+          color: $orange;
+          background-color: transparent;
+        }
+
+        .tabs__link-content {
+          @include brkpnt-xs {
+            transform: translateX(28px);
+          }
+        }
+
+        .tabs__link-txt {
+          border-right: rem(1) solid $white;
+
+          @include brkpnt-xs {
+            border-right-color: $charcoal-light;
+          }
+        }
+
+        .tabs__thmbnl:after {
+          opacity: 1;
+        }
+
+        .tabs__link-ico {
+          transform: rotate(90deg);
+
+          @include brkpnt-xs {
+            transform: none;
+          }
+        }
+
+        .ico__path {
+          stroke: $white;
+
+          @include brkpnt-xs {
+            stroke: $orange;
+          }
+        }
+      }
+    }
+
+    &__thmbnl-img {
+      width: rem(120);
+      height: auto;
+    }
+
+    &__num {
+      display: block;
+    }
+
+    &__content {
+      width: 100%;
+      padding: rem(28);
+
+      @include brkpnt-xs {
+        width: 54%;
+        min-height: rem(680);
+        border-left: rem(1) solid $charcoal-light;
+        padding: 0 0 0 rem(28);
+      }
+
+      @include brkpnt-sm {
+        width: 51%;
+        min-height: rem(600);
+      }
+    }
+
+    .card {
+      border-left: none;
+
+      &__main {
+        border-left: rem(12) solid $teal-darkest;
+      }
+    }
+
+    &__section {
+      padding: 0;
+      outline-offset: 0;
+      margin-top: 0;
+      margin-bottom: rem(-152);
+      @media print {
+        margin-bottom: 0;
+      }
+
+      @include brkpnt-xs {
+        margin: rem(-156) auto 0 auto;
+        max-width: rem(494);
+      }
+    }
+  }
+}

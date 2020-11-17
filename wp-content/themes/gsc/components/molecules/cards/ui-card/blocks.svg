@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160.781" height="65.232" viewBox="0 0 160.781 65.232" class="card__graphic" aria-hidden="true">
+	<title>Blocks stacked</title>
+	<g transform="translate(-710.036 -617.405)">
+		<path d="M801.461,617.4h0l-91.425,18.882v46.35H861.15V629.387Z" fill="#ffd961"></path>
+		<path d="M710.036,636.287v46.35h91.426V617.4Z" fill="#ffc40b"></path>
+		<path d="M710.036,644.233v38.4H788.86V628.406Z" fill="#e9e7e3"></path>
+		<path d="M861.15,682.637V629.387L801.461,617.4v65.232Z" fill="#ffd961"></path>
+		<path d="M848.537,682.637V640.389L788.86,628.406v54.231Z" fill="#fff"></path>
+		<path d="M710.036,662.892v19.745h98.646V643.089Z" fill="#eb7023"></path>
+		<path d="M870.817,682.637V655.559l-62.134-12.474v39.552Z" fill="#f6954b"></path>
+	</g>
+</svg>

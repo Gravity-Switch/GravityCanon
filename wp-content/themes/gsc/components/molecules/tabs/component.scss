@@ -1,0 +1,97 @@
+.tabs {
+  &__link {
+    @include font-settings($khand, 500);
+    @include typesetting(25, 32);
+    color: $charcoal;
+    border-bottom: rem(4) solid $tan-light;
+    text-decoration: none;
+    padding: rem(14) rem(18) rem(10);
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    text-align: left;
+
+    &:focus {
+      outline-offset: rem(-2);
+      outline: rem(2) solid $teal-light;
+    }
+
+    @include brkpnt-xs {
+      text-align: center;
+    }
+
+    @media print {
+      &[aria-selected="false"] {
+        display: none; 
+      }
+    }
+
+    &.is-active {
+      color: $teal-darker;
+      background-color: $tan-lightest;
+      border-bottom-color: $orange;
+
+      @include brkpnt-xs {
+        background-color: transparent;
+      }
+
+      &:visited,
+      &:hover,
+      &:active {
+        color: $teal-darker;
+      }
+    }
+
+    &:visited {
+      color: $charcoal;
+    }
+
+    &:hover,
+    &:active {
+      background-color: transparent;
+      color: $charcoal;
+    }
+  }
+
+  &__list {
+    display: block;
+    margin: 0;
+
+    @include brkpnt-xs {
+      display: flex;
+    }
+    @media print {
+      display: none;
+    }
+  }
+
+  &__item {
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+
+    @include brkpnt-xs {
+      //flex-basis: 48%;
+    }
+    &::before {
+      display: none;
+    }
+  }
+
+  &__section {
+    padding: rem(18);
+    background-color: $tan-lightest;
+    margin-top: rem(24);
+
+    @include brkpnt-xs {
+      background-color: transparent;
+    }
+
+    &[aria-hidden="true"] {
+      display: none;
+      @media print {
+        display: block;
+      }
+    }
+  }
+}

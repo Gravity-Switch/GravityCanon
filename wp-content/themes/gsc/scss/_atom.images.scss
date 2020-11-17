@@ -1,0 +1,64 @@
+/*--------------------------------------------------------------
+# Thumbnail image: size should be 400px x 266px for hi-res displays
+--------------------------------------------------------------*/
+.thmbnl {
+  width: rem(200);
+  height: rem(133);
+}
+
+/*--------------------------------------------------------------
+# Images w/graphical elements:
+
+1. Img w/bkg pattern: size should be 560px x 536px for hi-res displays
+2. Img w/graphic overlay: size should be 730px x 520px for hi-res displays
+--------------------------------------------------------------*/
+.figure {
+  position: relative;
+  margin: 0;
+
+  &__img {
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  // 1. Img w/bkg pattern
+  &--pttrn-bkg {
+    .figure__img {
+      width: calc(100% - #{rem(34)});
+      height: auto;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../images/dot-grid.svg");
+      background-repeat: no-repeat;
+      background-position: 100% 100%;
+      z-index: -5;
+      left: rem(17);
+      top: rem(17);
+      bottom: rem(-17);
+      right: 0;
+    }
+  }
+
+  // 2. Img w/graphic overlay
+  &--graphic-ovrly {
+    position: relative;
+    margin: 0;
+
+    .figure__graphic {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 37.7%;
+      height: 21.5%;
+    }
+  }
+}
+@media print {
+  img {
+    max-width: 16em;
+    height: auto;
+  }
+}

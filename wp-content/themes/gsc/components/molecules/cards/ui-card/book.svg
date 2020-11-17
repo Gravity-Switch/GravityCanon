@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="41.729" height="51.787" viewBox="0 0 41.729 51.787" aria-hidden="true" class="card__ico">
+	<title>Book with bookmark</title>
+	<g transform="translate(-451.25 -290)">
+		<g transform="translate(452 290.75)">
+			<path class="ico__path" d="M492.23,316.029h-35.2A5.028,5.028,0,0,1,452,311" transform="translate(-452 -265.742)"></path>
+			<path class="ico__path" d="M472.115,292.25H458.7a6.7,6.7,0,0,0-6.7,6.7v35.2a5.028,5.028,0,0,1,5.029-5.029h33.525a1.677,1.677,0,0,0,1.676-1.676V293.926a1.677,1.677,0,0,0-1.676-1.676h-5.029" transform="translate(-452 -288.898)"></path>
+			<path class="ico__path" d="M468.5,318.807V308.75" transform="translate(-431.623 -268.52)"></path>
+			<path class="ico__path" d="M474.41,317.57l-6.7-6.7-6.7,6.7V294.1a3.354,3.354,0,0,1,3.353-3.352h6.7a3.354,3.354,0,0,1,3.352,3.352Z" transform="translate(-440.885 -290.75)"></path>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="52.904" height="52.943" viewBox="0 0 52.904 52.943" aria-hidden="true" class="card__ico">
+	<title>Education resources</title>
+	<g transform="translate(-234.689 -1355.689)">
+		<g transform="translate(235.75 1356.75)">
+			<path class="ico__path" d="M259.594,1394.219H235.75V1356.75h51.094v10.219" transform="translate(-235.75 -1356.75)"></path>
+			<path class="ico__path" d="M235.75,1365.75l17.031,17.031" transform="translate(-235.75 -1345.313)"></path>
+			<path class="ico__path" d="M250.75,1356.75l10.219,10.219" transform="translate(-216.688 -1356.75)"></path>
+			<path class="ico__path" d="M252.269,1372.48l-1.817,13.35a1.705,1.705,0,0,0,2.882,1.512l4.653-4.655,4.653,4.655a1.705,1.705,0,0,0,2.882-1.512l-1.817-13.35" transform="translate(-217.101 -1336.76)"></path>
+			<path class="ico__path" d="M259.469,1384.688a10.219,10.219,0,1,0-10.219-10.219A10.22,10.22,0,0,0,259.469,1384.688Z" transform="translate(-218.594 -1347.219)"></path>
+			<path class="ico__path" d="M235.75,1373.781l17.031-17.031" transform="translate(-235.75 -1356.75)"></path>
+			<path class="ico__path" d="M254.227,1368.38a.852.852,0,1,0,.852.852.852.852,0,0,0-.852-.852" transform="translate(-213.352 -1341.97)"></path>
+		</g>
+	</g>
+</svg>

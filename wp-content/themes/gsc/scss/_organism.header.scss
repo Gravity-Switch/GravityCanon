@@ -1,0 +1,100 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+ 
+  @include brkpnt-md {
+    justify-content: space-between;
+    padding: rem(24) rem(24) rem(28);
+    border-bottom: rem(1) solid $charcoal-lighter;
+  }
+
+  @media print {
+    display: none;
+  }
+
+  &__logo {
+    flex-basis: 100%;
+    padding: rem(24);
+
+    @include brkpnt-md {
+      flex: 0 1 rem(340);
+      padding: 0;
+      margin-right: rem(8);
+      align-self: center;
+    }
+
+    @include brkpnt-lg {
+      flex: 0 1 auto;
+    }
+  }
+
+  &__nav,
+  &__nav-help {
+    flex: 1 1 auto;
+
+    .btn {
+      &--leading-icon {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        border-left: none;
+        border-color: $charcoal-light;
+
+        @include brkpnt-md {
+          background-color: $teal;
+          color: $white;
+        }
+        .ico__path {
+          @include brkpnt-md {
+            stroke: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &__nav {
+    @include brkpnt-md {
+      flex: 0 1 45%;
+      align-self: center;
+      max-width: rem(570);
+    }
+  }
+
+  &__nav-help {
+    &--hidden {
+      visibility: hidden;
+    }
+    @include brkpnt-md {
+      flex: 0 1 auto;
+      align-self: center;
+    }
+    .btn--leading-icon {
+      border-right: none;
+
+      @include brkpnt-md {
+        border: none;
+      }
+
+      &:hover {
+        @include brkpnt-md {
+          background-color: $teal-darker;
+        }
+      }
+    }
+  }
+
+  .logo {
+    &__graphic {
+      max-width: rem(600);
+    }
+    &__link {
+      text-align: center;
+      @include brkpnt-md {
+        text-align: left;
+      }
+    }
+  }
+}

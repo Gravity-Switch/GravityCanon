@@ -1,0 +1,26 @@
+/*--------------------------------------------------------------
+>>> FUNCTIONS - TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Rem calculator
+# Em calculator
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Rem calculator - Use this to convert px to rem units
+
+> $pixels = pixel value (don't include px)
+> $context = default base font size declared in _settings.variables.scss
+--------------------------------------------------------------*/
+@function rem($pixels, $context: $font-size-base) {
+  @return #{$pixels/$context}rem;
+}
+
+/*--------------------------------------------------------------
+# em calculator - Use this to convert px to em units
+
+> $pixels = pixel value (don't include px)
+> $context = default base font size declared in _settings.variables.scss
+--------------------------------------------------------------*/
+@function em($pixels, $context: $font-size-base) {
+  @return #{$pixels/$context}em;
+}

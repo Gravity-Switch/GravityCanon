@@ -1,0 +1,116 @@
+/*--------------------------------------------------------------
+>>> MIXINS - TABLE OF CONTENTS:
+----------------------------------------------------------------
+# font-settings
+# typesetting
+# breakpoints
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# font-settings - Use when declaring a font-family. Sets:
+
+> font-family - required
+> font-weight - required
+> font-style - defaults to normal
+--------------------------------------------------------------*/
+@mixin font-settings($font, $weight, $style: normal) {
+  font-family: $font;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+/*--------------------------------------------------------------
+# typesetting - Use this for setting font-size and line-height on elements. Enter pixel numbers to have them converted to responsive units. It takes three parameters:
+
+> font-size-pixels - font-size in pixels, just include number without unit (required)
+> line-height-pixels - line-height in pixels, just include number without unit (required)
+> context - used to set rem units for font-size. The default value is a variable declared in _settings.variables.scss
+--------------------------------------------------------------*/
+@mixin typesetting($font-size-pixels, $line-height-pixels, $context: $font-size-base) {
+  font-size: ($font-size-pixels/$context) + rem;
+  line-height: ($line-height-pixels/$font-size-pixels);
+}
+
+/*--------------------------------------------------------------
+# breakpoints - Use for setting breakpoints in em units. There are 7 breakpoints listed below (values listed in _settings.variables.scss). Use only what you need:
+
+> brkpnt-xxs
+> brkpnt-xs
+> brkpnt-sm
+> brkpnt-md
+> brkpnt-lg
+> brkpnt-xl
+> brkpnt-xxl
+--------------------------------------------------------------*/
+@mixin brkpnt-xxs {
+  @media only screen and (min-width: $screen-xxs/$font-size-base + em) {
+    @content;
+  }
+}
+
+@mixin brkpnt-xs {
+  @media only screen and (min-width: $screen-xs/$font-size-base + em) {
+    @content;
+  }
+}
+
+@mixin brkpnt-sm {
+  @media only screen and (min-width: $screen-sm/$font-size-base + em) {
+    @content;
+  }
+}
+
+@mixin brkpnt-md {
+  @media only screen and (min-width: $screen-md/$font-size-base + em) {
+    @content;
+  }
+}
+
+@mixin brkpnt-lg {
+  @media only screen and (min-width: $screen-lg/$font-size-base + em) {
+    @content;
+  }
+}
+
+@mixin brkpnt-xl {
+  @media only screen and (min-width: $screen-xl/$font-size-base + em) {
+    @content;
+  }
+}
+
+@mixin brkpnt-xxl {
+  @media only screen and (min-width: $screen-xxl/$font-size-base + em) {
+    @content;
+  }
+}
+
+@function column-width($column_num: 0) {
+  $gutter_num: $column_num - 1;
+  $result: ($column_num * $column-fluid) + ($gutter_num * $gutter-fluid); 
+  @return $result;
+}
+
+@mixin columns($column_num: 0, $margin_right: false, $margin_left: false) {
+  flex-basis: column-width($column_num);
+  @if $margin_right {
+    margin-right: $gutter-fluid;
+  }
+  @if $margin_left {
+    margin-left: $gutter-fluid;
+  }
+}
+
+@mixin row {
+  max-width: $max-row-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $mobile-gutter-fluid;
+  padding-right: $mobile-gutter-fluid;
+
+  @include brkpnt-sm {
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    align-items: flex-start;
+  }
+}

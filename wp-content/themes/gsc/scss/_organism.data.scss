@@ -1,0 +1,214 @@
+.data {
+  display: grid;
+
+  @include brkpnt-xs {
+    grid-template-columns: repeat(41, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  @include brkpnt-md {
+    grid-template-columns: repeat(47, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  &__intro {
+    margin-bottom: rem(60);
+
+    @include brkpnt-xs {
+      grid-row: 1;
+      grid-column: 1/42;
+      margin-bottom: 0;
+    }
+
+    @include brkpnt-md {
+      grid-column: 1/17;
+      grid-row: 1;
+      padding-top: rem(28);
+    }
+  }
+
+  &__action {
+    margin-top: rem(16);
+  }
+
+  &__item {
+    position: relative;
+    padding: rem(80) rem(28) rem(28);
+    margin-bottom: rem(28);
+    color: $white;
+    background: $charcoal;
+
+    // Aligns content in each grid item to
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    @include brkpnt-xs {
+      padding: rem(44) rem(28) rem(28);
+      margin: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__txt {
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .item {
+    &--1 {
+      @include brkpnt-xs {
+        grid-column: 1/20;
+        grid-row: 2/4;
+        margin-bottom: 5.5%;
+      }
+
+      @include brkpnt-md {
+        grid-column: 3/17;
+        grid-row: 2/4;
+        margin-top: 20%; // Adds space between intro block and grid item 1 on desktop
+        margin-bottom: 0;
+      }
+    }
+
+    &--2 {
+      @include brkpnt-xs {
+        grid-column: 21/42;
+        grid-row: 2/3;
+        margin-bottom: 5.5%;
+      }
+
+      @include brkpnt-md {
+        grid-column: 18/33;
+        grid-row: 1/3;
+        margin-bottom: 8%;
+      }
+    }
+
+    &--3 {
+      @include brkpnt-xs {
+        grid-column: 21/42;
+        grid-row: 3/4;
+        margin-bottom: 5.5%;
+      }
+
+      @include brkpnt-md {
+        grid-column: 18/33;
+        grid-row: 3/4;
+        margin-bottom: 0;
+      }
+    }
+
+    &--4 {
+      @include brkpnt-xs {
+        grid-column: 1/24;
+        grid-row: 4/5;
+      }
+
+      @include brkpnt-md {
+        grid-column: 34/48;
+        grid-row: 1/2;
+        margin-bottom: 8%;
+      }
+    }
+
+    &--5 {
+      @include brkpnt-xs {
+        grid-column: 25/42;
+        grid-row: 4/5;
+      }
+
+      @include brkpnt-md {
+        grid-column: 34/48;
+        grid-row: 2/4;
+      }
+    }
+
+    // Grid item colors
+    &--gray {
+      color: $teal-darkest;
+      background: linear-gradient(rgba(225, 233, 237, 0.85), rgba(225, 233, 237, 0.85)), url(../images/temp/data-item-1.jpg);
+
+      .data__label {
+        border-top: solid rem(1) $teal-darkest;
+      }
+    }
+
+    &--orange {
+      background: linear-gradient(rgba(211, 70, 0, 0.85), rgba(211, 70, 0, 0.85)), url(../images/temp/data-item-2.jpg);
+
+      .ico__path {
+        stroke: $white;
+      }
+    }
+
+    &--teal {
+      background: linear-gradient(rgba(0, 131, 131, 0.85), rgba(0, 131, 131, 0.85)), url(../images/temp/data-item-3.jpg);
+
+      .ico__path {
+        stroke: $white;
+      }
+    }
+
+    &--teal-darkest {
+      background: linear-gradient(rgba(0, 44, 46, 0.8), rgba(0, 44, 46, 0.8)), url(../images/temp/data-item-4.jpg);
+
+      .ico__path {
+        stroke: $white;
+      }
+    }
+
+    &--yellow {
+      color: $teal-darkest;
+      background: linear-gradient(rgba(255, 210, 33, 0.85), rgba(255, 210, 33, 0.85)), url(../images/temp/data-item-5.jpg);
+
+      .data__label {
+        border-top: solid rem(1) $teal-darkest;
+      }
+    }
+
+    &--gray,
+    &--orange,
+    &--teal,
+    &--teal-darkest,
+    &--yellow {
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+  }
+
+  // Styling for emphasized data: number and icon
+  &__emphasis {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__ico {
+    .ico {
+      width: rem(64);
+      height: rem(64);
+    }
+  }
+
+  &__num {
+    @include font-settings($khand, 500);
+    @include typesetting(40, 44);
+
+    @include brkpnt-xs {
+      @include typesetting(52, 52);
+    }
+  }
+
+  &__label {
+    @include typesetting(16, 24);
+    border-top: solid rem(1) $white;
+    display: block;
+    padding-top: rem(16);
+    margin-top: rem(16);
+  }
+}

@@ -1,0 +1,58 @@
+.filters-view {
+  margin: 0;
+  display: flex;
+
+  &__item {
+    padding-left: 0;
+    margin: 0;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  &__btn {
+    padding: rem(16) rem(20);
+
+    &:hover,
+    &.active {
+      .ico__path {
+        stroke: $white;
+      }
+    }
+
+    &.active {
+      background-color: $teal;
+
+      &:hover {
+        background-color: $teal-darker;
+      }
+    }
+  }
+
+  @media print {
+    display: none;
+  }
+}
+
+.btn__ico path {
+  stroke: $white;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: rem(1.5);
+}
+
+[data-gridlist] {
+  &[data-gridlist="grid"] [data-view="list"],
+  &[data-gridlist="list"] [data-view="grid"] {
+    display: none;
+  }
+  .filters-view {
+    display: none;
+    @include brkpnt-xs {
+      display: flex;
+    }
+  }
+
+
+}

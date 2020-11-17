@@ -1,0 +1,13 @@
+.helpful {
+  .helpful-controls {
+    display: flex;
+    width: 100%;
+    max-width: 16em;
+    justify-content: space-between;
+    padding-bottom: 2em;
+
+    .helpful-counter {
+      display: none;
+    }
+  }
+}

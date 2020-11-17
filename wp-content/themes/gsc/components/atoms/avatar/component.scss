@@ -1,0 +1,33 @@
+/*--------------------------------------------------------------
+# Avatar image: size should be 360px x 360px for hi-res displays
+--------------------------------------------------------------*/
+.avatar {
+  display: inline-block;
+  width: rem(108);
+  height: rem(108);
+  overflow: hidden;
+  border-radius: 100%;
+
+  @include brkpnt-xs {
+    width: rem(140);
+    height: rem(140);
+  }
+
+  img {
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, -50%);
+  }
+
+  &.wide img {
+    width: auto;
+    height: 100%;
+  }
+
+  &.tall img {
+    width: 100%;
+    height: auto;
+  }
+}

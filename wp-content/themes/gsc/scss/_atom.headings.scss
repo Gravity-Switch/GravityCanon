@@ -1,0 +1,134 @@
+/*--------------------------------------------------------------
+# Heading fonts: H1-H6
+--------------------------------------------------------------*/
+h1,
+h2,
+h3 {
+  @include font-settings($khand, 500);
+}
+
+h4,
+h5,
+h6 {
+  @include font-settings($src-sans-pro, 700);
+}
+
+/*--------------------------------------------------------------
+# Heading styles: H1-H6
+--------------------------------------------------------------*/
+h1 {
+  @include typesetting(48, 56);
+  margin: 0 0 rem(20) 0;
+
+  @include brkpnt-xs {
+    @include typesetting(60, 64);
+    margin: 0 0 rem(32) 0;
+  }
+}
+
+h2 {
+  @include typesetting(36, 44);
+  margin: 0 0 rem(12) 0;
+
+  @include brkpnt-xs {
+    @include typesetting(42, 52);
+    margin: 0 0 rem(16) 0;
+  }
+}
+
+h3 {
+  @include typesetting(25, 32);
+  margin: 0 0 rem(8) 0;
+
+  @include brkpnt-xs {
+    @include typesetting(30, 36);
+    margin: 0 0 rem(8) 0;
+  }
+}
+
+h4,
+h5,
+h6 {
+  @include typesetting(20, 28);
+  margin: 0 0 rem(4) 0;
+}
+
+.title {
+  // Adds orange bar to left of heading
+  &--border-left {
+    border-left: rem(8) solid $orange;
+    padding-left: rem(20);
+  }
+  // or right
+  &--border-right {
+    border-right: rem(8) solid $orange;
+    padding-right: rem(20);
+  }
+  // Subheading styles
+  &--sub-md {
+    @include font-settings($khand, 500);
+    @include typesetting(25, 32);
+    color: $charcoal;
+  }
+  &--sub-sm {
+    @include font-settings($src-sans-pro, 600);
+    @include typesetting(16, 20);
+    text-transform: uppercase;
+    color: $charcoal;
+  }
+}
+
+/*--------------------------------------------------------------
+# Heading spacing: Spacing between basic typographic elements
+--------------------------------------------------------------*/
+h1 + h2,
+h2 + h3,
+h3 + h4,
+h4 + h5,
+h5 + h6 {
+  margin-top: rem(16);
+}
+
+p + h2,
+ul + h2,
+ol + h2 {
+  margin-top: rem(44);
+
+  @include brkpnt-xs {
+    margin-top: rem(72);
+  }
+}
+
+p + h3,
+ul + h3,
+ol + h3 {
+  margin-top: rem(28);
+
+  @include brkpnt-xs {
+    margin-top: rem(52);
+  }
+}
+
+p + h4,
+ul + h4,
+ol + h4,
+p + h5,
+ul + h5,
+ol + h5,
+p + h6,
+ul + h6,
+ol + h6 {
+  margin-top: rem(20);
+
+  @include brkpnt-xs {
+    margin-top: rem(40);
+  }
+}
+
+
+@media print {
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 rem(8);
+  }
+}

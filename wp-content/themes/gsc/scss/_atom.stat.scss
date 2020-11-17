@@ -1,0 +1,57 @@
+.stat {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  text-align: center;
+  color: $charcoal;
+  line-height: 1;
+
+  &__info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+  }
+
+  &__ico {
+    margin-right: rem(8);
+
+    .ico__path {
+      stroke: $teal-darkest;
+    }
+  }
+
+  &__num {
+    @include font-settings($khand, 500);
+    @include typesetting(30, 36);
+    color: $teal;
+  }
+
+  &__label {
+    flex-basis: 100%;
+    margin-top: rem(2);
+    text-transform: capitalize;
+  }
+
+  // Longform paragraph text w/icon
+  &--ico-txt {
+    text-align: left;
+
+    .stat {
+      &__info {
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        @include typesetting(16, 24);
+
+        @include brkpnt-xs {
+          @include typesetting(18, 28);
+        }
+      }
+
+      &__ico {
+        margin-right: rem(14);
+      }
+    }
+  }
+}

@@ -1,0 +1,323 @@
+/*--------------------------------------------------------------
+# Modal - Default styles
+--------------------------------------------------------------*/
+
+/**
+ * Including the at-only style with the dialog CSS as it is required
+ * to visually hide a dialog's heading if desired.
+ */
+.at-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: rem(1);
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: rem(1);
+}
+
+/**
+ * Trigger styling
+ */
+[data-modal-open][hidden] {
+  display: none;
+}
+
+/**
+ * When a modal dialog is open, don't allow scrolling of content
+ * beneath (on desktop). Also useful in negating instances of
+ * double scroll bars.
+ * (browser window + dialog if long enough content)
+ */
+body.modal-open {
+  overflow: hidden;
+}
+
+/**
+ * Modal Dialog base styling
+ */
+.js [data-modal],
+.a11y-modal {
+  -webkit-overflow-scrolling: touch;
+  background: $white;
+  bottom: 0;
+  // bottom: auto;
+  // box-shadow: 0 0 rem(5000) rem(5000) rgba(0, 131, 131, 0.85);
+  //left: 0;
+  // margin: auto;
+  margin: 0;
+  max-height: 100%;
+  height: 100vh;
+  // max-width: 660px;
+  width: rem(592);
+  opacity: 1;
+  overflow: auto;
+  padding: rem(24);
+  position: fixed;
+  // position: absolute;
+  right: 0;
+  top: 0;
+  // transform: translateY(0%);
+  visibility: visible;
+  width: 100%;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+.js [data-modal],
+.a11y-modal {
+  //bottom: auto;
+  // top: 50%;
+  // transform: translateX(22%);
+  // transform: translateY(-50%);
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/**
+ * To allow for CSS animations, hidden modal dialogs are
+ * not set to display: none, but rather the following rule
+ * set, in combination with the dialog's default
+ * position: fixed, will keep dialogs hidden from
+ * all users until opened.
+ *
+ * This also solves an issue with iOS VO + Safari not allowing
+ * modal dialogs to be focused, if the dialog is initially
+ * set to "display: none".
+ */
+.js [data-modal][hidden],
+.a11y-modal[hidden] {
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(40vh);
+  visibility: hidden;
+}
+
+.a11y-modal__close-btn {
+  border: none;
+}
+
+/* Default close button hidden by default */
+.is-icon-btn {
+  background: none;
+  border: none;
+  height: 2em;
+  padding: 0;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  width: 2em;
+  display: none;
+}
+
+.is-icon-btn:hover [data-modal-x],
+.is-icon-btn:focus [data-modal-x] {
+  color: #600;
+  transform: scale(1.3) rotate(45deg);
+  transition: transform 0.2s ease-in-out;
+}
+
+[data-modal-x] {
+  border-right: rem(2) solid;
+  bottom: 0;
+  display: block;
+  height: 2em;
+  left: 0;
+  margin: auto;
+  pointer-events: none;
+  position: relative;
+  right: 0;
+  top: 0;
+  transform: rotate(45deg);
+  width: rem(2);
+}
+
+[data-modal-x]:after {
+  border-right: rem(2) solid;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: rotate(-90deg);
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Modal - Story
+--------------------------------------------------------------*/
+.modal {
+  z-index: 100;
+
+  &::before {
+    content: url(../images/dot-grid.svg);
+    width: rem(300);
+    height: rem(224);
+    bottom: 0;
+    right: 0;
+    // background-image: url(../images/dot-grid.svg);
+    background-repeat: no-repeat;
+    display: block;
+    position: fixed;
+    opacity: 0.4;
+  }
+
+  // Background overlay appearing behind modal
+
+  &__bkg,
+  &__overlay {
+    &:before {
+      content: "";
+      position: fixed;
+      background-color: rgba(0, 131, 131, 0.85);
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity $timing $easing;
+    }
+  }
+
+  // Background image appearing behind modal
+  &__bkg {
+    @include brkpnt-sm {
+      background-image: url(../images/temp/modal-bkg.jpg);
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      transition: opacity $timing $easing;
+    }
+  }
+
+  &-open {
+    // Activate overlay when modal is active
+    .modal__bkg,
+    .modal__overlay {
+      &:before {
+        width: 100vw;
+        height: 100%;
+        opacity: 1;
+        z-index: 11;
+      }
+    }
+
+    // Activate background image when modal is active
+    .modal__bkg {
+      @include brkpnt-sm {
+        width: 100vw;
+        height: 100vh;
+        opacity: 1;
+        z-index: 50;
+      }
+    }
+  }
+
+  &--story {
+    width: 98%;
+    border-left: rem(8) solid $orange;
+    //height: 100%;
+
+    @include brkpnt-sm {
+      border-left: none;
+      margin-left: 0;
+      background-color: transparent;
+      width: rem(894);
+      margin-left: rem(74);
+      padding: 0;
+    }
+
+    @include brkpnt-lg {
+      width: rem(1120);
+    }
+
+    .modal {
+      &__wrapper {
+        //height: 100%;
+        min-height: 100%;
+        top: 0;
+        bottom: auto;
+
+        @include brkpnt-sm {
+          background-color: $white;
+          border-left: rem(8) solid $orange;
+          padding: rem(24);
+          margin-left: rem(82);
+        }
+
+        @include brkpnt-lg {
+          margin-left: rem(95);
+        }
+      }
+
+      &__figure {
+        margin: 0;
+
+        @include brkpnt-sm {
+          margin: 0 0 0 rem(-142);
+          z-index: 200;
+        }
+
+        @include brkpnt-lg {
+          margin: 0 0 0 rem(-160);
+        }
+      }
+
+      &__main {
+        width: 90%;
+        margin: 0 auto;
+
+        @include brkpnt-sm {
+          display: flex;
+        }
+      }
+
+      &__content {
+        margin-top: rem(24);
+
+        @include brkpnt-sm {
+          padding: 0 0 0 rem(52);
+          max-width: rem(700);
+          margin: 0 auto;
+        }
+
+        @include brkpnt-lg {
+          padding: 0 0 0 rem(32);
+        }
+      }
+    }
+  }
+
+  &__avatar {
+    width: rem(120);
+    height: rem(120);
+
+    @include brkpnt-sm {
+      border: solid rem(4) $white;
+      width: rem(160);
+      height: rem(160);
+      margin: 0;
+    }
+
+    @include brkpnt-lg {
+      width: rem(190);
+      height: rem(190);
+    }
+  }
+
+  &__body {
+    margin-top: rem(24);
+  }
+
+  &__top {
+    padding-right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: rem(24);
+    justify-content: flex-end;
+    margin-bottom: rem(24);
+  }
+}

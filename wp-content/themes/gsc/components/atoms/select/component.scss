@@ -1,0 +1,20 @@
+.input {
+  &--selectbox {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    width: 100%;
+    border: rem(1) solid $charcoal;
+    background-color: $white;
+    background-image: url("../images/arrow-full-down.svg");
+    background-repeat: no-repeat;
+    background-position: right rem(21) center;
+    padding-left: rem(22);
+    padding-right: rem(54);
+  }
+}
+
+// Removes default dropdown arrow in IE
+select::-ms-expand {
+  display: none;
+}

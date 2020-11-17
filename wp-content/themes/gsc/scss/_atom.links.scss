@@ -1,0 +1,224 @@
+/*--------------------------------------------------------------
+# Link - Base styling
+--------------------------------------------------------------*/
+a {
+  color: $orange-dark;
+  text-decoration: underline;
+  transition: all $timing $easing;
+
+  &:visited {
+    color: $orange-darker;
+  }
+
+  &:hover {
+    color: $charcoal;
+    text-decoration: none;
+  }
+  @media print {
+    &::after{
+      content: " (" attr(href) ") ";
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+# Link w/arrow
+--------------------------------------------------------------*/
+.link {
+  @include typesetting(16, 16);
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+
+  &__content {
+    @include typesetting(14, 14);
+    letter-spacing: rem(0.4);
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.3;
+    // These styles needed to prevent CSS arrow from wrapping
+    display: block;
+    position: relative;
+    padding-right: rem(16); // Adds extra padding to link to account for space arrow takes up
+
+    // Creates arrow
+    &::after {
+      content: "";
+      border-top: rem(6) solid transparent;
+      border-bottom: rem(6) solid transparent;
+      border-left: rem(8) solid $orange;
+      margin-left: rem(8);
+      position: absolute;
+      margin-top: rem(3); // Vertically centers arrow
+      transition: border-left-color $timing $easing, transform $timing $easing;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $teal-darkest;
+
+      &::after {
+        border-left-color: $teal-darkest;
+        transform: translate(rem(4), 0);
+      }
+    }
+  }
+
+  /*--------------------------------------------------------------
+# Social media links
+--------------------------------------------------------------*/
+  &--social {
+    border-radius: 50%;
+    border: rem(1) solid $teal;
+    width: rem(46);
+    height: rem(46);
+    color: $teal-darkest;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover,
+    &:focus {
+      background-color: $teal;
+
+      .ico__path {
+        fill: $white;
+      }
+    }
+
+    .ico__path {
+      fill: $teal;
+      stroke: none;
+    }
+  }
+
+  /*--------------------------------------------------------------
+# Pager links
+--------------------------------------------------------------*/
+  &--pager {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+
+    @include brkpnt-xs {
+      text-align: left;
+    }
+
+    // .link--pager .link
+    .link {
+      &__img,
+      &__txt {
+        display: block;
+      }
+
+      &__img {
+        margin: 0 auto rem(28);
+
+        @include brkpnt-xs {
+          margin: 0 0 rem(28);
+        }
+      }
+
+      &__txt {
+        text-transform: none;
+      }
+
+      &__ico {
+        transition: transform $timing $easing;
+      }
+    }
+
+    // .link--pager .txt--primary
+    .txt--primary {
+      @include font-settings($khand, 500);
+      @include typesetting(30, 36);
+      color: $teal-darkest;
+      display: block;
+      margin-bottom: rem(8);
+
+      @include brkpnt-xs {
+        display: inline;
+        margin-right: rem(8);
+        margin-bottom: 0;
+      }
+    }
+
+    // .link--pager .txt--secondary
+    .txt--secondary {
+      @include typesetting(16, 20);
+      text-transform: uppercase;
+      letter-spacing: rem(0.1);
+      color: $charcoal;
+      margin-bottom: rem(4);
+    }
+
+    // .link--pager .ico__path
+    .ico__path {
+      stroke: $teal-darkest;
+    }
+  }
+
+  // .link--next
+  &--next {
+    &:hover,
+    &:active,
+    &:focus {
+      .link__ico {
+        transform: translate(rem(6), 0);
+      }
+    }
+  }
+
+  // .link--previous
+  &--previous {
+    @include brkpnt-xs {
+      text-align: right;
+    }
+
+    .link {
+      &__img {
+        margin: 0 auto rem(28);
+        @include brkpnt-xs {
+          margin: 0 0 rem(28) auto;
+        }
+      }
+      &__ico {
+        @include brkpnt-xs {
+          transform: translate(0, 42%);
+        }
+      }
+    }
+
+    .txt--primary {
+      margin-right: 0;
+
+      @include brkpnt-xs {
+        float: right;
+        margin-left: rem(8);
+      }
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      .link__ico {
+        transform: translate(rem(-6), 42%);
+      }
+    }
+  }
+
+  // .link--return
+  &--return {
+    text-align: center;
+
+    .txt--primary {
+      display: block;
+    }
+
+    .link__ico {
+      margin: 0 auto rem(20) auto;
+    }
+  }
+}

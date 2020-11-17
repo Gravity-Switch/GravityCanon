@@ -1,0 +1,29 @@
+.btn {
+  &--close {
+    background-color: $teal;
+    padding: rem(15) rem(16) rem(12);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $teal-darker;
+    }
+
+    &:active,
+    &:focus {
+      outline: rem(3) solid $teal-light;
+    }
+
+    .btn__ico {
+      display: block;
+      margin-bottom: rem(4);
+
+      path {
+        stroke: $white;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: rem(1.5);
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+/*--------------------------------------------------------------
+# Testimonial - Molecule, base styling
+--------------------------------------------------------------*/
+.testimonial {
+  &__figure {
+    margin: 0;
+    text-align: center;
+  }
+
+  &__quote {
+    @include font-settings($script, 400);
+    @include typesetting(28, 44);
+    color: $teal;
+    margin: rem(20) 0;
+
+    @include brkpnt-xs {
+      @include typesetting(36, 52);
+      margin: rem(28) 0;
+    }
+  }
+
+  &__txt {
+    margin-bottom: 0;
+  }
+
+  &__attr {
+    color: $charcoal;
+  }
+}
+
+/*--------------------------------------------------------------
+# Testimonial--block - Organism
+--------------------------------------------------------------*/
+.testimonial--block {
+  background-color: $tan-lightest;
+  padding: 0 rem(12);
+
+  .testimonial {
+    &__wrapper {
+      padding: 0 rem(12);
+      max-width: rem(986);
+      margin: 0 auto;
+    }
+    &__figure {
+      padding: rem(44) 0;
+
+      @include brkpnt-xs {
+        padding: rem(68) 0;
+      }
+    }
+    &__quote {
+      position: relative;
+
+      &::after,
+      &::before {
+        color: $teal-lightest;
+        @include typesetting(140, 0);
+        position: absolute;
+        display: block;
+
+        @include brkpnt-xs {
+          @include typesetting(180, 0);
+        }
+      }
+
+      &::before {
+        content: open-quote;
+        top: rem(52);
+        left: rem(-16);
+        z-index: 0;
+      }
+
+      &::after {
+        content: close-quote;
+        bottom: rem(-20);
+        z-index: 0;
+        right: rem(-16);
+      }
+    }
+    &__txt {
+      position: relative;
+      z-index: 50;
+    }
+    &__controls {
+      display: flex;
+      justify-content: center;
+      padding: rem(20) 0;
+      border-top: rem(1) solid $charcoal-light;
+
+      @include brkpnt-xs {
+        padding: rem(28) 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.page-template-homepage section {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+section.homepage-title {
+  flex-direction: column;
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 2em;
+  }
+}
+
+section.jump-off-grid {
+  .container {
+    flex-direction: column;
+
+    .jump-off {
+      margin-top: 2em;
+      width: 90%;
+      margin-left:auto;
+      margin-right:auto;
+    }
+  }
+}
+
+@include brkpnt-sm {
+  section.homepage-title {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+  }
+
+  section.jump-off-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+    margin-bottom: 5em;
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+
+      .jump-off {
+        margin-right: auto;
+        width: 30%;
+      }
+    }
+  }
+}

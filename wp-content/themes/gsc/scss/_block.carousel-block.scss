@@ -1,0 +1,15 @@
+.staggered-slider {
+  .tabs__content {
+    .card__figure {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.guide {
+  .tabs__link .tabs__thmbnl:after {
+    height: 100% !important;
+  }
+}

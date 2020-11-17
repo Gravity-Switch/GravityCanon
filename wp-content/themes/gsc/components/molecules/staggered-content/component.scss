@@ -1,0 +1,20 @@
+.staggered-content {
+  @include row;
+
+  &__title {
+    @include columns(7, true);
+  }
+
+  &__text {
+    @include columns(17);
+  }
+
+  &.staggered-content--divider {
+    .staggered-content__text {
+      @include brkpnt-sm {
+        padding-left: rem(20);    // totally arbitrary padding, but this is a good default
+        border-left: 1px solid $charcoal-dark;
+      }
+    }
+  }
+}

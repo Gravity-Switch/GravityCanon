@@ -1,0 +1,31 @@
+.color-teal {
+  color: $teal;
+  stroke: $teal;
+}
+
+.color-orange {
+  color: $orange;
+  stroke: $orange;
+}
+
+.scrn-rdr-txt {
+  position: absolute;
+  left: rem(-10000);
+  top: auto;
+  width: rem(1);
+  height: rem(1);
+  overflow: hidden;
+}
+
+// Clears floats
+.clearfix:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.alt-bg {
+  background-color: $tan-lightest;
+}

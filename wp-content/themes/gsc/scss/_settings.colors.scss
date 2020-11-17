@@ -1,0 +1,74 @@
+/*--------------------------------------------------------------
+>>> COLORS - TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Turquoise
+# Orange
+# Yellow
+# Tan
+# Charcoal
+# White
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Turquoise
+--------------------------------------------------------------*/
+$teal-lightest: #c9e3e3;
+$teal-lighter: #87dede;
+$teal-light: #1ab7b7;
+$teal: #008383;
+$teal-darker: #004143;
+$teal-darkest: #192220;
+
+/*--------------------------------------------------------------
+# Orange
+--------------------------------------------------------------*/
+$orange: #d34600;
+$orange-dark: #be4100;
+$orange-darker: #963808;
+$orange-darkest: #712701;
+
+/*--------------------------------------------------------------
+# Yellow
+--------------------------------------------------------------*/
+$yellow: #ffcc04;
+
+/*--------------------------------------------------------------
+# Tan
+--------------------------------------------------------------*/
+$tan-lightest: #f6f5f0;
+$tan-lighter: #ece9e2;
+$tan-light: #e0d6bf;
+
+/*--------------------------------------------------------------
+# Charcoal
+--------------------------------------------------------------*/
+$charcoal-lightest: #f5f5f5;
+$charcoal-lighter: #d9d9d9;
+$charcoal-light: #b4b4b4;
+$charcoal: #707070;
+$charcoal-dark: #4d4d4e;
+
+/*--------------------------------------------------------------
+# White
+--------------------------------------------------------------*/
+$white: #fff;
+
+// helpers
+.color-teallighter,
+.color-teallighter:focus,
+.color-teallighter:hover {
+  color: $teal-lighter;
+  fill: $teal-lighter;
+}
+.color-teallight,
+.color-teallight:focus,
+.color-teallight:hover {
+  color: $teal-light;
+  fill: $teal-light;
+}
+.color-teal,
+.color-teal:focus,
+.color-teal:hover {
+  color: $teal;
+  fill: $teal;
+}

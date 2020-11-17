@@ -1,0 +1,72 @@
+/*--------------------------------------------------------------
+# General input styles
+--------------------------------------------------------------*/
+.form {
+  &__element {
+    position: relative;
+
+    &--disabled {
+      opacity: .4;
+      cursor: not-allowed;
+      * {
+        pointer-events: none; 
+      }
+    }
+  }
+
+  &__input {
+    border: rem(1) solid $charcoal;
+    padding: rem(12) rem(18);
+    color: $charcoal;
+
+    &:focus {
+      color: $teal-darkest;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+# Input - Errors
+--------------------------------------------------------------*/
+.error {
+  .form {
+    &__label {
+      color: $orange;
+    }
+
+    &__input {
+      border-color: $orange;
+    }
+
+    &__mssg {
+      color: $orange;
+      background-image: url("../images/ico-error.svg");
+      background-repeat: no-repeat;
+      background-position: left center;
+      padding-left: rem(32);
+      margin-top: rem(4);
+    }
+  }
+}
+
+
+.gform_fields {
+  margin-left: 0;
+  margin-right: 0;
+  li {
+      list-style: none !important;
+      padding-left: 0;
+
+      &:before {
+        display: none;
+        content: none;
+      }
+  }
+}
+
+
+.input--full-width {
+  input, textarea {
+    width: 100%;
+  }
+}

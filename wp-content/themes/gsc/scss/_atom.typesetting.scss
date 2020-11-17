@@ -1,0 +1,38 @@
+/*--------------------------------------------------------------
+>>> TYPESETTING
+----------------------------------------------------------------
+Generic type settings applied globally
+--------------------------------------------------------------*/
+
+html {
+  font-size: 100%;
+}
+body {
+  @include font-settings($src-sans-pro, 400);
+  @include typesetting(16, 24);
+  color: $teal-darkest;
+
+  @include brkpnt-xs {
+    @include typesetting(18, 28);
+  }
+
+  @media print {
+    &, * {
+      color: black !important;
+      font-family: "Garamond", serif !important;
+      border: none !important;
+      padding: 0 !important;
+      border-radius: 0 !important;
+      height: auto;
+      max-width: 100%;
+      text-align: left !important;
+    }
+    li {
+      padding-left: 1rem !important;
+    }
+  }
+}
+
+strong {
+  font-weight: 700;
+}

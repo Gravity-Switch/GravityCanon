@@ -1,0 +1,129 @@
+/*--------------------------------------------------------------
+>>> FOOTER - Sitewide
+--------------------------------------------------------------*/
+.footer {
+  background-color: $tan-lightest;
+
+  @media print {
+    display: none;
+  }
+  
+  &__main {
+    position: relative;
+    padding: rem(52) 0 rem(168);
+    background-image: url(../images/graphic-mountains.svg);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 129%;
+
+    @include brkpnt-sm {
+      background-position: 252% 100%;
+      background-size: 84%;
+      padding-bottom: rem(40);
+    }
+
+    .footer__inner {
+      padding-bottom: rem(20);
+
+      @include brkpnt-xxs {
+        max-width: rem(540);
+        padding-bottom: rem(132);
+      }
+
+      @include brkpnt-sm {
+        padding-bottom: rem(40);
+        max-width: rem(388);
+      }
+    }
+  }
+
+  &__txt {
+    margin-bottom: 0;
+  }
+
+  &__list {
+    display: flex;
+    margin: 0;
+  }
+
+  &__item {
+    padding-left: 0;
+    margin-bottom: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &__socials {
+    max-width: rem(188);
+    padding: rem(28) 0 rem(32);
+
+    .footer__list {
+      justify-content: space-between;
+    }
+  }
+
+  &__actions {
+    border-top: solid rem(1) $charcoal-light;
+    padding-top: rem(32);
+
+    .footer__item {
+      padding: 0 rem(20) 0;
+      border-left: solid rem(1) $charcoal-light;
+
+      &:first-child {
+        padding-left: 0;
+        border: none;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    .footer__link {
+      color: $teal-darkest;
+      font-weight: 600;
+      text-transform: uppercase;
+      border-bottom: solid rem(2) $orange;
+      text-decoration: none;
+      transition: border-bottom $timing $easing, color $timing $easing;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $orange;
+        border-bottom: transparent;
+      }
+    }
+  }
+
+  &__secondary {
+    background-color: $white;
+    padding: rem(16) 0;
+    @include typesetting(16, 24);
+
+    .footer__inner {
+      @include brkpnt-sm {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__copyright {
+    padding-right: rem(8);
+  }
+
+  &__sitemap {
+    display: block;
+    margin: rem(12) 0;
+
+    @include brkpnt-xs {
+      display: inline;
+      border-left: solid rem(1) $charcoal-light;
+      padding-left: rem(8);
+    }
+  }
+}

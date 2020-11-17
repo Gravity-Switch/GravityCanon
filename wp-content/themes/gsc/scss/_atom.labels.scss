@@ -1,0 +1,57 @@
+/*--------------------------------------------------------------
+# Labels for inputs
+--------------------------------------------------------------*/
+.form {
+  &__label {
+    display: block;
+    cursor: text;
+  }
+}
+
+/*--------------------------------------------------------------
+# Labels for checkboxes
+--------------------------------------------------------------*/
+.label {
+  &--checkbox {
+    position: relative;
+    padding-left: rem(40);
+    cursor: pointer;
+    color: $charcoal;
+    transition: color 0.3s ease-in-out;
+
+    &::before {
+      border: rem(1) solid $charcoal;
+      content: "";
+      height: rem(26);
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: rem(26);
+    }
+  }
+
+  &--radio {
+    margin-left: rem(40);
+    cursor: pointer;
+    color: $charcoal;
+
+    &::before {
+      content: "";
+      position: absolute;
+      border: rem(1) solid $charcoal;
+      width: rem(26);
+      height: rem(26);
+      top: 0;
+      left: 0;
+      border-radius: 100%;
+    }
+  }
+}
+
+.form__element--required .form__label {
+  &:after {
+    content: "*";
+    color: red;
+    margin-left: 4px;
+  }
+}

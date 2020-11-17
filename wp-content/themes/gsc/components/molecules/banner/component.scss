@@ -1,0 +1,48 @@
+.hero {
+  &__container {
+    position: relative;
+    padding: rem(48) 0;
+
+    @include brkpnt-xs {
+      padding: rem(92) 0;
+    }
+  }
+  &__txt {
+    position: relative;
+    z-index: 1;
+    color: $white;
+    text-align: center;
+    padding: 0 rem(16);
+    @media print {
+      color: black;
+      padding: 0;
+      text-align: left;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    background-image: url(../images/temp/hero-img.jpg);
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $teal;
+      opacity: .85;
+    }
+  }
+}
