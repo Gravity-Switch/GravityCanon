@@ -7,17 +7,17 @@ $defaults = [
 		"legend_text" => false,
 		"legend_id" => false,
 		"options" => [],
-		"error" => false,
-    "required" => false
+		"error" => false
 	],
 	"style" => [
 		"container" => "div",
 		"item_container" => "div",
 		"id" => "",
-		"class" => ""
+		"class" => "",
+		"name" => ""
 	]
 ];
-gsc_define("checkboxes", $defaults, function($data) {
+gsc_define("radios", $defaults, function($data) {
 
 	$classes = "";
   if (!empty($data["style"]["class"])) {
@@ -26,31 +26,23 @@ gsc_define("checkboxes", $defaults, function($data) {
 	if (!empty($data["content"]["error"])) {
     $classes .= " error";
 	}
-  if (!empty($data['content']['required'])) {
+  if ($data['content']['required']) {
     $classes .= " form__element--required";
   }
 	$class_attr = "class='$classes'";
-  $misc_attrs = "";
-  if (!empty($data["style"]["attrs"])) {
-    foreach ($data["style"]["attrs"] as $attr_name=>$attr_value) {
-      $misc_attrs .= " $attr_name='$attr_value' ";
-    }
-  }
 
-	$checkboxes = "";
+	$radios = "";
 	if (!empty($data['content']['options'])) {
-    foreach ($data['content']['options'] as $checkbox) {
-			$checkboxes .= gsc("checkbox", [
+    foreach ($data['content']['options'] as $radio) {
+			echo gsc("radio", [
         "content" => [
-          "value" => $checkbox["value"],
-          "text" => $checkbox["text"],
+          "value" => $radio["value"],
+          "label" => $radio["label"],
         ],
         "style" => [
-          "id" => $checkbox["id"],
-          "name" => $checkbox["name"],
-          "checked" => $checkbox["checked"],
-  				"disabled" => $checkbox["disabled"],
-          "container" => $data["style"]["item_container"]
+          "checked" => $radio["checked"],
+          "disabled" => $radio["disabled"],
+          "id" => $radio["id"]
         ]
       ]);
     }
@@ -61,8 +53,8 @@ gsc_define("checkboxes", $defaults, function($data) {
     $error_html .= "<p class='form__mssg'>{$data["content"]["error"]}</p>";
 	}
 
-	$ul = "<{$data['style']['container']} $class_attr $misc_attrs role='group' aria-labelledby='{$data['content']['legend_id']}' role='group'>
-					$checkboxes
+	$ul = "<{$data['style']['container']} $class_attr role='group' aria-labelledby='{$data['content']['legend_id']}' role='group'>
+					$radios
 					$error_html
 				</{$data['style']['container']}>";
 
@@ -79,74 +71,67 @@ gsc_define("checkboxes", $defaults, function($data) {
 
 	return $content;
 });
-gsc_meta("checkboxes", [MOLECULE]);
-gsc_test("checkboxes", "", function() {
-	echo gsc("checkboxes", [
+gsc_meta("radios", [ATOM]);
+gsc_test("radios", "", function() {
+	echo gsc("radios", [
     "content" => [
 			"legend_text" => "This is an optional label",
 			"legend_id" => "example-legend-id-1",
 			"options" => [
 				[
 					"value" => "the-value",
-					"text" => "Option 1",
-					"id" => "checkbox-1",
-					"name" => "somecheckbox"
+					"label" => "Option 1",
+					"id" => "radio-1",
 				],
 				[
 					"value" => "the-value",
-					"text" => "Option 2",
-					"id" => "checkbox-2",
-					"name" => "somecheckbox"
+					"label" => "Option 2",
+					"id" => "radio-2",
 				],
 				[
 					"value" => "the-value",
-					"text" => "Option 3",
-					"id" => "checkbox-3",
-					"name" => "somecheckbox",
+					"label" => "Option 3",
+					"id" => "radio-3",
 					"disabled" => true
 				],
 				[
 					"value" => "the-value",
-					"text" => "Option 4",
-					"id" => "checkbox-4",
-					"name" => "somecheckbox",
+					"label" => "Option 4",
+					"id" => "radio-4",
 					"checked" => true
 				],
 				[
 					"value" => "the-value",
-					"text" => "Option 5",
-					"id" => "checkbox-5",
-					"name" => "somecheckbox"
+					"label" => "Option 5",
+					"id" => "radio-5",
 				],
 			]
 		],
 		"style" => [
 			"class" => "potato-box",
+			"name" => "group-of-radios-1"
 		]
 	]);
 
-	echo gsc("checkboxes", [
+	echo gsc("radios", [
     "content" => [
 			"options" => [
 				[
 					"value" => "the-value",
-					"text" => "Option 1",
-					"id" => "checkbox-1",
-					"name" => "somecheckbox"
+					"label" => "Option 1",
+					"id" => "radio-6",
 				],
 				[
 					"value" => "the-value",
-					"text" => "Option 2",
-					"id" => "checkbox-2",
-					"name" => "somecheckbox"
+					"label" => "Option 2",
+					"id" => "radio-7",
 				]
 			],
 			"error" => "You must choose at least one"
 		],
 		"style" => [
 			"class" => "potato-box",
-			"container" => "ul",
-			"item_container" => "li"
+			"name" => "group-of-radios-2"
 		]
 	]);
 });

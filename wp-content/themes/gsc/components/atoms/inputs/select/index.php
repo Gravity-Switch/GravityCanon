@@ -2,13 +2,13 @@
 $defaults = [
   "content" => [
 		"label" => "State",
-		"disabled" => false,
-		"required" => false,
-    "multiple" => false,
 		"options" => [],
 		"error"
 	],
 	"style" => [
+    "disabled" => false,
+    "required" => false,
+    "multiple" => false,
 		"id" => "select-box-1",
 		"class" => "",
 		"name" => "state"
@@ -16,12 +16,12 @@ $defaults = [
 ];
 gsc_define("select", $defaults, function($data) {
 
-	$disabled = $data['content']['disabled'] ? "disabled='disabled'" : "";
-	$required = $data['content']['required'] ? "required='required' aria-required='true'" : "";
+	$disabled = $data['style']['disabled'] ? "disabled='disabled'" : "";
+	$required = $data['style']['required'] ? "required='required' aria-required='true'" : "";
 
-	$disabled_attr = $data['content']['disabled'] ? "disabled='disabled'" : "";
-	$required_attr = $data['content']['required'] ? "required='required'" : "";
-  $multiple_attr =  $data['content']['multiple'] ? "required='multiple'" : "";
+	$disabled_attr = $data['style']['disabled'] ? "disabled='disabled'" : "";
+	$required_attr = $data['style']['required'] ? "required='required'" : "";
+  $multiple_attr =  $data['style']['multiple'] ? "required='multiple'" : "";
 
 	$classes = "form__element element--selectbox";
   if (!empty($data["style"]["class"])) {
@@ -98,7 +98,6 @@ gsc_test("select", "", function() {
 
 	echo gsc("select", [
 		"content" => [
-			"disabled" => true,
 			"options" => [
 				[
 					"value" => "",
@@ -125,12 +124,14 @@ gsc_test("select", "", function() {
 					"disabled" => true
 				]
 			]
-		]
+		],
+    "style" => [
+      "disabled" => true,
+    ]
 	]);
 
 	echo gsc("select", [
 		"content" => [
-			"required" => true,
 			"error" => "You must chooese an option",
 			"options" => [
 				[
@@ -158,6 +159,9 @@ gsc_test("select", "", function() {
 					"disabled" => true
 				]
 			]
-		]
+		],
+    "style" => [
+      "required" => true
+    ]
 	]);
 });

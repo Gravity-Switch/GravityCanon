@@ -5,7 +5,7 @@
 $defaults = [
   "content" => [
 		"value" => "",
-    "text" => ""
+    "label" => ""
 	],
 	"style" => [
     "name" => "",
@@ -24,7 +24,7 @@ gsc_define("checkbox", $defaults, function($data) {
   $checkbox_id = isset($data["style"]['id']) ? $data["style"]['id'] : "";
   $checkbox_name = isset($data["style"]['name']) ? $data["style"]['name'] : "";
   $checkbox_value = isset($data["content"]['value']) ? $data["content"]['value'] : "";
-  $checkbox_text = isset($data["content"]['text']) ? $data["content"]['text'] : "";
+  $checkbox_text = isset($data["content"]['text']) ? $data["content"]['label'] : "";
   $checkbox_class = isset($data["style"]['class']) ? $data["style"]['class'] : "";
   $checkbox_misc_attrs = "";
   if (!empty($data["style"]["attrs"])) {
@@ -51,7 +51,7 @@ gsc_test("checkbox", "basic checkbox", function() {
   echo gsc("checkbox", [
     "content" => [
   		"value" => "test",
-      "text" => "test"
+      "label" => "test"
   	],
   ]);
 });

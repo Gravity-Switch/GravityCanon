@@ -3,11 +3,11 @@ $defaults = [
   "content" => [
 		"label" => "Text input label",
 		"value" => "",
-		"disabled" => false,
-		"required" => false,
 		"error" => false
 	],
 	"style" => [
+    "disabled" => false,
+    "required" => false,
 		"id" => "text-input-1",
 		"class" => "",
 		"name" => "text-input",
@@ -23,8 +23,8 @@ gsc_define("input-text", $defaults, function($data) {
 		$name = $data['style']['id'];
 	}
 
-	$disabled = $data['content']['disabled'] ? "disabled='disabled'" : "";
-	$required = $data['content']['required'] ? "required='required' aria-required='true'" : "";
+	$disabled = $data['style']['disabled'] ? "disabled='disabled'" : "";
+	$required = $data['style']['required'] ? "required='required' aria-required='true'" : "";
 
 	$classes = "form__element element--text";
   if (!empty($data["style"]["class"])) {
@@ -36,7 +36,7 @@ gsc_define("input-text", $defaults, function($data) {
 
   $input_classes = "form__input input--text {$data["style"]["input-class"]} ";
 
-  if ($data['content']['required']) {
+  if ($data['style']['required']) {
     $classes .= " form__element--required";
   }
 	$class_attr = "class='$classes'";
@@ -75,10 +75,10 @@ gsc_test("input-text", "", function() {
 		"content" => [
 			"label" => "Second test label",
 			"value" => "This is here when you load the page",
-			"disabled" => true,
-			"required" => true
 		],
 		"style" => [
+      "disabled" => true,
+      "required" => true,
 			"id" => "demo-input-id-asdf",
 			"class" => "extra-test-class"
 		]
@@ -88,8 +88,10 @@ gsc_test("input-text", "", function() {
 		"content" => [
 			"label" => "Third test label",
 			"value" => "Some text",
-			"required" => true,
 			"error" => "Not entered correctly"
-		]
+		],
+    "style" => [
+      "required" => true
+    ]
 	]);
 });
