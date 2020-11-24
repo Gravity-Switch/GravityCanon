@@ -123,7 +123,6 @@ const clean = () => {
 gulp.task(
 	'dev',
 	gulp.series(
-		//clean,
 		gulp.parallel(
 			styles,
 			scripts,

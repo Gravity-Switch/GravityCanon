@@ -6,7 +6,8 @@
         "node": ">=6.9.1"
     },
     "scripts": {
-        "start": "gulp --gulpfile config/gulp.js"
+        "start": "NODE_ENV=development gulp --gulpfile config/gulp.js",
+        "build": "NODE_ENV=build gulp --gulpfile config/gulp.js build"
     },
     "dependencies": {
         "core-js": "^3.6.5"
