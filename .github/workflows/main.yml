@@ -21,7 +21,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: Compile with Grunt
+      - name: compile with gulp
         uses: elstudio/actions-js-build/build@v2
         with:
           wdPath: './wp-content/themes/gsc'
