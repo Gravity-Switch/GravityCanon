@@ -21,19 +21,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
-      - name: Compile with Gulp
-        uses: elstudio/actions-js-build/build@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
         with:
-          wdPath: './wp-content/themes/gsc'
-        env: 
-          ARGS: npm run-script build
-
-      - name: Commit changes
-        uses: elstudio/actions-js-build/commit@v3
-        with:
-          commitMessage: regenerate assets
-
+          node-version: '12.x'
+      - run: npm install
+      - run: npm run-script build
       - name: Deploy!
         uses: SamKirkland/FTP-Deploy-Action@2.0.0
         env:
