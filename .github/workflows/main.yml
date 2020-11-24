@@ -43,4 +43,3 @@ jobs:
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           METHOD: ${{ secrets.FTP_PROTOCOL }}
           PORT: ${{ secrets.FTP_PORT }}
-          ARGS: --delete
