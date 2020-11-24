@@ -153,12 +153,7 @@ module.exports = () => {
 		require('postcss-import')({
 			extensions: '.css',
 			prefix: false,
-			plugins: [
-				require('postcss-lazy-rules')({
-					images: utils.srcImagesPath('sprite/*.png'),
-					stylesheet: utils.srcStylesPath('_sprite.css')
-				})
-			],
+			plugins: [],
 			resolve(id, basedir, importOptions) {
 				if (id.indexOf('~') === 0) {
 					return path.resolve(
