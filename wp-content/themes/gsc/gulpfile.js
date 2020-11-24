@@ -139,4 +139,4 @@ gulp.task(
 /**
  * Register default gulp task.
  */
-gulp.task('default', gulp.parallel('dev'));
+gulp.task('default', gulp.parallel('build'));
