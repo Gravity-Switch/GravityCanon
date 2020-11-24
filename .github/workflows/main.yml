@@ -21,20 +21,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: Use Node.js
-        uses: actions/setup-node@v1
+      - name: Compile with Grunt
+        uses: elstudio/actions-js-build/build@v2
         with:
-          node-version: '12.x'
-      - run: npm --prefix wp-content/themes/gsc/package.json install
-      - run: npm npm --prefix wp-content/themes/gsc/package.json run-script build
-      - uses: EndBug/add-and-commit@v5
-        with:
-          author_name: Brenda Rossi
-          author_email: brenda@gravityswitch.com
-          message: "Compile assets"
-          add: "*.js *.css"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          wdPath: './wp-content/themes/gsc/package.json'
       - name: Deploy!
         uses: SamKirkland/FTP-Deploy-Action@2.0.0
         env:
