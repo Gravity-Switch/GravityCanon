@@ -44,3 +44,4 @@ jobs:
           REMOTE_DIR: ${{ secrets.FTP_SERVER_DIR }}
           METHOD: ${{ secrets.FTP_PROTOCOL }}
           PORT: ${{ secrets.FTP_PORT }}
+          ARGS: --verbose  
