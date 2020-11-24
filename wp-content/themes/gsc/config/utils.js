@@ -56,7 +56,7 @@ module.exports.buildVendorPath = destPath =>
 
 // Detect invironment type
 module.exports.detectEnv = () => {
-	const env = process.env.NODE_ENV || 'development';
+	const env = process.env.NODE_ENV || 'build';
 	const isDev = env === 'development';
 	const isProd = env === 'production';
 	const isBuild = env === 'build';
