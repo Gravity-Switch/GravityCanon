@@ -23,3 +23,10 @@ package-lock.json
 *.log
 *.sql
 *.sqlite
+
+bundle.js
+bundle.js.map
+editor-style.css
+editor-style.css.map
+style.css
+style.css.map
