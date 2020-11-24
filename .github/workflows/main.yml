@@ -26,7 +26,7 @@ jobs:
         with:
           node-version: '12.x'
       - run: npm --prefix wp-content/themes/gsc/package.json install
-      - run: npm run-script build
+      - run: npm npm --prefix wp-content/themes/gsc/package.json run-script build
       - name: Deploy!
         uses: SamKirkland/FTP-Deploy-Action@2.0.0
         env:
