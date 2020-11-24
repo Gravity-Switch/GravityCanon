@@ -5,7 +5,7 @@ const del = require('del');
 const path = require('path');
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-const utils = require('./utils');
+const utils = require('./config/utils');
 const gulpif = require('gulp-if');
 const rename = require('gulp-rename');
 const notify = require('gulp-notify');
@@ -39,7 +39,7 @@ const error = function(e) {
  * Process Sass files through Sass and PostCSS.
  */
 const styles = () => {
-	const config = require('./postcss');
+	const config = require('./config/postcss');
 	const src = utils.srcStylesPath('style.scss');
 	const srcEditor = utils.srcStylesPath('editor-style.scss');
 	const styleSheets = ["style", "editor-style"];
@@ -83,7 +83,7 @@ const scripts = () => {
 		.pipe(plumber({ errorHandler: error }))
 		.pipe(gulpif(
 			true,
-			webpack(require('./webpack'), bundler),
+			webpack(require('./config/webpack'), bundler),
 			rename('bundle.js')
 		))
 		.pipe(gulp.dest(dest));
