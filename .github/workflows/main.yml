@@ -42,6 +42,6 @@ jobs:
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           LOCAL_DIR: ${{ secrets.LOCAL_DIR }}
-          METHOD: sftp
+          METHOD: ${{ secrets.FTP_PROTOCOL }}
           PORT: ${{ secrets.FTP_PORT }}
           ARGS: --delete
