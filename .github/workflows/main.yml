@@ -27,13 +27,21 @@ jobs:
           node-version: '12.x'
       - run: npm --prefix wp-content/themes/gsc/package.json install
       - run: npm npm --prefix wp-content/themes/gsc/package.json run-script build
+      - uses: EndBug/add-and-commit@v5
+        with:
+          author_name: Brenda Rossi
+          author_email: brenda@gravityswitch.com
+          message: "Compile assets"
+          add: "*.js *.css"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Deploy!
         uses: SamKirkland/FTP-Deploy-Action@2.0.0
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-          LOCAL_DIR: build
+          LOCAL_DIR: ${{ secrets.LOCAL_DIR }}
           METHOD: sftp
           PORT: ${{ secrets.FTP_PORT }}
           ARGS: --delete
