@@ -21,26 +21,26 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
-      - name: Compile with Gulp
-        uses: elstudio/actions-js-build/build@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
         with:
-          wdPath: './wp-content/themes/gsc'
-        env: 
-          ARGS: npm run-script build
-
-      - name: Commit changes
-        uses: elstudio/actions-js-build/commit@v3
+          node-version: '12.x'
+      - run: npm --prefix wp-content/themes/gsc/package.json install
+      - run: npm npm --prefix wp-content/themes/gsc/package.json run-script build
+      - uses: EndBug/add-and-commit@v5
         with:
-          commitMessage: regenerate assets
-
-      - name: Deploy!
-        uses: SamKirkland/FTP-Deploy-Action@2.0.0
+          author_name: Brenda Rossi
+          author_email: brenda@gravityswitch.com
+          message: "Compile assets"
+          add: "*.js *.css"
         env:
-          FTP_SERVER: ${{ secrets.FTP_SERVER }}
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-          LOCAL_DIR: build
-          METHOD: sftp
-          PORT: ${{ secrets.FTP_PORT }}
-          ARGS: --delete
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy!
+        uses: SamKirkland/FTP-Deploy-Action@3.0.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          protocol: ${{ secrets.FTP_PROTOCOL }}
+          port: ${{ secrets.FTP_PORT }}
