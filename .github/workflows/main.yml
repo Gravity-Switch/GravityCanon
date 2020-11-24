@@ -24,7 +24,7 @@ jobs:
       - name: Compile with Grunt
         uses: elstudio/actions-js-build/build@v2
         with:
-          wdPath: './wp-content/themes/gsc/package.json'
+          wdPath: './wp-content/themes/gsc'
       - name: Deploy!
         uses: SamKirkland/FTP-Deploy-Action@2.0.0
         env:
