@@ -24,9 +24,9 @@ jobs:
       - name: compile with gulp
         uses: elstudio/actions-js-build/build@v2
         with:
-          wdPath: './wp-content/themes/gsc'
+          wdPath: './wp-content/themes/${{ secrets.THEME_NAME }}'
       - name: cleanup node
-        run: sudo rm -rf './wp-content/themes/gsc/node_modules'
+        run: sudo rm -rf './wp-content/themes/${{ secrets.THEME_NAME }}/node_modules'
       - name: Deploy!
         uses: SamKirkland/FTP-Deploy-Action@2.0.0
         env:
