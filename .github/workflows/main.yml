@@ -25,6 +25,8 @@ jobs:
         uses: elstudio/actions-js-build/build@v2
         with:
           wdPath: './wp-content/themes/gsc'
+      - name: cleanup node
+        run: rm -rf './wp-content/themes/gsc/node_modules'
       - name: Deploy!
         uses: SamKirkland/FTP-Deploy-Action@2.0.0
         env:
