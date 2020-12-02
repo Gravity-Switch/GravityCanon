@@ -129,7 +129,7 @@ gsc_define("ui-card", $defaults, function($data) {
 			if (!empty($list_items)) {
 				$list_html = "";
 				foreach ($list_items as $item) {
-					$item_html = $item["text"];
+					$item_html = $item["content"];
 					if ($item["url"]) {
 						$item_url = $item["url"];
 						$item_title = $item["title"] ? $item["title"] : "";
@@ -293,22 +293,22 @@ gsc_test("ui-card", "", function() {
 			"list_title" => "Type of Credentials",
 			"list_items" => [
 				[
-					"text" => "Apprenticeship Certificate",
+					"content" => "Apprenticeship Certificate",
 					"url" => "#",
 					"title" => "Link title goes here!"
 				],
 				[
-					"text" => "Associate’s Degree",
+					"content" => "Associate’s Degree",
 					"url" => "#",
 					"title" => "Link title goes here!"
 				],
 				[
-					"text" => "Apprenticeship Certificate",
+					"content" => "Apprenticeship Certificate",
 					"url" => "#",
 					"title" => "Link title goes here!"
 				],
 				[
-					"text" => "Associate’s Degree",
+					"content" => "Associate’s Degree",
 					"url" => "#",
 					"title" => "Link title goes here!"
 				],
@@ -328,32 +328,32 @@ gsc_test("ui-card", "", function() {
 			"list_title" => "Type of Credentials",
 			"list_items" => [
 				[
-					"text" => "Elementary Education",
+					"content" => "Elementary Education",
 					"url" => "#",
 					"title" => "Link title goes here!"
 				],
 				[
-					"text" => "Transition to Teaching Licensure Program",
+					"content" => "Transition to Teaching Licensure Program",
 					"url" => "#",
 					"title" => "Link title goes here!"
 				],
 				[
-					"text" => "Mortuary Science Resident Trainee License",
+					"content" => "Mortuary Science Resident Trainee License",
 					"url" => "#",
 					"title" => "Link title goes here!"
 				],
 				[
-					"text" => "Secondary Education Transition to Teaching Licensure Program",
+					"content" => "Secondary Education Transition to Teaching Licensure Program",
 					"url" => "#",
 					"title" => "Link title goes here!"
 				],
 				[
-					"text" => "Elementary Education",
+					"content" => "Elementary Education",
 					"url" => "#",
 					"title" => "Link title goes here!"
 				],
 				[
-					"text" => "Transition to Teaching Licensure Program",
+					"content" => "Transition to Teaching Licensure Program",
 					"url" => "#",
 					"title" => "Link title goes here!"
 				],
