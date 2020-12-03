@@ -70,7 +70,10 @@ gsc_test("subtitle", "", function() {
       "main" => "Subtitle Content with Color"
     ],
     "style" => [
-      "class" => "color-teal"
+      "class" => "color-teal",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
     ]
   ]);
 });

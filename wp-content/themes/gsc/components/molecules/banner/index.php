@@ -60,6 +60,12 @@ gsc_test("banner", "", function() {
   echo gsc("banner", [
     "content" => [
       "title" => 'See If a Job Fits'
+    ],
+    "style" => [
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
     ]
   ]);
 

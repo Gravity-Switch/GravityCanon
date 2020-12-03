@@ -55,3 +55,17 @@ gsc_test("checkbox", "basic checkbox", function() {
   	],
   ]);
 });
+gsc_test("checkbox", "basic checkbox (custom class and attrs)", function() {
+  echo gsc("checkbox", [
+    "content" => [
+      "value" => "test",
+      "label" => "test"
+    ],
+    "style" => [
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
+    ]
+  ]);
+});

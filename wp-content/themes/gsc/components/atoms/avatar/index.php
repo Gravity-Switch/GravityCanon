@@ -56,3 +56,14 @@ gsc_test("avatar", "custom image, no link", function() {
     ]
 	]);
 });
+gsc_test("avatar", "custom image, custom class", function() {
+  echo gsc("avatar", [
+    "content" => [
+      "src" => get_template_directory_uri() . "/images/temp/img-grphc-ovrly.jpg",
+      "alt" => "Some guy at desk"
+    ],
+    "style" => [
+      "class" => "custom-class"
+    ]
+  ]);
+});

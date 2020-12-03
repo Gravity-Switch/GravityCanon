@@ -41,3 +41,13 @@ gsc_meta("btn-close", [ATOM]);
 gsc_test("btn-close", "basic close button", function() {
   echo gsc("btn-close", []);
 });
+gsc_test("btn-close", "basic close button (custom class and attrs)", function() {
+  echo gsc("btn-close", [
+    "content" => [
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
+    ]
+  ]);
+});

@@ -84,7 +84,10 @@ gsc_test("textarea", "", function() {
 		],
 		"style" => [
 			"id" => "demo-textarea-id-asdf",
-			"class" => "extra-test-class"
+			"class" => "extra-test-class",
+      "attrs" => [
+        "test-attrs" => "attr"
+      ]
 		]
 	]);
 });

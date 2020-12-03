@@ -148,6 +148,22 @@ gsc_test("btn", "primary (link)", function() {
     ]
   ]);
 });
+
+gsc_test("btn", "primary (custom class and attr)", function() {
+  echo gsc("btn", [
+    "content" => [
+      "button" => false,
+      "url" => "https://wwww.gravityswitch.com"
+    ],
+    "style" => [
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
+    ]
+  ]);
+});
+
 gsc_test("btn", "secondary", function() {
   echo gsc("btn", [
     "content" => [
@@ -166,11 +182,42 @@ gsc_test("btn", "secondary (link)", function() {
   ]);
 });
 
+gsc_test("btn", "secondary (custom class and attr)", function() {
+  echo gsc("btn", [
+    "content" => [
+      "button" => false,
+      "type" => 'secondary',
+      "text" => 'Secondary Button'
+    ],
+    "style" => [
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
+    ]
+  ]);
+});
+
 gsc_test("btn", "toggles", function() {
   echo gsc("btn", [
     "content" => [
       "type" => 'toggle',
       "text" => 'Toggle Button'
+    ]
+  ]);
+});
+
+gsc_test("btn", "toggles (custom class and attr)", function() {
+  echo gsc("btn", [
+    "content" => [
+      "type" => 'toggle',
+      "text" => 'Toggle Button'
+    ],
+    "style" => [
+      "class" => 'custom-class',
+      "attrs" => [
+        "custom-attr" => 'attr'
+      ]
     ]
   ]);
 });
@@ -189,6 +236,22 @@ gsc_test("btn", "modal (link)", function() {
       "type" => 'modal',
       "text" => 'Modal Link Button',
       "url" => "https://www.gravityswitch.com"
+    ]
+  ]);
+});
+gsc_test("btn", "modal (custom class and attr)", function() {
+  echo gsc("btn", [
+    "content" => [
+      "button" => false,
+      "type" => 'modal',
+      "text" => 'Modal Link Button',
+      "url" => "https://www.gravityswitch.com"
+    ],
+    "style" => [
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
     ]
   ]);
 });
@@ -262,5 +325,46 @@ gsc_test("btn", "icon (link)", function() {
           </g>
         </svg>'
       ]
+  ]);
+});
+gsc_test("btn", "icon (custom class and attr)", function() {
+  echo gsc("btn", [
+    "content" => [
+      "button" => false,
+      "type" => 'icon',
+      "text" => 'Icon Leading Button',
+      "url" => "https://www.gravityswitch.com"
+    ],
+    "style" => [
+      "svg" => '<svg xmlns="http://www.w3.org/2000/svg" width="17.5" height="17.5" viewbox="0 0 17.5 17.5" aria-hidden="true">
+        <title>List</title>
+        <g transform="translate(-255.005 -4827)">
+          <g transform="translate(255.755 4827.75)">
+            <path class="ico__path" d="M263.255,4830.75h10.667" transform="translate(-257.922 -4828.617)" />
+            <path class="ico__path" d="M263.255,4839.75h10.667" transform="translate(-257.922 -4831.217)" />
+            <path class="ico__path" d="M263.255,4848.75h10.667" transform="translate(-257.922 -4833.817)" />
+            <path
+              class="ico__path"
+              d="M255.755,4828.283a.534.534,0,0,1,.533-.533h2.133a.534.534,0,0,1,.533.533v2.134a.534.534,0,0,1-.533.533h-2.133a.534.534,0,0,1-.533-.533Z"
+              transform="translate(-255.755 -4827.75)"
+            />
+            <path
+              class="ico__path"
+              d="M255.755,4837.283a.533.533,0,0,1,.533-.533h2.133a.533.533,0,0,1,.533.533v2.133a.534.534,0,0,1-.533.534h-2.133a.534.534,0,0,1-.533-.534Z"
+              transform="translate(-255.755 -4830.35)"
+            />
+            <path
+              class="ico__path"
+              d="M255.755,4846.283a.534.534,0,0,1,.533-.533h2.133a.534.534,0,0,1,.533.533v2.134a.534.534,0,0,1-.533.533h-2.133a.534.534,0,0,1-.533-.533Z"
+              transform="translate(-255.755 -4832.95)"
+            />
+          </g>
+        </g>
+      </svg>',
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
+    ]
   ]);
 });

@@ -14,7 +14,7 @@ $defaults = [
 
 gsc_define("list", $defaults, function($data) {
 
-	$list_class = "list" . $data["style"]["class"];
+	$list_class = "list " . $data["style"]["class"];
 	$item_class = "list__item";
 
 	if ($data["style"]["dividers"]) {
@@ -89,7 +89,11 @@ gsc_test("list", "", function() {
 			]
 		],
 		"style" => [
-			"dividers" => true
+			"dividers" => true,
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
 		]
 	]);
 

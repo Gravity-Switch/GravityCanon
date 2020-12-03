@@ -23,7 +23,7 @@ gsc_define("icon", $defaults, function($data) {
 
   $class_attr = " class='ico' ";
   if (!empty($data["style"]["class"])) {
-    $class_attr .= " class='ico {$data["style"]["class"]}'";
+    $class_attr = " class='ico {$data["style"]["class"]}'";
   }
 
   $id_attr = "";
@@ -76,6 +76,21 @@ gsc_test("icon", "", function() {
       "category" => 'Technology',
       "subcategory" => 'Automated-Translation',
       "icon" => 'chat-translate'
+    ]
+  ]);
+});
+gsc_test("icon", "Custom Class and Attrs", function() {
+  echo gsc("icon", [
+    "content" => [
+      "category" => "Technology",
+      "subcategory" => "Automated-Translation",
+      "icon" => "chat-translate"
+    ],
+    "style" => [
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
     ]
   ]);
 });

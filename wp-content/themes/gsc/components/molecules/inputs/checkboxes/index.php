@@ -146,7 +146,10 @@ gsc_test("checkboxes", "", function() {
 		"style" => [
 			"class" => "potato-box",
 			"container" => "ul",
-			"item_container" => "li"
+			"item_container" => "li",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
 		]
 	]);
 });

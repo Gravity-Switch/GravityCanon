@@ -27,7 +27,7 @@ gsc_define("filters-grid-and-list", $defaults, function ($data) {
         </button>
       </li>
 
-      <li class='filters-view__item'>
+      <li class='filters-view__item {$data['content']['class']}'>
         <button data-toggle='list' type='button' class='filters-view__btn btn--toggle js-filter-view' aria-pressed='false'>
           <span class='scrn-rdr-txt'>Show list view</span>
           <span class='filters-view__ico ico ico--list'>
@@ -52,4 +52,11 @@ gsc_define("filters-grid-and-list", $defaults, function ($data) {
 gsc_meta("filters-grid-and-list", [ATOM]);
 gsc_test("filters-grid-and-list", "", function() {
   echo gsc("filters-grid-and-list", []);
+});
+gsc_test("filters-grid-and-list", "Custom Class", function() {
+  echo gsc("filters-grid-and-list", [
+    "content" => [
+      "class" => "custom-class"
+    ]
+  ]);
 });

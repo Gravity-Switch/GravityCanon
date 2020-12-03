@@ -161,7 +161,8 @@ gsc_test("select", "", function() {
 			]
 		],
     "style" => [
-      "required" => true
+      "required" => true,
+      "class" => "custom-class"
     ]
 	]);
 });

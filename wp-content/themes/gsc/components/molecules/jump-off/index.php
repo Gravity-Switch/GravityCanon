@@ -44,7 +44,7 @@ gsc_define("jump-off", $defaults, function($data) {
 
   $misc_attrs = "";
   if (!empty($data["style"]["attrs"])){
-      foreach ($data["style"]["attrs"] as $attr->name=>$attr_value) {
+      foreach ($data["style"]["attrs"] as $attr_name=>$attr_value) {
         $misc_attrs .= "$attr_name='$attr_value' ";
       }
   }
@@ -100,7 +100,10 @@ gsc_test("jump-off", "teal jumpoff", function() {
 gsc_test("jump-off", "darker teal jumpoff", function() {
   echo gsc("jump-off", [
     "style" => [
-      "class" => 'card--teal-darker'
+      "class" => 'card--teal-darker',
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
     ]
   ]);
 });

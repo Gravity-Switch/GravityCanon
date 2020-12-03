@@ -20,7 +20,7 @@ gsc_define("accordion", $defaults, function($data) {
 
   $class_attr = "";
   if (!empty($data["style"]["class"])) {
-    $class_attr = "class='{$data["style"]["class"]}'";
+    $class_attr = $data["style"]["class"];
   }
 
   $id_attr = "";
@@ -45,7 +45,7 @@ gsc_define("accordion", $defaults, function($data) {
   if ($data["content"]["data-allow-multiple"] == true) {
     $data_allow_multiple = "data-allow-multiple";
   }
-  $accordion_html .= "<div class='accordion js-accordion' {$data_allow_toggle} {$data_allow_multiple} >";
+  $accordion_html .= "<div class='accordion js-accordion {$class_attr}' {$data_allow_toggle} {$data_allow_multiple} {$misc_attrs}>";
 
   // check if title content exists
   if (!empty($data["content"]["titles"])) {
@@ -138,6 +138,43 @@ gsc_test("accordion", "basic accordion test", function() {
           Please read these Terms of Use carefully. They govern the use of our website and form a legally binding agreement between you and VSAC. If you do not agree to abide by the Terms of
           Use, you must not use this website. These Terms of Use apply to this website and the other VSAC websites or web applications that display or link to these Terms of Use.
         </p>"
+      ]
+    ]
+  ]);
+});
+
+gsc_test("accordion", "Accordion with custom class and attrs", function() {
+  echo gsc("accordion", [
+    "content" => [
+      "titles" => [
+        "A cross-sector convening of executives from across the state selected the goal of 70 percent attainment",
+        "A cross-sector convening of executives from across the state selected the goal of 70 percent attainment"
+      ],
+      "content" => [
+        "<p>By using this Website, you agree to the Terms of Use.</p>
+        <p>
+          Vermont Student Assistance Corporation (“VSAC”) maintains this website on the Internet for students, parents, financial aid professionals, education lenders, and others interested in
+          learning about access to education, training, and career opportunities and for those interested in applying to VSAC for education loans.
+        </p>
+        <p>
+          Please read these Terms of Use carefully. They govern the use of our website and form a legally binding agreement between you and VSAC. If you do not agree to abide by the Terms of
+          Use, you must not use this website. These Terms of Use apply to this website and the other VSAC websites or web applications that display or link to these Terms of Use.
+        </p>",
+        "<p>By using this Website, you agree to the Terms of Use.</p>
+        <p>
+          Vermont Student Assistance Corporation (“VSAC”) maintains this website on the Internet for students, parents, financial aid professionals, education lenders, and others interested in
+          learning about access to education, training, and career opportunities and for those interested in applying to VSAC for education loans.
+        </p>
+        <p>
+          Please read these Terms of Use carefully. They govern the use of our website and form a legally binding agreement between you and VSAC. If you do not agree to abide by the Terms of
+          Use, you must not use this website. These Terms of Use apply to this website and the other VSAC websites or web applications that display or link to these Terms of Use.
+        </p>"
+      ]
+    ],
+    "style" => [
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => "attr"
       ]
     ]
   ]);

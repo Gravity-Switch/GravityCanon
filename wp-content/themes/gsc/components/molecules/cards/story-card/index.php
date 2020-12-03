@@ -77,6 +77,12 @@ gsc_test("story-card", "", function() {
 			"person_title" => "Frontend Developer",
 			"story_title" => "Olivia's Career Story",
 			"story_text" => "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Justo nec ultrices dui sapien eget mi proin sed libero. Elementum nibh tellus molestie nunc non blandit. Vestibulum lectus mauris ultrices eros in. Pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus. Et netus et malesuada fames ac turpis egestas sed tempus.</p><p>Augue mauris augue neque gravida in. Non quam lacus suspendisse faucibus interdum posuere. Est lorem ipsum dolor sit. Non odio euismod lacinia at quis risus sed vulputate odio. Dictum sit amet justo donec enim diam vulputate. Eget velit aliquet sagittis id consectetur purus ut. Sed id semper risus in hendrerit gravida rutrum quisque.</p>"
-		]
+		],
+    "style" => [
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
+    ]
 	]);
 });

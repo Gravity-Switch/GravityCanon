@@ -40,7 +40,7 @@ gsc_define("link", $defaults, function ($data) {
 
   $misc_attrs = "";
   if (!empty($data["style"]["attrs"])){
-      foreach ($data["style"]["attrs"] as $attr->name=>$attr_value) {
+      foreach ($data["style"]["attrs"] as $attr_name=>$attr_value) {
         $misc_attrs .= "$attr_name='$attr_value' ";
       }
   }
@@ -69,7 +69,10 @@ gsc_test("link", "", function() {
       "target" => 'self'
     ],
     "style" => [
-      "class" => 'color-teal'
+      "class" => 'color-teal',
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
     ]
   ]);
 });

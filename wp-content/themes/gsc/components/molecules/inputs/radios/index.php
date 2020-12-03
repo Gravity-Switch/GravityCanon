@@ -118,20 +118,23 @@ gsc_test("radios", "", function() {
 			"options" => [
 				[
 					"value" => "the-value",
-					"label" => "Option 1",
-					"id" => "radio-6",
+					"label" => "Option 10",
+					"id" => "radio-10",
 				],
 				[
 					"value" => "the-value",
-					"label" => "Option 2",
-					"id" => "radio-7",
+					"label" => "Option 12",
+					"id" => "radio-12",
 				]
 			],
 			"error" => "You must choose at least one"
 		],
 		"style" => [
 			"class" => "potato-box",
-			"name" => "group-of-radios-2"
+			"name" => "group-of-radios-2",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
 		]
 	]);
 });

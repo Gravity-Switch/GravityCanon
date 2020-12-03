@@ -150,6 +150,12 @@ gsc_test("card-list", "", function() {
 			"img_src" => get_template_directory_uri()."/images/temp/card-img@2x.jpg",
 			"img_alt" => "this is example img alt text!",
 		],
+    "style" => [
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
+    ]
 	]);
 
 });

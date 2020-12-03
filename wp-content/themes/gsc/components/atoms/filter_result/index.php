@@ -75,6 +75,19 @@ gsc_test("filter_result", "", function() {
       "plural_obj" => 'employees'
     ]
   ]);
+  echo gsc("filter_result", [
+    "content" => [
+      "num_results" => 1,
+      "singular_obj" => "employee",
+      "plural_obj" => "employees"
+    ],
+    "style" => [
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
+    ]
+  ]);
 });
 
  ?>

@@ -22,8 +22,8 @@ gsc_define("radio", $defaults, function($data) {
 
   $radio = "";
   $radio .= "
-  <{$data}['style']['item_container']} class='form__element element--radio {$radio_disabled_class}'>
-    <input class='form__input input--radio' type='radio' {$radio_disabled} {$radio_checked} id='{$data['style']['id']}' name='{$data['style']['name']}' value='{$data['value']}' />
+  <{$data['style']['item_container']} class='form__element element--radio {$radio_disabled_class}'>
+    <input class='form__input input--radio {$data["style"]["class"]}' type='radio' {$radio_disabled} {$radio_checked} id='{$data['style']['id']}' name='{$data['style']['name']}' value='{$data['value']}' />
 
     <label class='form__label label--radio' for='{$data["style"]["id"]}'>
       {$data['label']}
@@ -43,6 +43,18 @@ gsc_test("radio", "", function() {
     ],
     "style" => [
       "id" => 'radio-1'
+    ]
+  ]);
+});
+gsc_test("radio", "Custom Class", function() {
+  echo gsc("radio", [
+    "content" => [
+      "value" => "the-value",
+      "label" => "Option 1"
+    ],
+    "style" => [
+      "id" => "radio-2",
+      "class" => "custom-class"
     ]
   ]);
 });

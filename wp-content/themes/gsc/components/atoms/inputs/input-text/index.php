@@ -80,7 +80,10 @@ gsc_test("input-text", "", function() {
       "disabled" => true,
       "required" => true,
 			"id" => "demo-input-id-asdf",
-			"class" => "extra-test-class"
+			"class" => "extra-test-class",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
 		]
 	]);
 

@@ -261,6 +261,12 @@ gsc_test("sidebar", "", function() {
           ]
         ]
       ]
+    ],
+    "style" => [
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
     ]
   ]);
 });

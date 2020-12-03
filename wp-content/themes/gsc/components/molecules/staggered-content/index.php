@@ -116,6 +116,12 @@ gsc_test("staggered-content", "", function() {
       ],
       "text" => 'Assess and treat individuals with mental, emotional, or substance abuse problems, including abuse of alcohol tobacco and/or other drugs Activites may include individual and group therapy, crisis intervention, case management, client advocacy, prevention, and eduction',
     ],
+    "style" => [
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
+    ]
   ]);
 
 });

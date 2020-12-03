@@ -88,7 +88,7 @@ gsc_define("ui-card-with-data", $defaults, function($data) {
   $cta_type = $data["style"]["cta_type"] == "button" ? "btn" : "link__content";
 
   $html = '';
-  $html .= "<article class='card card--with-data {$class}'>";
+  $html .= "<article class='card card--with-data {$class}' {$misc_attrs}>";
   $html .= "<aside class='card__aside'>";
   $html .= "<figure class='card__figure figure--graphic-ovrly'>";
 
@@ -241,6 +241,12 @@ gsc_test("ui-card-with-data", "", function() {
   echo gsc("ui-card-with-data", [
     "content" => [
       "group_name" => 'test-group'
+    ],
+    "style" => [
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
     ]
   ]);
 });

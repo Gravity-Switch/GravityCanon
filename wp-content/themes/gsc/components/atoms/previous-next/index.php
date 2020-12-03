@@ -22,11 +22,6 @@ $defaults = [
 
 gsc_define("previous-next", $defaults, function($data) {
 
-  $class_attr = "";
-  if (!empty($data["style"]["class"])) {
-    $class_attr = "class='{$data["style"]["class"]}'";
-  }
-
   $id_attr = "";
   if (!empty($data["style"]["id"])) {
     $id_attr = "id='{$data["style"]["id"]}'";
@@ -40,7 +35,7 @@ gsc_define("previous-next", $defaults, function($data) {
   }
 
   // JQuery script will check for presence of the object within the a class
-  $html = "<a href='#' class='{$data["content"]["object"]} banner__link banner__link--prev'>";
+  $html = "<a href='#' class='{$data["content"]["object"]} banner__link banner__link--prev {$data["style"]["class"]}' {$misc_attrs}>";
   $html .= "<span class='banner__icon'>";
   $html .= "{$data["style"]["svg"]}";
   $html .= "</span>";
@@ -57,4 +52,14 @@ gsc_test("previous-next", "", function() {
   ]);
 });
 
+gsc_test("previous-next", "Custom class and attrs", function() {
+  echo gsc("previous-next", [
+      "style" => [
+        "class" => "custom-class",
+        "attrs" => [
+          "custom-attr" => "attr"
+        ]
+      ]
+  ]);
+});
  ?>

@@ -164,7 +164,13 @@ gsc_test("tabs", "", function() {
 			],
 			"aria_title" => "title for tab content",
       "group_name" => 'looongtitle'
-		]
+		],
+    "style" => [
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
+    ]
 	]);
 
 });

@@ -227,6 +227,10 @@ gsc_test("ui-card", "", function() {
 		],
 		"style" => [
 			"cta_type" => "link_text",
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => 'attr'
+      ]
 		],
 	]);
 
@@ -240,6 +244,10 @@ gsc_test("ui-card", "", function() {
 		],
 		"style" => [
 			"type" => "orange",
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
 		],
 	]);
 
@@ -253,6 +261,10 @@ gsc_test("ui-card", "", function() {
 		],
 		"style" => [
 			"type" => "teal",
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
 		],
 	]);
 
@@ -268,6 +280,10 @@ gsc_test("ui-card", "", function() {
 		],
 		"style" => [
 			"type" => "img_overlap",
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
 		],
 	]);
 
@@ -280,7 +296,11 @@ gsc_test("ui-card", "", function() {
 			"cta_url" => "https://example.com",
 		],
 		"style" => [
-			"type" => "callout"
+			"type" => "callout",
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
 		],
 	]);
 
@@ -315,7 +335,11 @@ gsc_test("ui-card", "", function() {
 			],
 		],
 		"style" => [
-			"type" => "resources_primary"
+			"type" => "resources_primary",
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
 		],
 	]);
 
@@ -360,7 +384,11 @@ gsc_test("ui-card", "", function() {
 			],
 		],
 		"style" => [
-			"type" => "resources_secondary"
+			"type" => "resources_secondary",
+      "class" => "custom-class",
+      "attrs" => [
+        "custom-attr" => "attr"
+      ]
 		],
 	]);
 
