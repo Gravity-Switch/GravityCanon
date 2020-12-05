@@ -2,46 +2,13 @@
 
 $defaults = [
   "content" => [
-    "title" => "Highway Maintenance Workers",
-    "img_src" => get_template_directory_uri() . "/images/temp/img-stndrd@2x.jpg",
+    "title" => "",
+    "img_src" => '',
     "img_alt" => "",
-    "img_class" => "card__img",
+    "img_class" => "",
     "text" => "",
-    "list_items" => [ // if false, main is used instead
-      [
-        "title" => 'Overview',
-        "content" => [
-          "stats" => [
-            [
-              "icon" => "<svg xmlns='http://www.w3.org/2000/svg' width='24.714' height='30.817' viewBox='0 0 24.714 30.817' aria-hidden='true'><title>Money bag</title><g transform='translate(0.857 0.75)'><path class='ico__path' d='M362.6,301.75h-2.649a1.749,1.749,0,0,0-.652,3.371l2.69,1.076a1.749,1.749,0,0,1-.652,3.371h-2.647' transform='translate(-349.14 -286.113)'></path><path class='ico__path' d='M360.074,301.977V301' transform='translate(-348.572 -286.341)'></path><path class='ico__path' d='M360.074,308.727v-.977' transform='translate(-348.572 -284.295)'></path><path class='ico__path' d='M354.824,297.25h13.682' transform='translate(-350.163 -287.477)'></path><path class='ico__path' d='M366.245,295.335l1.874-3.748a.978.978,0,0,0-1.311-1.311l-2.476,1.235a.977.977,0,0,1-1.25-.332l-.655-.994a.977.977,0,0,0-1.626,0l-.663.994a.976.976,0,0,1-1.25.332l-2.472-1.235a.978.978,0,0,0-1.312,1.311l1.837,3.675' transform='translate(-350.109 -289.75)'></path><path class='ico__path' d='M356.446,299.5l-3.6,4.17a7.73,7.73,0,0,0,6.124,12.443h7.545a7.729,7.729,0,0,0,6.124-12.443l-3.6-4.17' transform='translate(-351.247 -286.795)'></path></g></svg>",
-              "value" => '?',
-              "label" => "Average Wage",
-              "class" => 'wage'
-            ],
-            [
-              "icon" => "<svg xmlns='http://www.w3.org/2000/svg' width='32.571' height='30.5' viewBox='0 0 32.571 30.5' aria-hidden='true'><title>Briefcase</title><g transform='translate(0.75 0.75)'><path class='ico__path' d='M204.748,117.725a2.153,2.153,0,0,1,2.071-2.227h26.929a2.154,2.154,0,0,1,2.071,2.227v20.045A2.154,2.154,0,0,1,233.748,140H206.819a2.154,2.154,0,0,1-2.071-2.227Z' transform='translate(-204.748 -110.998)'></path><path class='ico__path' d='M209.248,120.748h22.071' transform='translate(-204.748 -107.284)'></path><path class='ico__path' d='M209.248,126.748h22.071' transform='translate(-204.748 -104.998)'></path><path class='ico__path' d='M219.34,112.023A1.5,1.5,0,0,0,217.917,111h-3.838a1.5,1.5,0,0,0-1.423,1.025L211.5,115.5h9Z' transform='translate(-200.462 -110.998)'></path><path class='ico__path' d='M207.748,115.5V114' transform='translate(-204.748 -110.998)'></path><path class='ico__path' d='M224.248,115.5V114' transform='translate(-196.177 -110.998)'></path></g></svg>",
-              "value" => '?',
-              "label" => "Current Openings",
-              "class" => 'job'
-            ]
-          ]
-        ]
-      ],
-      [
-        "title" => 'Interests',
-        "content" => 'Working with machines or with your hands, organized and detail-oriented',
-        "icon" => "<svg xmlns='http://www.w3.org/2000/svg' width='30.5' height='30.5' viewBox='0 0 30.5 30.5' aria-hidden='true'>
-          <title>Heart</title>
-          <g transform='translate(-427 -568)'>
-            <g transform='translate(427.75 568.75)'>
-              <path class='ico__path' d='M440.517,587.9l-5.767-6.017a3.414,3.414,0,0,1-.644-3.939h0a3.413,3.413,0,0,1,5.465-.887l.946.942.942-.942a3.413,3.413,0,0,1,5.465.887h0a3.416,3.416,0,0,1-.644,3.939Z' transform='translate(-426.017 -566.637)'></path>
-              <path class='ico__path' d='M442.25,597.75a14.5,14.5,0,1,0-14.5-14.5A14.5,14.5,0,0,0,442.25,597.75Z' transform='translate(-427.75 -568.75)'></path>
-            </g>
-          </g>
-        </svg>"
-        ]
-    ],
-    "cta" => 'Learn more about job',
+    "list_items" => [],
+    "cta" => '',
     "cta_url" => '#',
     "group_name" => ''
   ],
@@ -240,7 +207,43 @@ gsc_test("ui-card-with-data", "", function() {
   echo gsc("ui-card-with-data", []);
   echo gsc("ui-card-with-data", [
     "content" => [
-      "group_name" => 'test-group'
+      "title" => "Highway Maintenance Workers",
+      "group_name" => 'test-group',
+      "img_src" => get_template_directory_uri() . "/images/temp/img-stndrd@2x.jpg",
+      "list_items" => [ // if false, main is used instead
+        [
+          "title" => 'Overview',
+          "content" => [
+            "stats" => [
+              [
+                "icon" => "<svg xmlns='http://www.w3.org/2000/svg' width='24.714' height='30.817' viewBox='0 0 24.714 30.817' aria-hidden='true'><title>Money bag</title><g transform='translate(0.857 0.75)'><path class='ico__path' d='M362.6,301.75h-2.649a1.749,1.749,0,0,0-.652,3.371l2.69,1.076a1.749,1.749,0,0,1-.652,3.371h-2.647' transform='translate(-349.14 -286.113)'></path><path class='ico__path' d='M360.074,301.977V301' transform='translate(-348.572 -286.341)'></path><path class='ico__path' d='M360.074,308.727v-.977' transform='translate(-348.572 -284.295)'></path><path class='ico__path' d='M354.824,297.25h13.682' transform='translate(-350.163 -287.477)'></path><path class='ico__path' d='M366.245,295.335l1.874-3.748a.978.978,0,0,0-1.311-1.311l-2.476,1.235a.977.977,0,0,1-1.25-.332l-.655-.994a.977.977,0,0,0-1.626,0l-.663.994a.976.976,0,0,1-1.25.332l-2.472-1.235a.978.978,0,0,0-1.312,1.311l1.837,3.675' transform='translate(-350.109 -289.75)'></path><path class='ico__path' d='M356.446,299.5l-3.6,4.17a7.73,7.73,0,0,0,6.124,12.443h7.545a7.729,7.729,0,0,0,6.124-12.443l-3.6-4.17' transform='translate(-351.247 -286.795)'></path></g></svg>",
+                "value" => '?',
+                "label" => "Average Wage",
+                "class" => 'wage'
+              ],
+              [
+                "icon" => "<svg xmlns='http://www.w3.org/2000/svg' width='32.571' height='30.5' viewBox='0 0 32.571 30.5' aria-hidden='true'><title>Briefcase</title><g transform='translate(0.75 0.75)'><path class='ico__path' d='M204.748,117.725a2.153,2.153,0,0,1,2.071-2.227h26.929a2.154,2.154,0,0,1,2.071,2.227v20.045A2.154,2.154,0,0,1,233.748,140H206.819a2.154,2.154,0,0,1-2.071-2.227Z' transform='translate(-204.748 -110.998)'></path><path class='ico__path' d='M209.248,120.748h22.071' transform='translate(-204.748 -107.284)'></path><path class='ico__path' d='M209.248,126.748h22.071' transform='translate(-204.748 -104.998)'></path><path class='ico__path' d='M219.34,112.023A1.5,1.5,0,0,0,217.917,111h-3.838a1.5,1.5,0,0,0-1.423,1.025L211.5,115.5h9Z' transform='translate(-200.462 -110.998)'></path><path class='ico__path' d='M207.748,115.5V114' transform='translate(-204.748 -110.998)'></path><path class='ico__path' d='M224.248,115.5V114' transform='translate(-196.177 -110.998)'></path></g></svg>",
+                "value" => '?',
+                "label" => "Current Openings",
+                "class" => 'job'
+              ]
+            ]
+          ]
+        ],
+        [
+          "title" => 'Interests',
+          "content" => 'Working with machines or with your hands, organized and detail-oriented',
+          "icon" => "<svg xmlns='http://www.w3.org/2000/svg' width='30.5' height='30.5' viewBox='0 0 30.5 30.5' aria-hidden='true'>
+            <title>Heart</title>
+            <g transform='translate(-427 -568)'>
+              <g transform='translate(427.75 568.75)'>
+                <path class='ico__path' d='M440.517,587.9l-5.767-6.017a3.414,3.414,0,0,1-.644-3.939h0a3.413,3.413,0,0,1,5.465-.887l.946.942.942-.942a3.413,3.413,0,0,1,5.465.887h0a3.416,3.416,0,0,1-.644,3.939Z' transform='translate(-426.017 -566.637)'></path>
+                <path class='ico__path' d='M442.25,597.75a14.5,14.5,0,1,0-14.5-14.5A14.5,14.5,0,0,0,442.25,597.75Z' transform='translate(-427.75 -568.75)'></path>
+              </g>
+            </g>
+          </svg>"
+          ]
+      ]
     ],
     "style" => [
       "class" => "custom-class",

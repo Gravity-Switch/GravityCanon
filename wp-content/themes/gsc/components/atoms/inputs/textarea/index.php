@@ -1,16 +1,16 @@
 <?php
 $defaults = [
   "content" => [
-		"label" => "Textarea input label",
+		"label" => "",
 		"value" => "",
 		"disabled" => false,
 		"required" => false,
 		"error" => false
 	],
 	"style" => [
-		"id" => "text-input-1",
+		"id" => "",
 		"class" => "",
-		"name" => "text-input",
+		"name" => "",
 		"attrs" => []
 	]
 ];

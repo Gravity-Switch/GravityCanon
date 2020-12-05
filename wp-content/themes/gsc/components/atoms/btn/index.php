@@ -12,21 +12,13 @@
      "active" => false, // for toggle buttons active/inactive styling
      "type" => '', // secondary, toggle, modal, icon; blank for default
      "main" => '',
-     "text" => 'Contact Us',
+     "text" => '',
      "url" => '',
      "target" => '_self',
      "title" => '' // alias for "main" so you can feed in ACF link fields directly
    ],
    "style" => [
-     "svg" => '<svg xmlns="http://www.w3.org/2000/svg" width="17.184" height="17.184" viewbox="0 0 17.184 17.184" aria-hidden="true">
-       <title>Expand view</title>
-       <g transform="translate(2961.466 -3245.184) rotate(45)">
-         <g transform="translate(207.755 4383.75)">
-           <path class="ico__path" d="M207.755,4393.779l10.03-10.03" transform="translate(-207.755 -4383.75)" />
-           <path class="ico__path" d="M217.785,4393.779l-10.03-10.03" transform="translate(-207.755 -4383.75)" />
-         </g>
-       </g>
-     </svg>', // used for modal button
+     "svg" => '', // used for modal button
      "class" => '',
      "id" => '',
      "attrs" => []

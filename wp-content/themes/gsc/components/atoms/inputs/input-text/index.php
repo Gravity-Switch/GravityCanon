@@ -1,16 +1,16 @@
 <?php
 $defaults = [
   "content" => [
-		"label" => "Text input label",
+		"label" => "",
 		"value" => "",
 		"error" => false
 	],
 	"style" => [
     "disabled" => false,
     "required" => false,
-		"id" => "text-input-1",
+		"id" => "",
 		"class" => "",
-		"name" => "text-input",
+		"name" => "",
 		"attrs" => [],
     "input-class" => ""
 	]
