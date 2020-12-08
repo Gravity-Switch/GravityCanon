@@ -4,7 +4,8 @@
 # Default font-size for site
 # Breakpoints
 # Animation
-# Layout Grid
+# Layout grid
+# Border widths
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -38,3 +39,10 @@ $gutter-fluid: 2.2950819672%;
 $gutter-static: rem(28);
 $max-row-width: rem(1220);
 $mobile-gutter-fluid: 5%;
+
+/*--------------------------------------------------------------
+# Border Widths
+--------------------------------------------------------------*/
+$brdr-thin: 1px;
+$brdr-md: 5px;
+$brdr-thick: 10px;
