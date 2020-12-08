@@ -9,9 +9,13 @@
 }
 
 /*--------------------------------------------------------------
-# Labels for checkboxes
+# Labels for:
+1. Checkboxes
+2. Radio inputs
+3. Required inputs
 --------------------------------------------------------------*/
 .label {
+  // Checkbox
   &--checkbox {
     position: relative;
     padding-left: rem(40);
@@ -30,6 +34,7 @@
     }
   }
 
+  // Radio inputs
   &--radio {
     margin-left: rem(40);
     cursor: pointer;
@@ -48,10 +53,11 @@
   }
 }
 
+// Required inputs
 .form__element--required .form__label {
   &:after {
     content: "*";
-    color: red;
+    color: $orange;
     margin-left: 4px;
   }
 }
