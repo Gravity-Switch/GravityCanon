@@ -8,7 +8,7 @@
       top: 0;
       position: fixed;
       z-index: 50;
-      background: $teal;
+      background: $color-primary;
       opacity: 0.85;
     }
   }
@@ -49,7 +49,7 @@
   &__actions {
     padding: rem(32) rem(24);
     display: flex;
-    background-color: $tan-lightest;
+    background-color: $color-primary-lightest;
     border-top: $brdr-sm solid $charcoal-lighter;
     z-index: 100;
     flex-grow: 0;
@@ -86,26 +86,26 @@
     &__btn {
       background-color: transparent;
       width: 100%;
-      color: $teal-darkest;
+      color: $color-primary-darkest;
       @include typesetting(18, 18);
 
       &:hover {
-        background-color: $orange;
+        background-color: $color-secondary;
         color: #fff;
       }
 
       &[aria-expanded="true"] {
         background-color: transparent;
-        color: $orange;
+        color: $color-secondary;
       }
 
       &[aria-expanded="false"] {
         background-color: transparent;
-        color: $teal-darkest;
+        color: $color-primary-darkest;
 
         &:hover {
           @include brkpnt-md {
-            color: $orange;
+            color: $color-secondary;
           }
         }
       }
@@ -116,8 +116,8 @@
         padding: rem(16);
 
         &:hover {
-          background-color: $tan-lighter;
-          color: $teal-darkest;
+          background-color: $color-accent-primary-lighter;
+          color: $color-primary-darkest;
         }
       }
 
@@ -207,11 +207,11 @@
 
       &__item {
         &--current-list {
-          background-color: $tan-lightest;
+          background-color: $color-accent-primary-lightest;
 
           > .list__link {
             font-weight: 600;
-            color: $teal-darkest;
+            color: $color-primary-darkest;
 
             &:hover,
             &:active {
@@ -223,9 +223,9 @@
 
       &__link {
         &--current-page {
-          background-color: $tan-lighter;
+          background-color: $color-accent-primary-lighter;
           font-weight: 600;
-          color: $teal-darkest;
+          color: $color-primary-darkest;
 
           &:hover,
           &:active {
@@ -237,7 +237,7 @@
             position: absolute;
             width: rem(8);
             height: 100%;
-            background-color: $orange;
+            background-color: $color-secondary;
             left: 0;
             top: 0;
           }
@@ -301,8 +301,8 @@
       }
 
       &--nested {
-        background-color: $tan-lightest;
-        border-top: $brdr-lg solid $orange;
+        background-color: $color-accent-primary-lightest;
+        border-top: $brdr-lg solid $color-secondary;
         margin: 0;
         position: relative;
 
@@ -339,7 +339,7 @@
           content: "";
           border-top: $brdr-md solid transparent;
           border-bottom: $brdr-md solid transparent;
-          border-left: $brdr-md solid $orange;
+          border-left: $brdr-md solid $color-secondary;
           height: 0.5em;
           margin-left: 0.75em;
           width: 0.5em;
@@ -372,12 +372,12 @@
         }
 
         &[aria-expanded="true"]:hover::after {
-          border-left-color: $orange;
+          border-left-color: $color-secondary;
         }
 
         &[aria-expanded="false"]::after {
           transform: rotate(0);
-          border-left-color: $orange;
+          border-left-color: $color-secondary;
 
           @include brkpnt-md {
             transform: rotate(90deg);
@@ -501,21 +501,21 @@
 
     .btn--close {
       background-color: $white;
-      color: $teal-darkest;
+      color: $color-primary-darkest;
 
       @include brkpnt-md {
-        background-color: $teal;
+        background-color: $color-primary;
         color: $white;
       }
 
       &:hover {
         @include brkpnt-md {
-          background-color: $teal-darker;
+          background-color: $color-primary-darker;
         }
       }
 
       .btn__ico path {
-        stroke: $teal;
+        stroke: $color-primary;
 
         @include brkpnt-md {
           stroke: $white;
@@ -524,7 +524,7 @@
     }
 
     .block--1 {
-      background-color: $teal;
+      background-color: $color-primary;
       position: relative;
 
       @include brkpnt-md {
@@ -534,7 +534,7 @@
     }
 
     .block--2 {
-      background-color: $tan-lightest;
+      background-color: $color-accent-primary-lightest;
 
       @include brkpnt-md {
         min-height: 100%;

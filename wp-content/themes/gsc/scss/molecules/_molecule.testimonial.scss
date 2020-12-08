@@ -10,7 +10,7 @@
   &__quote {
     @include font-settings($font-tertiary, 400);
     @include typesetting(28, 44);
-    color: $teal;
+    color: $color-primary;
     margin: rem(20) 0;
 
     @include brkpnt-xs {
@@ -32,7 +32,7 @@
 # Testimonial--block - Organism
 --------------------------------------------------------------*/
 .testimonial--block {
-  background-color: $tan-lightest;
+  background-color: $color-accent-primary-lightest;
   padding: 0 rem(12);
 
   .testimonial {
@@ -53,7 +53,7 @@
 
       &::after,
       &::before {
-        color: $teal-lightest;
+        color: $color-accent-primary-lightest;
         @include typesetting(140, 0);
         position: absolute;
         display: block;

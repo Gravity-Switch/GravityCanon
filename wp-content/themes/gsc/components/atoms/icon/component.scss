@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 .ico {
   &--circle {
-    background-color: $orange;
+    background-color: $color-secondary;
     border-radius: 100%;
     width: rem(90);
     height: rem(90);
@@ -18,14 +18,15 @@
 
   &__path {
     fill: none;
-    stroke: $teal-darkest;
+    stroke: $color-primary-darkest;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: rem(1.5);
   }
 
   @media print {
-    &, svg {
+    &,
+    svg {
       max-width: 2em;
     }
   }

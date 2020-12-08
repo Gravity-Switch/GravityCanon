@@ -1,459 +1,456 @@
-.card{
-	/*--------------------------------------------------------------
+.card {
+  /*--------------------------------------------------------------
 	# Card - No img, diff bkg colors
 	--------------------------------------------------------------*/
-	&--alt {
-		color: $white;
-		border-left: rem(12) solid $teal-darkest;
+  &--alt {
+    color: $white;
+    border-left: $brdr-xl solid $color-primary-darkest;
 
-		&::after {
-			content: "";
-			position: absolute;
-			width: rem(200);
-			height: rem(104);
-			background-image: url("../images/pttrn-line-arrows.svg");
-			background-repeat: no-repeat;
-			bottom: 0;
-			right: 0;
-			opacity: 0.4;
-		}
+    &::after {
+      content: "";
+      position: absolute;
+      width: rem(200);
+      height: rem(104);
+      background-image: url("../images/pttrn-line-arrows.svg");
+      background-repeat: no-repeat;
+      bottom: 0;
+      right: 0;
+      opacity: 0.4;
+    }
 
-		// Card links w/arrows
-		.link__content {
-			color: $white;
+    // Card links w/arrows
+    .link__content {
+      color: $white;
 
-			&:after {
-				border-left-color: $white;
-			}
-		}
+      &:after {
+        border-left-color: $white;
+      }
+    }
 
-		/*--------------------------------------------------------------
+    /*--------------------------------------------------------------
 	# Card - Button styles
 	--------------------------------------------------------------*/
-		.btn {
-			background-color: $teal-darkest;
+    .btn {
+      background-color: $color-primary-darkest;
 
-			&:hover,
-			&:active,
-			&:focus {
-				background-color: $teal-darker;
-			}
-		}
-	}
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $color-primary-darker;
+      }
+    }
+  }
 
-	&--orange {
-		background-color: $orange;
-	}
+  &--orange {
+    background-color: $color-secondary;
+  }
 
-	&--teal {
-		background-color: $teal;
-	}
+  &--teal {
+    background-color: $color-primary;
+  }
 
-	&--teal-darker {
-		background-color: $teal-darker;
-	}
+  &--teal-darker {
+    background-color: $color-primary-darker;
+  }
 
-	/*--------------------------------------------------------------
+  /*--------------------------------------------------------------
 	# Card - Overlapping img card. Two grids used:
 
 	> One for the whole card (.card) 
 	> One for the text content in the card (.card__main)
 	--------------------------------------------------------------*/
-	&--img-overlap {
-		border-top: rem(12) solid $teal;
-		margin-top: rem(56);
+  &--img-overlap {
+    border-top: $brdr-xl solid $color-primary;
+    margin-top: rem(56);
 
-		@include brkpnt-xs {
-			display: grid;
-			grid-template-columns: repeat(16, 1fr);
-			max-width: rem(1014);
-			background-color: transparent;
-			border-top: none;
-			margin-top: 0;
-		}
+    @include brkpnt-xs {
+      display: grid;
+      grid-template-columns: repeat(16, 1fr);
+      max-width: rem(1014);
+      background-color: transparent;
+      border-top: none;
+      margin-top: 0;
+    }
 
-		&::after {
-			content: "";
-			position: absolute;
-			width: rem(257);
-			height: rem(159);
-			background-image: url(../images/dot-grid.svg);
-			background-repeat: no-repeat;
-			bottom: 0;
-			right: 0;
-			opacity: 0.4;
-		}
+    &::after {
+      content: "";
+      position: absolute;
+      width: rem(257);
+      height: rem(159);
+      background-image: url(../images/dot-grid.svg);
+      background-repeat: no-repeat;
+      bottom: 0;
+      right: 0;
+      opacity: 0.4;
+    }
 
-		.card__aside {
-			@include brkpnt-xs {
-				grid-column: 1/8;
-				grid-row: 1;
-				z-index: 1;
-				max-width: rem(438);
-				align-self: center;
-				position: relative;
-			}
-		}
+    .card__aside {
+      @include brkpnt-xs {
+        grid-column: 1/8;
+        grid-row: 1;
+        z-index: 1;
+        max-width: rem(438);
+        align-self: center;
+        position: relative;
+      }
+    }
 
-		.card__figure {
-			width: 83%;
-			margin: 0 auto;
-			margin-top: rem(-68);
+    .card__figure {
+      width: 83%;
+      margin: 0 auto;
+      margin-top: rem(-68);
 
-			@include brkpnt-xs {
-				margin: 0;
-				width: 100%;
-			}
-		}
+      @include brkpnt-xs {
+        margin: 0;
+        width: 100%;
+      }
+    }
 
-		.card__main {
-			@include brkpnt-xs {
-				position: relative;
-				z-index: 0;
-				grid-column: 2/17;
-				grid-row: 1;
-				border-left: rem(12) solid $teal;
-				background-color: $tan-lightest;
+    .card__main {
+      @include brkpnt-xs {
+        position: relative;
+        z-index: 0;
+        grid-column: 2/17;
+        grid-row: 1;
+        border-left: $brdr-xl solid $color-primary;
+        background-color: $color-accent-primary-lightest;
 
-				// Creates sub-grid for placement of text, link content in card
-				display: grid;
-				grid-template-columns: repeat(16, 1fr);
-				padding: rem(60) rem(36) rem(60) rem(32);
-			}
-		}
+        // Creates sub-grid for placement of text, link content in card
+        display: grid;
+        grid-template-columns: repeat(16, 1fr);
+        padding: rem(60) rem(36) rem(60) rem(32);
+      }
+    }
 
-		.card__wrap {
-			@include brkpnt-xs {
-				grid-column: 8/17;
-			}
-		}
-	}
+    .card__wrap {
+      @include brkpnt-xs {
+        grid-column: 8/17;
+      }
+    }
+  }
 
-	/*--------------------------------------------------------------
+  /*--------------------------------------------------------------
 	# Card - Callout
 	--------------------------------------------------------------*/
-	&--callout {
-		max-width: rem(1014);
-		background-color: $teal-darker;
-		border-left-color: $teal;
+  &--callout {
+    max-width: rem(1014);
+    background-color: $color-primary-darker;
+    border-left-color: $color-primary;
 
-		.card__main {
-			padding: rem(36) rem(24) rem(40);
+    .card__main {
+      padding: rem(36) rem(24) rem(40);
 
-			@include brkpnt-xs {
-				padding: rem(60) rem(66);
-			}
-		}
+      @include brkpnt-xs {
+        padding: rem(60) rem(66);
+      }
+    }
 
-		.card__title {
-			@include typesetting(30, 36);
-			margin-bottom: rem(16);
+    .card__title {
+      @include typesetting(30, 36);
+      margin-bottom: rem(16);
 
-			@include brkpnt-xs {
-				margin-bottom: rem(24);
-				@include typesetting(40, 42);
-			}
-		}
+      @include brkpnt-xs {
+        margin-bottom: rem(24);
+        @include typesetting(40, 42);
+      }
+    }
 
-		.btn {
-			background-color: $orange;
+    .btn {
+      background-color: $color-secondary;
 
-			&:hover,
-			&:active,
-			&:focus {
-				background-color: $orange-dark;
-				color: $white;
-			}
-		}
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $color-secondary-dark;
+        color: $white;
+      }
+    }
 
-		&::after {
-			width: rem(212);
-			height: rem(116);
-		}
-	}
+    &::after {
+      width: rem(212);
+      height: rem(116);
+    }
+  }
 
-
-
-
-	/*--------------------------------------------------------------
+  /*--------------------------------------------------------------
 	# Card - card--jumpoff
 	--------------------------------------------------------------*/
-	&--jumpoff {
-		&::after {
-			background-image: url(../images/dot-grid-white.svg);
-			width: rem(136);
-			height: rem(119);
-		}
+  &--jumpoff {
+    &::after {
+      background-image: url(../images/dot-grid-white.svg);
+      width: rem(136);
+      height: rem(119);
+    }
 
-		&.card--teal-darker {
-			border-left-color: $teal;
+    &.card--teal-darker {
+      border-left-color: $color-primary;
 
-			.btn {
-				background-color: $orange;
+      .btn {
+        background-color: $color-secondary;
 
-				&:hover,
-				&:active,
-				&:focus {
-					background-color: $orange-dark;
-					color: $white;
-				}
-			}
-		}
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: $color-secondary-dark;
+          color: $white;
+        }
+      }
+    }
 
-		.ico__path {
-			stroke: $white;
-		}
+    .ico__path {
+      stroke: $white;
+    }
 
-		.card {
-			&__main {
-				padding: rem(48) rem(24) rem(52);
-			}
+    .card {
+      &__main {
+        padding: rem(48) rem(24) rem(52);
+      }
 
-			&__title {
-				margin: 8px 0 28px;
-			}
-		}
-	}
+      &__title {
+        margin: 8px 0 28px;
+      }
+    }
+  }
 
-	/*--------------------------------------------------------------
+  /*--------------------------------------------------------------
 	# Card - CTA
 	--------------------------------------------------------------*/
-	&--cta {
-		border-top: none;
-		padding-top: 0.75rem;
+  &--cta {
+    border-top: none;
+    padding-top: 0.75rem;
 
-		@include brkpnt-xs {
-			padding-top: 0;
-		}
+    @include brkpnt-xs {
+      padding-top: 0;
+    }
 
-		@include brkpnt-xs {
-			max-width: rem(1220);
-			padding: 0 rem(24);
-		}
+    @include brkpnt-xs {
+      max-width: rem(1220);
+      padding: 0 rem(24);
+    }
 
-		.figure--pttrn-bkg::after {
-			left: rem(-34);
-			content: none;
+    .figure--pttrn-bkg::after {
+      left: rem(-34);
+      content: none;
 
-			@include brkpnt-xs {
-				content: "";
-				width: rem(325);
-				height: rem(202);
-				transform: scaleX(-1);
-			}
+      @include brkpnt-xs {
+        content: "";
+        width: rem(325);
+        height: rem(202);
+        transform: scaleX(-1);
+      }
 
-			@include brkpnt-md {
-				width: rem(426);
-				height: rem(255);
-			}
-		}
+      @include brkpnt-md {
+        width: rem(426);
+        height: rem(255);
+      }
+    }
 
-		&:after {
-			display: none;
-		}
+    &:after {
+      display: none;
+    }
 
-		.card {
-			@include brkpnt-xs {
-				&__aside {
-					grid-column: 1/9;
-					align-self: start;
-					max-width: rem(596);
-					margin-bottom: rem(-80);
-					//margin-top: rem(36);
-					padding-top: 5%;
-				}
-			}
+    .card {
+      @include brkpnt-xs {
+        &__aside {
+          grid-column: 1/9;
+          align-self: start;
+          max-width: rem(596);
+          margin-bottom: rem(-80);
+          //margin-top: rem(36);
+          padding-top: 5%;
+        }
+      }
 
-			&__main {
-				@include brkpnt-xs {
-					padding-top: 0;
-					border-left: none;
-				}
-			}
+      &__main {
+        @include brkpnt-xs {
+          padding-top: 0;
+          border-left: none;
+        }
+      }
 
-			&__wrap {
-				@include brkpnt-xs {
-					grid-column: 9/17;
-				}
-			}
+      &__wrap {
+        @include brkpnt-xs {
+          grid-column: 9/17;
+        }
+      }
 
-			&__body {
-				@include brkpnt-xs {
-					padding-top: 13.5%;
-				}
-			}
+      &__body {
+        @include brkpnt-xs {
+          padding-top: 13.5%;
+        }
+      }
 
-			&__title {
-				margin-bottom: rem(32);
+      &__title {
+        margin-bottom: rem(32);
 
-				@include brkpnt-xs {
-					@include typesetting(36, 44);
-					margin-bottom: rem(36);
-				}
-			}
+        @include brkpnt-xs {
+          @include typesetting(36, 44);
+          margin-bottom: rem(36);
+        }
+      }
 
-			&__links {
-				display: flex;
-				flex-direction: column;
+      &__links {
+        display: flex;
+        flex-direction: column;
 
-				@include brkpnt-md {
-					flex-direction: row;
-				}
+        @include brkpnt-md {
+          flex-direction: row;
+        }
 
-				.btn {
-					flex: 1 1 auto;
-					width: 100%;
-					margin-bottom: rem(20);
+        .btn {
+          flex: 1 1 auto;
+          width: 100%;
+          margin-bottom: rem(20);
 
-					@include brkpnt-md {
-						margin-bottom: 0;
-					}
+          @include brkpnt-md {
+            margin-bottom: 0;
+          }
 
-					&:first-child {
-						margin-right: 0;
+          &:first-child {
+            margin-right: 0;
 
-						@include brkpnt-md {
-							margin-right: rem(12);
-						}
-					}
+            @include brkpnt-md {
+              margin-right: rem(12);
+            }
+          }
 
-					&:last-child {
-						margin-bottom: 0;
-					}
+          &:last-child {
+            margin-bottom: 0;
+          }
 
-					&--secondary {
-						flex: 1 1 67%;
-					}
-				}
-			}
-		}
-	}
+          &--secondary {
+            flex: 1 1 67%;
+          }
+        }
+      }
+    }
+  }
 
-	/*--------------------------------------------------------------
+  /*--------------------------------------------------------------
 	# Card - Resources
 	--------------------------------------------------------------*/
-	&--resources {
-		max-width: rem(1014);
-		background-color: $teal-darker;
-		border-left-color: $teal;
-		margin-top: rem(44);
+  &--resources {
+    max-width: rem(1014);
+    background-color: $color-primary-darker;
+    border-left-color: $color-primary;
+    margin-top: rem(44);
 
-		@include brkpnt-xs {
-			margin-top: 0;
-		}
+    @include brkpnt-xs {
+      margin-top: 0;
+    }
 
-		.card {
-			&__main {
-				@include brkpnt-xs {
-					padding: rem(68) rem(68) rem(60);
-				}
-			}
-			&__header {
-				border-bottom: solid rem(1) rgba(255, 255, 255, 0.4);
+    .card {
+      &__main {
+        @include brkpnt-xs {
+          padding: rem(68) rem(68) rem(60);
+        }
+      }
+      &__header {
+        border-bottom: solid $brdr-xxs rgba(255, 255, 255, 0.4);
 
-				@include brkpnt-xs {
-					display: flex;
-				}
-			}
+        @include brkpnt-xs {
+          display: flex;
+        }
+      }
 
-			&__heading {
-				padding: rem(36) 0 rem(24);
+      &__heading {
+        padding: rem(36) 0 rem(24);
 
-				@include brkpnt-xs {
-					padding: 0 0 rem(40);
-					margin-left: rem(32);
-				}
-			}
+        @include brkpnt-xs {
+          padding: 0 0 rem(40);
+          margin-left: rem(32);
+        }
+      }
 
-			&__subtitle {
-				color: $white;
-				margin-bottom: rem(8);
-				display: block;
+      &__subtitle {
+        color: $white;
+        margin-bottom: rem(8);
+        display: block;
 
-				@include brkpnt-xs {
-					margin-bottom: rem(4);
-				}
-			}
+        @include brkpnt-xs {
+          margin-bottom: rem(4);
+        }
+      }
 
-			&__title {
-				@include typesetting(36, 44);
-				margin: 0 0 rem(12) 0;
+      &__title {
+        @include typesetting(36, 44);
+        margin: 0 0 rem(12) 0;
 
-				@include brkpnt-xs {
-					@include typesetting(42, 52);
-					margin: 0;
-				}
-			}
+        @include brkpnt-xs {
+          @include typesetting(42, 52);
+          margin: 0;
+        }
+      }
 
-			&__body {
-				margin-top: rem(36);
+      &__body {
+        margin-top: rem(36);
 
-				@include brkpnt-xs {
-					margin-top: rem(44);
-				}
-			}
+        @include brkpnt-xs {
+          margin-top: rem(44);
+        }
+      }
 
-			&__list {
-				margin: rem(20) 0 0;
+      &__list {
+        margin: rem(20) 0 0;
 
-				@include brkpnt-xs {
-					@supports (column-gap: 15%) {
-						column-count: 2;
-						column-rule: solid 1px rgba(255, 255, 255, 0.4);
-						column-gap: 15%;  
-					}
-				}
-			}
+        @include brkpnt-xs {
+          @supports (column-gap: 15%) {
+            column-count: 2;
+            column-rule: solid 1px rgba(255, 255, 255, 0.4);
+            column-gap: 15%;
+          }
+        }
+      }
 
-			&__item {
-				padding: 0;
-				margin-bottom: rem(16);
+      &__item {
+        padding: 0;
+        margin-bottom: rem(16);
 
-				&::before {
-					display: none;
-				}
+        &::before {
+          display: none;
+        }
 
-				&:last-child {
-					margin-bottom: 0;
-				}
-			}
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
 
-			&__link {
-				color: $white;
+      &__link {
+        color: $white;
 
-				&:visited,
-				&:hover,
-				&:active,
-				&:focus {
-					color: $white;
-				}
+        &:visited,
+        &:hover,
+        &:active,
+        &:focus {
+          color: $white;
+        }
 
-				&:hover,
-				&:active,
-				&:focus {
-					text-decoration: none;
-				}
-			}
-		}
+        &:hover,
+        &:active,
+        &:focus {
+          text-decoration: none;
+        }
+      }
+    }
 
-		.ico {
-			&--circle {
-				margin: rem(-80) auto 0;
+    .ico {
+      &--circle {
+        margin: rem(-80) auto 0;
 
-				@include brkpnt-xs {
-					margin: 0;
-				}
-			}
-		}
+        @include brkpnt-xs {
+          margin: 0;
+        }
+      }
+    }
 
-		// resources-secondary
-		&-secondary {
-			background-color: $teal;
-			border-left-color: $teal-darkest;
+    // resources-secondary
+    &-secondary {
+      background-color: $color-primary;
+      border-left-color: $color-primary-darkest;
 
-			.ico--circle {
-				background-color: $teal-darker;
-			}
-		}
-	}
+      .ico--circle {
+        background-color: $color-primary-darker;
+      }
+    }
+  }
 }

@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------
 >>> COLORS - TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Turquoise
+# Teal
 # Orange
 # Yellow
 # Tan
@@ -11,34 +11,34 @@
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-# Turquoise
+# Teal
 --------------------------------------------------------------*/
-$teal-lightest: #c9e3e3;
-$teal-lighter: #87dede;
-$teal-light: #1ab7b7;
-$teal: #008383;
-$teal-darker: #004143;
-$teal-darkest: #192220;
+$color-primary-lightest: #c9e3e3;
+$color-primary-lighter: #87dede;
+$color-primary-light: #1ab7b7;
+$color-primary: #008383;
+$color-primary-darker: #004143;
+$color-primary-darkest: #192220;
 
 /*--------------------------------------------------------------
 # Orange
 --------------------------------------------------------------*/
-$orange: #d34600;
-$orange-dark: #be4100;
-$orange-darker: #963808;
-$orange-darkest: #712701;
-
-/*--------------------------------------------------------------
-# Yellow
---------------------------------------------------------------*/
-$yellow: #ffcc04;
+$color-secondary: #d34600;
+$color-secondary-dark: #be4100;
+$color-secondary-darker: #963808;
+$color-secondary-darkest: #712701;
 
 /*--------------------------------------------------------------
 # Tan
 --------------------------------------------------------------*/
-$tan-lightest: #f6f5f0;
-$tan-lighter: #ece9e2;
-$tan-light: #e0d6bf;
+$color-accent-primary-lightest: #f6f5f0;
+$color-accent-primary-lighter: #ece9e2;
+$color-accent-primary-light: #e0d6bf;
+
+/*--------------------------------------------------------------
+# Yellow
+--------------------------------------------------------------*/
+$color-accent-secondary: #ffcc04;
 
 /*--------------------------------------------------------------
 # Charcoal
@@ -60,18 +60,18 @@ $white: #fff;
 .color-teallighter,
 .color-teallighter:focus,
 .color-teallighter:hover {
-  color: $teal-lighter;
-  fill: $teal-lighter;
+  color: $color-primary-lighter;
+  fill: $color-primary-lighter;
 }
 .color-teallight,
 .color-teallight:focus,
 .color-teallight:hover {
-  color: $teal-light;
-  fill: $teal-light;
+  color: $color-primary-light;
+  fill: $color-primary-light;
 }
 .color-teal,
 .color-teal:focus,
 .color-teal:hover {
-  color: $teal;
-  fill: $teal;
+  color: $color-primary;
+  fill: $color-primary;
 }

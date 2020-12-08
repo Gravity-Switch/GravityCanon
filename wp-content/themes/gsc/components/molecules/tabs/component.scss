@@ -3,7 +3,7 @@
     @include font-settings($font-secondary, 500);
     @include typesetting(25, 32);
     color: $charcoal;
-    border-bottom: $brdr-sm solid $tan-light;
+    border-bottom: $brdr-sm solid $color-accent-primary-light;
     text-decoration: none;
     padding: rem(14) rem(18) rem(10);
     display: block;
@@ -13,7 +13,7 @@
 
     &:focus {
       outline-offset: rem(-2);
-      outline: rem(2) solid $teal-light;
+      outline: rem(2) solid $color-primary-light;
     }
 
     @include brkpnt-xs {
@@ -27,9 +27,9 @@
     }
 
     &.is-active {
-      color: $teal-darker;
-      background-color: $tan-lightest;
-      border-bottom-color: $orange;
+      color: $color-primary-darker;
+      background-color: $color-primary-lightest;
+      border-bottom-color: $color-secondary;
 
       @include brkpnt-xs {
         background-color: transparent;
@@ -38,7 +38,7 @@
       &:visited,
       &:hover,
       &:active {
-        color: $teal-darker;
+        color: $color-primary-darker;
       }
     }
 
@@ -80,7 +80,7 @@
 
   &__section {
     padding: rem(18);
-    background-color: $tan-lightest;
+    background-color: $color-accent-primary-lightest;
     margin-top: rem(24);
 
     @include brkpnt-xs {

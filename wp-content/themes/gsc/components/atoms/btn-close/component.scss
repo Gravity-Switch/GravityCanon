@@ -1,17 +1,17 @@
 .btn {
   &--close {
-    background-color: $teal;
+    background-color: $color-primary;
     padding: rem(15) rem(16) rem(12);
 
     &:hover,
     &:active,
     &:focus {
-      background-color: $teal-darker;
+      background-color: $color-primary-darker;
     }
 
     &:active,
     &:focus {
-      outline: $brdr-sm solid $teal-light;
+      outline: $brdr-sm solid $color-primary-light;
     }
 
     .btn__ico {

@@ -17,7 +17,7 @@
     }
 
     &--guide {
-      background-color: $tan-lightest;
+      background-color: $color-accent-primary-lightest;
       @include brkpnt-xs {
         padding: rem(40) 0;
       }
@@ -57,7 +57,7 @@
       text-transform: uppercase;
       text-align: left;
       padding: rem(28) rem(28) rem(28) 0;
-      color: $teal-darkest;
+      color: $color-primary-darkest;
       border-bottom: $brdr-xxs solid $charcoal-light;
       transition: color $timing $easing, transform $timing $easing;
 
@@ -71,7 +71,7 @@
       }
 
       .ico__path {
-        stroke: $teal-darkest;
+        stroke: $color-primary-darkest;
         transition: stroke $timing $easing;
       }
 
@@ -121,7 +121,7 @@
         top: 0;
         left: 0;
         opacity: 0;
-        border-left: $brdr-lg solid $teal-darker;
+        border-left: $brdr-lg solid $color-primary-darker;
         transition: opacity $timing $easing;
       }
 
@@ -137,11 +137,11 @@
 
       &.is-active {
         color: $white;
-        background-color: $orange;
+        background-color: $color-secondary;
         border-bottom: $brdr-xxs solid $charcoal-light;
 
         @include brkpnt-xs {
-          color: $orange;
+          color: $color-secondary;
           background-color: transparent;
         }
 
@@ -175,7 +175,7 @@
           stroke: $white;
 
           @include brkpnt-xs {
-            stroke: $orange;
+            stroke: $color-secondary;
           }
         }
       }
@@ -211,7 +211,7 @@
       border-left: none;
 
       &__main {
-        border-left: $brdr-xl solid $teal-darkest;
+        border-left: $brdr-xl solid $color-primary-darkest;
       }
     }
 

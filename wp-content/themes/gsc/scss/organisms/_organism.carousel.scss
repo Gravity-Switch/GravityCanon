@@ -1,5 +1,5 @@
 .carousel {
-  background-color: $tan-lightest;
+  background-color: $color-accent-primary-lightest;
   margin-top: rem(40);
 
   &__main {
@@ -96,7 +96,7 @@
     position: relative;
     height: 100%;
     background-color: transparent;
-    color: $teal-darkest;
+    color: $color-primary-darkest;
     padding: rem(32);
     text-align: left;
 
@@ -113,18 +113,18 @@
     &:hover,
     &:active,
     &:focus {
-      background-color: $tan-lighter;
-      color: $teal-darkest;
+      background-color: $color-accent-primary-lighter;
+      color: $color-primary-darkest;
     }
 
     &.current {
-      background-color: $orange;
+      background-color: $color-secondary;
       color: $white;
 
       &:hover,
       &:active,
       &:focus {
-        background-color: $orange;
+        background-color: $color-secondary;
         color: $white;
       }
     }

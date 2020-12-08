@@ -57,7 +57,7 @@
 .form__element--required .form__label {
   &:after {
     content: "*";
-    color: $orange;
+    color: $color-secondary;
     margin-left: 4px;
   }
 }

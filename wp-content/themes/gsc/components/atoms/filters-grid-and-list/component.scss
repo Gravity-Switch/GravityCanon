@@ -22,10 +22,10 @@
     }
 
     &.active {
-      background-color: $teal;
+      background-color: $color-primary;
 
       &:hover {
-        background-color: $teal-darker;
+        background-color: $color-primary-darker;
       }
     }
   }
@@ -53,6 +53,4 @@
       display: flex;
     }
   }
-
-
 }

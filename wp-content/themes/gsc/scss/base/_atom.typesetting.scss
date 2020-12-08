@@ -10,7 +10,7 @@ html {
 body {
   @include font-settings($font-primary, 400);
   @include typesetting(16, 24);
-  color: $teal-darkest;
+  color: $color-primary-darkest;
 
   @include brkpnt-xs {
     @include typesetting(18, 28);

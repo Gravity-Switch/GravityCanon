@@ -20,7 +20,7 @@
     color: $charcoal;
 
     &:focus {
-      color: $teal-darkest;
+      color: $color-primary-darkest;
     }
   }
 }
@@ -31,15 +31,15 @@
 .error {
   .form {
     &__label {
-      color: $orange;
+      color: $color-secondary;
     }
 
     &__input {
-      border-color: $orange;
+      border-color: $color-secondary;
     }
 
     &__mssg {
-      color: $orange;
+      color: $color-secondary;
       background-image: url("../images/ico-error.svg");
       background-repeat: no-repeat;
       background-position: left center;

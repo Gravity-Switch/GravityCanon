@@ -14,7 +14,7 @@
   .card {
     &__main {
       padding: 0 13.063063063% rem(67) 15.765765766%;
-      border-left: $brdr-lg solid $orange;
+      border-left: $brdr-lg solid $color-secondary;
       background: $white;
     }
 
@@ -32,11 +32,11 @@
     &__title {
       @include typesetting(42, 42);
       margin-top: rem(5);
-      color: $teal-darkest;
+      color: $color-primary-darkest;
     }
 
     &__body {
-      color: $teal-darkest;
+      color: $color-primary-darkest;
     }
   }
 }

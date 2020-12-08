@@ -18,7 +18,7 @@ textarea,
 .btn {
   &:focus,
   &:active {
-    outline: $brdr-sm solid $teal-light;
+    outline: $brdr-sm solid $color-primary-light;
     outline-offset: rem(-2); // Prevents outline from getting cut off in Safari
   }
 }
@@ -34,8 +34,8 @@ button {
 }
 
 ::selection {
-  background-color: $teal-lighter;
-  color: $teal-darkest;
+  background-color: $color-primary-lighter;
+  color: $color-primary-darkest;
 }
 
 // Fieldset reset

@@ -25,17 +25,17 @@
 
     &:focus {
       + .label--radio::before {
-        box-shadow: 0 0 0 rem(3) $teal-light;
+        box-shadow: 0 0 0 rem(3) $color-primary-light;
         outline: $brdr-sm solid transparent; // For Windows high contrast mode.
       }
     }
 
     &:checked {
       + .label--radio {
-        color: $teal-darkest;
+        color: $color-primary-darkest;
 
         &::before {
-          border-color: $teal-darkest;
+          border-color: $color-primary-darkest;
         }
 
         &::after {
@@ -45,7 +45,7 @@
           height: rem(16);
           top: rem(5);
           left: rem(5);
-          background-color: $teal-darkest;
+          background-color: $color-primary-darkest;
           border-radius: 100%;
         }
 

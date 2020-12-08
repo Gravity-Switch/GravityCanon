@@ -18,14 +18,14 @@
     margin-right: rem(8);
 
     .ico__path {
-      stroke: $teal-darkest;
+      stroke: $color-primary-darkest;
     }
   }
 
   &__num {
     @include font-settings($font-secondary, 500);
     @include typesetting(30, 36);
-    color: $teal;
+    color: $color-primary;
   }
 
   &__label {

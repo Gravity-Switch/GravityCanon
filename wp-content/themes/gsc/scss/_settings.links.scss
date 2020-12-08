@@ -11,12 +11,12 @@
 # Link - Inline styling
 --------------------------------------------------------------*/
 a {
-  color: $orange-dark;
+  color: $color-secondary-darkest;
   text-decoration: underline;
   transition: all $timing $easing;
 
   &:visited {
-    color: $orange-darker;
+    color: $color-secondary-darker;
   }
 
   &:hover {
@@ -55,7 +55,7 @@ a {
       content: "";
       border-top: $brdr-md solid transparent;
       border-bottom: $brdr-md solid transparent;
-      border-left: $brdr-lg solid $orange;
+      border-left: $brdr-lg solid $color-secondary;
       margin-left: rem(8);
       position: absolute;
       margin-top: rem(3); // Vertically centers arrow
@@ -65,10 +65,10 @@ a {
     &:hover,
     &:active,
     &:focus {
-      color: $teal-darkest;
+      color: $color-primary-darkest;
 
       &::after {
-        border-left-color: $teal-darkest;
+        border-left-color: $color-primary-darkest;
         transform: translate(rem(4), 0);
       }
     }
@@ -79,17 +79,17 @@ a {
 --------------------------------------------------------------*/
   &--social {
     border-radius: 50%;
-    border: $brdr-xxs solid $teal;
+    border: $brdr-xxs solid $color-primary;
     width: rem(46);
     height: rem(46);
-    color: $teal-darkest;
+    color: $color-primary-darkest;
     display: flex;
     justify-content: center;
     align-items: center;
 
     &:hover,
     &:focus {
-      background-color: $teal;
+      background-color: $color-primary;
 
       .ico__path {
         fill: $white;
@@ -97,7 +97,7 @@ a {
     }
 
     .ico__path {
-      fill: $teal;
+      fill: $color-primary;
       stroke: none;
     }
   }
@@ -143,7 +143,7 @@ a {
     .txt--primary {
       @include font-settings($font-secondary, 500);
       @include typesetting(30, 36);
-      color: $teal-darkest;
+      color: $color-primary-darkest;
       display: block;
       margin-bottom: rem(8);
 
@@ -165,7 +165,7 @@ a {
 
     // .link--pager .ico__path
     .ico__path {
-      stroke: $teal-darkest;
+      stroke: $color-primary-darkest;
     }
   }
 

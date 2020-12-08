@@ -217,7 +217,7 @@ body.modal-open {
 
   &--story {
     width: 98%;
-    border-left: $brdr-lg solid $orange;
+    border-left: $brdr-lg solid $color-secondary;
     //height: 100%;
 
     @include brkpnt-sm {
@@ -242,7 +242,7 @@ body.modal-open {
 
         @include brkpnt-sm {
           background-color: $white;
-          border-left: $brdr-lg solid $orange;
+          border-left: $brdr-lg solid $color-secondary;
           padding: rem(24);
           margin-left: rem(82);
         }

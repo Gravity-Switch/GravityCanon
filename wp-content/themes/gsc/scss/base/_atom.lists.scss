@@ -25,7 +25,7 @@ li {
 ul li:before {
   content: "\002022";
   position: absolute;
-  color: $teal;
+  color: $color-primary;
   top: rem(-7);
   left: 0;
   font-size: rem(24);
@@ -53,7 +53,7 @@ ol {
     &:before {
       content: counter(step-counter) ".";
       position: absolute;
-      color: $teal;
+      color: $color-primary;
       top: 0;
       left: 0;
       font-size: rem(16);

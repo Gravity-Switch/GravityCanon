@@ -2,7 +2,7 @@
 >>> FOOTER - Sitewide
 --------------------------------------------------------------*/
 .footer {
-  background-color: $tan-lightest;
+  background-color: $color-accent-primary-lightest;
 
   @media print {
     display: none;
@@ -83,17 +83,17 @@
     }
 
     .footer__link {
-      color: $teal-darkest;
+      color: $color-primary-darkest;
       font-weight: 600;
       text-transform: uppercase;
-      border-bottom: solid $brdr-xs $orange;
+      border-bottom: solid $brdr-xs $color-secondary;
       text-decoration: none;
       transition: border-bottom $timing $easing, color $timing $easing;
 
       &:hover,
       &:active,
       &:focus {
-        color: $orange;
+        color: $color-secondary;
         border-bottom: transparent;
       }
     }

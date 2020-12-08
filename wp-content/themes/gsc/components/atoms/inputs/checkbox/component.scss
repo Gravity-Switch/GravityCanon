@@ -21,7 +21,7 @@
     top: 0;
     padding: rem(4);
     border: 0;
-    background-color: $teal-darkest;
+    background-color: $color-primary-darkest;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 
@@ -43,14 +43,14 @@
 
     &:focus {
       + .label--checkbox::before {
-        box-shadow: 0 0 0 rem(3) $teal-light;
+        box-shadow: 0 0 0 rem(3) $color-primary-light;
         outline: rem(3) solid transparent; // For Windows high contrast mode.
       }
     }
 
     &:checked {
       + .label--checkbox {
-        color: $teal-darkest;
+        color: $color-primary-darkest;
 
         .form__ico {
           opacity: 1;

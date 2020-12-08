@@ -12,9 +12,9 @@
     @include font-settings($font-primary, 700);
     @include typesetting(20, 28);
     text-transform: none;
-    color: $teal-darkest;
+    color: $color-primary-darkest;
     background-color: transparent;
-    color: $teal-darkest;
+    color: $color-primary-darkest;
     padding: rem(24) rem(24) rem(24) rem(50);
     display: inline-flex;
     text-align: left;
@@ -27,7 +27,7 @@
     &:active,
     &:focus {
       background-color: transparent;
-      color: $teal-darkest;
+      color: $color-primary-darkest;
     }
 
     // expand, collapse icons
@@ -37,7 +37,7 @@
       left: 0;
       top: 16%;
       content: "";
-      border: $brdr-xs solid $orange;
+      border: $brdr-xs solid $color-secondary;
       width: rem(32);
       height: rem(30);
       margin-right: rem(18);
@@ -86,7 +86,7 @@
 
     &:hover {
       background: transparent;
-      color: $teal-darkest;
+      color: $color-primary-darkest;
     }
   }
 

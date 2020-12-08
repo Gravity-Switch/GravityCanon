@@ -94,7 +94,7 @@
     .link__content {
       text-transform: none;
       text-decoration: none;
-      color: $teal-darkest;
+      color: $color-primary-darkest;
       font-weight: 400;
       letter-spacing: 0;
       @include typesetting(16, 24);
@@ -126,7 +126,7 @@
 .career-story {
   padding-top: rem(55);
   padding-bottom: rem(88);
-  background: $teal-darker;
+  background: $color-primary-darker;
   @include brkpnt-sm {
     padding-top: rem(86);
     padding-bottom: rem(99);

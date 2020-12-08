@@ -13,7 +13,7 @@
   appearance: none;
   display: inline-block;
   color: $white;
-  background-color: $orange;
+  background-color: $color-secondary;
   text-transform: uppercase;
   @include typesetting(14, 17);
   font-weight: 600;
@@ -32,13 +32,13 @@
   &:hover,
   &:active,
   &:focus {
-    background-color: $orange-dark;
+    background-color: $color-secondary-dark;
     color: $white;
   }
 
   &:focus,
   &:active {
-    outline: rem(3) solid $teal-light;
+    outline: rem(3) solid $color-primary-light;
   }
 }
 
@@ -46,12 +46,12 @@
 # Secondary button
 --------------------------------------------------------------*/
 .btn--secondary {
-  background-color: $teal-darkest;
+  background-color: $color-primary-darkest;
 
   &:hover,
   &:active,
   &:focus {
-    background-color: $teal-darker;
+    background-color: $color-primary-darker;
   }
 
   @media print {
@@ -66,19 +66,19 @@
 .btn {
   &--toggle {
     background-color: transparent;
-    color: $teal-darkest;
-    border: solid $brdr-xxs $teal;
+    color: $color-primary-darkest;
+    border: solid $brdr-xxs $color-primary;
 
     .ico__path {
-      stroke: $teal;
+      stroke: $color-primary;
     }
 
     &:hover,
     &:active,
     &:focus {
       color: $white;
-      background-color: $teal-darker;
-      border-color: $teal-darker;
+      background-color: $color-primary-darker;
+      border-color: $color-primary-darker;
 
       .ico__path {
         stroke: $white;
@@ -87,11 +87,11 @@
 
     &:active,
     &:focus {
-      outline: rem(3) solid $teal-light;
+      outline: rem(3) solid $color-primary-light;
     }
 
     &:visited {
-      color: $teal-darkest;
+      color: $color-primary-darkest;
 
       &:hover,
       &:active,
@@ -101,7 +101,7 @@
     }
 
     &.is-active {
-      background-color: $teal;
+      background-color: $color-primary;
       color: $white;
 
       .ico__path {
@@ -111,13 +111,13 @@
       &:hover,
       &:active,
       &:focus {
-        background-color: $teal-darker;
-        border-color: $teal-darker;
+        background-color: $color-primary-darker;
+        border-color: $color-primary-darker;
       }
 
       &:active,
       &:focus {
-        outline: rem(3) solid $teal-light;
+        outline: rem(3) solid $color-primary-light;
       }
     }
   }
@@ -127,13 +127,13 @@
     display: flex;
     align-items: center;
     background-color: transparent;
-    color: $orange;
+    color: $color-secondary;
     padding: rem(4);
     transition: color $timing $easing;
 
     .btn__txt {
       margin-right: rem(8);
-      color: $orange;
+      color: $color-secondary;
       transition: color $timing $easing;
     }
 
@@ -143,7 +143,7 @@
     }
 
     .ico__path {
-      stroke: $orange;
+      stroke: $color-secondary;
       transition: stroke $timing $easing;
     }
 
@@ -151,14 +151,14 @@
     &:active,
     &:focus {
       background-color: transparent;
-      color: $teal-darkest;
+      color: $color-primary-darkest;
 
       .btn__txt {
-        color: $teal-darkest;
+        color: $color-primary-darkest;
       }
 
       .ico__path {
-        stroke: $teal-darkest;
+        stroke: $color-primary-darkest;
       }
     }
   }
@@ -181,18 +181,18 @@
 
   // Close button
   &--close {
-    background-color: $teal;
+    background-color: $color-primary;
     padding: rem(15) rem(16) rem(12);
 
     &:hover,
     &:active,
     &:focus {
-      background-color: $teal-darker;
+      background-color: $color-primary-darker;
     }
 
     &:active,
     &:focus {
-      outline: rem(3) solid $teal-light;
+      outline: rem(3) solid $color-primary-light;
     }
 
     .btn__ico {

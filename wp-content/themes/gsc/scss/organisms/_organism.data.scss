@@ -130,11 +130,11 @@
 
     // Grid item colors
     &--gray {
-      color: $teal-darkest;
+      color: $color-primary-darkest;
       background: linear-gradient(rgba(225, 233, 237, 0.85), rgba(225, 233, 237, 0.85)), url(../images/temp/data-item-1.jpg);
 
       .data__label {
-        border-top: solid $brdr-xxs $teal-darkest;
+        border-top: solid $brdr-xxs $color-primary-darkest;
       }
     }
 
@@ -163,11 +163,11 @@
     }
 
     &--yellow {
-      color: $teal-darkest;
+      color: $color-primary-darkest;
       background: linear-gradient(rgba(255, 210, 33, 0.85), rgba(255, 210, 33, 0.85)), url(../images/temp/data-item-5.jpg);
 
       .data__label {
-        border-top: solid $brdr-xxs $teal-darkest;
+        border-top: solid $brdr-xxs $color-primary-darkest;
       }
     }
 

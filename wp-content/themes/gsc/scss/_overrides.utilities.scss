@@ -1,11 +1,11 @@
 .color-teal {
-  color: $teal;
-  stroke: $teal;
+  color: $color-primary;
+  stroke: $color-primary;
 }
 
 .color-orange {
-  color: $orange;
-  stroke: $orange;
+  color: $color-secondary;
+  stroke: $color-secondary;
 }
 
 .scrn-rdr-txt {
@@ -27,5 +27,5 @@
 }
 
 .alt-bg {
-  background-color: $tan-lightest;
+  background-color: $color-accent-primary-lightest;
 }

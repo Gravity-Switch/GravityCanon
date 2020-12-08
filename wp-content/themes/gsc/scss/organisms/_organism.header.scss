@@ -43,7 +43,7 @@
         border-color: $charcoal-light;
 
         @include brkpnt-md {
-          background-color: $teal;
+          background-color: $color-primary;
           color: $white;
         }
         .ico__path {
@@ -80,7 +80,7 @@
 
       &:hover {
         @include brkpnt-md {
-          background-color: $teal-darker;
+          background-color: $color-primary-darker;
         }
       }
     }
