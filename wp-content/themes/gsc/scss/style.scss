@@ -211,14 +211,14 @@ BEWARE, THOSE WHO WOULD BREAK THE SACRED ORDER OF COMPONENTS - brenda */
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-@import "template.home-page.scss";
-@import "template.standard-interior.scss";
-@import "template.resources.scss";
-@import "template.career.scss";
-@import "template.career-list.scss";
-@import "template.404.scss";
-@import "plugin.helpful.scss";
-@import "plugin.facetwp.scss";
+@import "templates/template.home-page.scss";
+@import "templates/template.standard-interior.scss";
+@import "templates/template.resources.scss";
+@import "templates/template.career.scss";
+@import "templates/template.career-list.scss";
+@import "templates/template.404.scss";
+@import "plugins/plugin.helpful.scss";
+@import "plugins/plugin.facetwp.scss";
 
 /*--------------------------------------------------------------
 # Infinite scroll
@@ -232,7 +232,6 @@ BEWARE, THOSE WHO WOULD BREAK THE SACRED ORDER OF COMPONENTS - brenda */
 # jQuery UI Theme
 --------------------------------------------------------------*/
 @import "jquery-ui.css";
-
 
 /*--------------------------------------------------------------
 # Utilities
