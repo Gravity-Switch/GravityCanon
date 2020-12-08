@@ -30,35 +30,14 @@
     }
   }
 
-  &__main {
-    // display: none; Remove for new JS
-
-    /* Adjust for new JS
-    &.is-active {
-      display: block;
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      top: 0;
-      overflow-y: auto;
-      z-index: 100;
-      background: $white;
-    } */
-  }
-
   &__form {
-    //height: 100vh;
     display: flex;
     flex-direction: column;
-    //overflow: hidden;
-
     height: 100vh;
   }
 
   &__inner {
     padding: rem(24) 0;
-    //overflow-x: hidden;
-    //overflow-y: auto;
     flex-grow: 1;
 
     @include brkpnt-md {
@@ -67,18 +46,11 @@
     }
   }
 
-  &__filters {
-    //padding-bottom: rem(200);
-  }
-
   &__actions {
     padding: rem(32) rem(24);
     display: flex;
     background-color: $tan-lightest;
     border-top: rem(1) solid $charcoal-lighter;
-    // position: sticky;
-    //position: absolute;
-    //bottom: 0;
     z-index: 100;
     flex-grow: 0;
     flex-shrink: 0;
@@ -250,11 +222,6 @@
       }
 
       &__link {
-        // &:hover,
-        // &:active {
-        //   text-decoration: underline;
-        // }
-
         &--current-page {
           background-color: $tan-lighter;
           font-weight: 600;
@@ -430,21 +397,10 @@
 
     .menu {
       &__main {
-        // height: 0;
-        // position: fixed;
-        // overflow: hidden;
-        // transition: height $timing $easing;
-        // &.open {
-        //   height: 100vh;
-        // }
         @include brkpnt-md {
           display: block;
           position: static;
-          // height: auto;
           width: auto;
-          // &.open {
-          //   height: auto;
-          // }
         }
       }
       &__top,
@@ -469,8 +425,6 @@
   &--help {
     width: 100vw;
     height: 100vh;
-    //display: flex;
-    //flex-direction: column;
     padding: 0;
 
     // .menu
@@ -611,7 +565,7 @@
       }
 
       .link__content {
-        @include font-settings($khand, 500);
+        @include font-settings($font-secondary, 500);
         @include typesetting(25, 32);
         text-decoration: none;
 

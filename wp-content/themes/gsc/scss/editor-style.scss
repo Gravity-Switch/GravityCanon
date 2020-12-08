@@ -1,23 +1,16 @@
 /*!
-Theme Name: Advance VT
-Theme URI: http://underscores.me/
+Theme Name: Gravity Canon
 Author: Gravity Switch
 Author URI: http://gravityswitch.com
-Description: Advance VT new site theme
+Description: Gravity Switch Canonical Theme & Components
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: avt
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Text Domain:
+Tags:
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned.
-
-Advance VT is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 /*--------------------------------------------------------------
@@ -43,6 +36,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+# Functions
+--------------------------------------------------------------*/
+@import "tools/tools.functions.scss";
+/*--------------------------------------------------------------
 # Variables
 --------------------------------------------------------------*/
 @import "settings.variables.scss";
@@ -58,99 +55,84 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "settings.colors.scss";
 
 /*--------------------------------------------------------------
-# Functions
---------------------------------------------------------------*/
-@import "tools.functions";
-
-/*--------------------------------------------------------------
 # Mixins
 --------------------------------------------------------------*/
-@import "tools.mixins";
+@import "tools/tools.mixins";
 
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
-@import "generic.normalize.scss";
+@import "base/generic.normalize.scss";
 
 /*--------------------------------------------------------------
 # Global styles
 --------------------------------------------------------------*/
-@import "generic.global.scss";
+@import "base/generic.global.scss";
 
 /*--------------------------------------------------------------
-# @import for every .scss in /compontents
+# Containers
 --------------------------------------------------------------*/
-@import "../components/**/*.scss";
+@import "base/object.container.scss";
+
+/*--------------------------------------------------------------
+# Containers
+--------------------------------------------------------------*/
+@import "settings.grid.scss";
 
 /*--------------------------------------------------------------
 # Typesetting
 --------------------------------------------------------------*/
-@import "atom.typesetting.scss";
+@import "base/atom.typesetting.scss";
 
 /*--------------------------------------------------------------
 # Headings
 --------------------------------------------------------------*/
-@import "atom.headings.scss";
+@import "settings.headings.scss";
 
 /*--------------------------------------------------------------
 # Paragraphs
 --------------------------------------------------------------*/
-@import "atom.paragraphs.scss";
+@import "settings.paragraphs.scss";
 
 /*--------------------------------------------------------------
 # Lists
 --------------------------------------------------------------*/
-@import "atom.lists.scss";
+@import "base/atom.lists.scss";
 
 /*--------------------------------------------------------------
 # Links
 --------------------------------------------------------------*/
-@import "atom.links.scss";
-
+@import "settings.links.scss";
 
 /*--------------------------------------------------------------
 # Images
 --------------------------------------------------------------*/
-@import "atom.images.scss";
+@import "settings.images.scss";
 
 /*--------------------------------------------------------------
 # Labels
 --------------------------------------------------------------*/
-@import "atom.labels.scss";
+@import "base/atom.labels.scss";
 
 /*--------------------------------------------------------------
 # Inputs
 --------------------------------------------------------------*/
-@import "atom.inputs.scss";
+@import "base/atom.inputs.scss";
 
 /*--------------------------------------------------------------
 # Stats
 --------------------------------------------------------------*/
-@import "atom.stat.scss";
+@import "settings.stat.scss";
 
 /*--------------------------------------------------------------
 # Logo
 --------------------------------------------------------------*/
-@import "atom.logo.scss";
-
-/*--------------------------------------------------------------
-# Tabs
---------------------------------------------------------------*/
-// @import "molecule.tabs.scss";
-
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-# Accessibility
---------------------------------------------------------------*/
+@import "settings.logo.scss";
 
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
-@import "molecule.testimonial.scss";
-
+@import "molecules/molecule.testimonial.scss";
 
 /*
 
@@ -183,28 +165,59 @@ BEWARE, THOSE WHO WOULD BREAK THE SACRED ORDER OF COMPONENTS - brenda */
 --------------------------------------------------------------*/
 @import "../components/**/component.scss";
 
+/* BEWARE!!!!!!!!!!! - brenda */
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+@import "organisms/organism.header.scss";
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+@import "organisms/organism.footer.scss";
+
+/*--------------------------------------------------------------
+# Carousel
+--------------------------------------------------------------*/
+@import "organisms/organism.carousel.scss";
+
+/*--------------------------------------------------------------
+# Carousel Block
+--------------------------------------------------------------*/
+@import "blocks/block.carousel-block.scss";
+
+/*--------------------------------------------------------------
+# Modal
+--------------------------------------------------------------*/
+@import "organisms/organism.modal.scss";
 
 /*--------------------------------------------------------------
 # Menu
 --------------------------------------------------------------*/
-@import "organism.header.scss";
+@import "organisms/organism.menu.scss";
 
 /*--------------------------------------------------------------
-# Menu
+# Data
 --------------------------------------------------------------*/
-@import "organism.menu.scss";
+@import "organisms/organism.data.scss";
 
 /*--------------------------------------------------------------
-# Menu
+# Guide
 --------------------------------------------------------------*/
-@import "organism.modal.scss";
+@import "organisms/organism.guide.scss";
 
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-@import "template.resources.scss";
-@import "plugin.helpful.scss";
-@import "plugin.facetwp.scss";
+@import "templates/template.home-page.scss";
+@import "templates/template.standard-interior.scss";
+@import "templates/template.resources.scss";
+@import "templates/template.career.scss";
+@import "templates/template.career-list.scss";
+@import "templates/template.404.scss";
+@import "plugins/plugin.helpful.scss";
+@import "plugins/plugin.facetwp.scss";
 
 /*--------------------------------------------------------------
 # Infinite scroll
@@ -213,7 +226,15 @@ BEWARE, THOSE WHO WOULD BREAK THE SACRED ORDER OF COMPONENTS - brenda */
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# jQuery UI Theme
+--------------------------------------------------------------*/
+@import "jquery-ui.css";
+
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
 @import "overrides.utilities.scss";
+
+/* hi */

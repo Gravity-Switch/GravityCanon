@@ -52,7 +52,7 @@
 
     //.tabs__link
     &__link {
-      @include font-settings($src-sans-pro, 600);
+      @include font-settings($font-primary, 600);
       @include typesetting(16, 20);
       text-transform: uppercase;
       text-align: left;

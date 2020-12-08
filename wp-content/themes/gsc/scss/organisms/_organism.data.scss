@@ -196,7 +196,7 @@
   }
 
   &__num {
-    @include font-settings($khand, 500);
+    @include font-settings($font-secondary, 500);
     @include typesetting(40, 44);
 
     @include brkpnt-xs {

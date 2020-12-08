@@ -8,7 +8,7 @@
   }
 
   &__quote {
-    @include font-settings($script, 400);
+    @include font-settings($font-tertiary, 400);
     @include typesetting(28, 44);
     color: $teal;
     margin: rem(20) 0;

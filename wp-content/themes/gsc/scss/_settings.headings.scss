@@ -4,13 +4,13 @@
 h1,
 h2,
 h3 {
-  @include font-settings($khand, 500);
+  @include font-settings($font-secondary, 500);
 }
 
 h4,
 h5,
 h6 {
-  @include font-settings($src-sans-pro, 700);
+  @include font-settings($font-primary, 700);
 }
 
 /*--------------------------------------------------------------
@@ -66,12 +66,12 @@ h6 {
   }
   // Subheading styles
   &--sub-md {
-    @include font-settings($khand, 500);
+    @include font-settings($font-secondary, 500);
     @include typesetting(25, 32);
     color: $charcoal;
   }
   &--sub-sm {
-    @include font-settings($src-sans-pro, 600);
+    @include font-settings($font-primary, 600);
     @include typesetting(16, 20);
     text-transform: uppercase;
     color: $charcoal;
@@ -125,10 +125,13 @@ ol + h6 {
   }
 }
 
-
 @media print {
-
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin: 0 0 rem(8);
   }
 }
