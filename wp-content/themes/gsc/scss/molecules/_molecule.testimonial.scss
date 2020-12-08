@@ -85,7 +85,7 @@
       display: flex;
       justify-content: center;
       padding: rem(20) 0;
-      border-top: rem(1) solid $charcoal-light;
+      border-top: $brdr-xxs solid $charcoal-light;
 
       @include brkpnt-xs {
         padding: rem(28) 0;

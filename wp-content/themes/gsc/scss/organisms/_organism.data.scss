@@ -134,7 +134,7 @@
       background: linear-gradient(rgba(225, 233, 237, 0.85), rgba(225, 233, 237, 0.85)), url(../images/temp/data-item-1.jpg);
 
       .data__label {
-        border-top: solid rem(1) $teal-darkest;
+        border-top: solid $brdr-xxs $teal-darkest;
       }
     }
 
@@ -167,7 +167,7 @@
       background: linear-gradient(rgba(255, 210, 33, 0.85), rgba(255, 210, 33, 0.85)), url(../images/temp/data-item-5.jpg);
 
       .data__label {
-        border-top: solid rem(1) $teal-darkest;
+        border-top: solid $brdr-xxs $teal-darkest;
       }
     }
 
@@ -206,7 +206,7 @@
 
   &__label {
     @include typesetting(16, 24);
-    border-top: solid rem(1) $white;
+    border-top: solid $brdr-xxs $white;
     display: block;
     padding-top: rem(16);
     margin-top: rem(16);

@@ -58,7 +58,7 @@
       text-align: left;
       padding: rem(28) rem(28) rem(28) 0;
       color: $teal-darkest;
-      border-bottom: rem(1) solid $charcoal-light;
+      border-bottom: $brdr-xxs solid $charcoal-light;
       transition: color $timing $easing, transform $timing $easing;
 
       @include brkpnt-xs {
@@ -89,7 +89,7 @@
       }
 
       &-txt {
-        border-right: rem(1) solid $charcoal-light;
+        border-right: $brdr-xxs solid $charcoal-light;
         padding: 0 rem(24);
         margin-right: rem(24);
         width: 92%;
@@ -121,7 +121,7 @@
         top: 0;
         left: 0;
         opacity: 0;
-        border-left: rem(8) solid $teal-darker;
+        border-left: $brdr-lg solid $teal-darker;
         transition: opacity $timing $easing;
       }
 
@@ -138,7 +138,7 @@
       &.is-active {
         color: $white;
         background-color: $orange;
-        border-bottom: rem(1) solid $charcoal-light;
+        border-bottom: $brdr-xxs solid $charcoal-light;
 
         @include brkpnt-xs {
           color: $orange;
@@ -152,7 +152,7 @@
         }
 
         .tabs__link-txt {
-          border-right: rem(1) solid $white;
+          border-right: $brdr-xxs solid $white;
 
           @include brkpnt-xs {
             border-right-color: $charcoal-light;
@@ -197,7 +197,7 @@
       @include brkpnt-xs {
         width: 54%;
         min-height: rem(680);
-        border-left: rem(1) solid $charcoal-light;
+        border-left: $brdr-xxs solid $charcoal-light;
         padding: 0 0 0 rem(28);
       }
 
@@ -211,7 +211,7 @@
       border-left: none;
 
       &__main {
-        border-left: rem(12) solid $teal-darkest;
+        border-left: $brdr-xl solid $teal-darkest;
       }
     }
 

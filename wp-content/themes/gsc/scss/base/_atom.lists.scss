@@ -71,7 +71,7 @@ ol {
 --------------------------------------------------------------*/
 .list {
   &__item--dividers {
-    border-bottom: rem(1) solid $charcoal-lighter;
+    border-bottom: $brdr-xxs solid $charcoal-lighter;
     padding: rem(12) 0;
     margin-bottom: 0;
 

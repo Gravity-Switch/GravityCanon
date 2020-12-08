@@ -3,7 +3,7 @@
     @include font-settings($font-secondary, 500);
     @include typesetting(25, 32);
     color: $charcoal;
-    border-bottom: rem(4) solid $tan-light;
+    border-bottom: $brdr-sm solid $tan-light;
     text-decoration: none;
     padding: rem(14) rem(18) rem(10);
     display: block;

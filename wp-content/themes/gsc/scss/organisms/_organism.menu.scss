@@ -50,7 +50,7 @@
     padding: rem(32) rem(24);
     display: flex;
     background-color: $tan-lightest;
-    border-top: rem(1) solid $charcoal-lighter;
+    border-top: $brdr-sm solid $charcoal-lighter;
     z-index: 100;
     flex-grow: 0;
     flex-shrink: 0;
@@ -68,7 +68,7 @@
 
   .list {
     margin-left: 0;
-    border-top: rem(1) solid $charcoal-lighter;
+    border-top: $brdr-sm solid $charcoal-lighter;
 
     &__item--dividers {
       padding: 0;
@@ -156,7 +156,7 @@
       display: flex;
       flex-direction: column;
       width: rem(320);
-      border-right: rem(1) solid $charcoal-lighter;
+      border-right: $brdr-sm solid $charcoal-lighter;
     }
     @media print {
       display: none !important;
@@ -196,7 +196,7 @@
     // .list
     .list {
       margin-left: 0;
-      border-top: rem(1) solid $charcoal-lighter;
+      border-top: $brdr-sm solid $charcoal-lighter;
 
       @include brkpnt-md {
         margin-right: 0;
@@ -245,7 +245,7 @@
       }
 
       &--nested {
-        border-top: rem(1) solid $charcoal-lighter;
+        border-top: $brdr-sm solid $charcoal-lighter;
         padding: rem(20) 0 rem(20);
         margin: 0;
 
@@ -302,7 +302,7 @@
 
       &--nested {
         background-color: $tan-lightest;
-        border-top: rem(8) solid $orange;
+        border-top: $brdr-lg solid $orange;
         margin: 0;
         position: relative;
 
@@ -316,7 +316,7 @@
 
         .list__item--dividers {
           @include brkpnt-md {
-            border-bottom: rem(1) solid $charcoal-lighter;
+            border-bottom: $brdr-sm solid $charcoal-lighter;
           }
         }
       }
@@ -337,9 +337,9 @@
 
         &::after {
           content: "";
-          border-top: rem(6) solid transparent;
-          border-bottom: rem(6) solid transparent;
-          border-left: rem(8) solid $orange;
+          border-top: $brdr-md solid transparent;
+          border-bottom: $brdr-md solid transparent;
+          border-left: $brdr-md solid $orange;
           height: 0.5em;
           margin-left: 0.75em;
           width: 0.5em;

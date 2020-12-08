@@ -12,8 +12,8 @@
   &.staggered-content--divider {
     .staggered-content__text {
       @include brkpnt-sm {
-        padding-left: rem(20);    // totally arbitrary padding, but this is a good default
-        border-left: 1px solid $charcoal-dark;
+        padding-left: rem(20); // totally arbitrary padding, but this is a good default
+        border-left: $brdr-xxs solid $charcoal-dark;
       }
     }
   }

@@ -4,7 +4,7 @@
 
   &__main {
     @include brkpnt-xs {
-      border-bottom: 1px solid $charcoal-light;
+      border-bottom: $brdr-sm solid $charcoal-light;
     }
   }
 

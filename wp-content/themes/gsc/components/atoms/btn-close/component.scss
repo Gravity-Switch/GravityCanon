@@ -11,7 +11,7 @@
 
     &:active,
     &:focus {
-      outline: rem(3) solid $teal-light;
+      outline: $brdr-sm solid $teal-light;
     }
 
     .btn__ico {

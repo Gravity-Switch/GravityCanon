@@ -2,74 +2,74 @@
 # Card--with-data - These cards contain tabs
 --------------------------------------------------------------*/
 .card--with-data {
-	.card {
-		&__title {
-			margin-bottom: rem(28);
-		}
+  .card {
+    &__title {
+      margin-bottom: rem(28);
+    }
 
-		&__panel {
-			display: flex;
+    &__panel {
+      display: flex;
 
-			&[aria-hidden="true"] {
-				display: none;
-			}
-		}
+      &[aria-hidden="true"] {
+        display: none;
+      }
+    }
 
-		&__actions {
-			text-align: center;
+    &__actions {
+      text-align: center;
 
-			.btn {
-				width: 100%;
-				max-width: rem(280);
-			}
-		}
-	}
+      .btn {
+        width: 100%;
+        max-width: rem(280);
+      }
+    }
+  }
 
-	.tabs {
-		&__list {
-			padding-bottom: rem(40);
-			margin-bottom: rem(24);
-			border-bottom: rem(1) solid $charcoal-light;
-			display: flex;
-			justify-content: space-between;
-		}
+  .tabs {
+    &__list {
+      padding-bottom: rem(40);
+      margin-bottom: rem(24);
+      border-bottom: $brdr-xxs solid $charcoal-light;
+      display: flex;
+      justify-content: space-between;
+    }
 
-		&__item {
-			flex-basis: 48%;
-			flex-grow: 0;
-		}
+    &__item {
+      flex-basis: 48%;
+      flex-grow: 0;
+    }
 
-		&__section {
-			margin-bottom: rem(28);
-			margin-top: 0;
-			padding: 0;
-			background-color: transparent;
-		}
+    &__section {
+      margin-bottom: rem(28);
+      margin-top: 0;
+      padding: 0;
+      background-color: transparent;
+    }
 
-		&__body {
-			display: flex;
-		}
-	}
+    &__body {
+      display: flex;
+    }
+  }
 
-	.btn--toggle {
-		width: 100%;
-		padding: rem(16) rem(16);
-		text-align: center;
-	}
+  .btn--toggle {
+    width: 100%;
+    padding: rem(16) rem(16);
+    text-align: center;
+  }
 
-	.stat {
-		border-right: 1px solid $charcoal-light;
+  .stat {
+    border-right: $brdr-xxs solid $charcoal-light;
 
-		&__heading {
-			display: none;
-		}
+    &__heading {
+      display: none;
+    }
 
-		&:last-child {
-			border: none;
-		}
+    &:last-child {
+      border: none;
+    }
 
-		&--datapoint {
-			padding: rem(16) 0;
-		}
-	}
+    &--datapoint {
+      padding: rem(16) 0;
+    }
+  }
 }

@@ -56,12 +56,12 @@ h6 {
 .title {
   // Adds orange bar to left of heading
   &--border-left {
-    border-left: rem(8) solid $orange;
+    border-left: $brdr-lg solid $orange;
     padding-left: rem(20);
   }
   // or right
   &--border-right {
-    border-right: rem(8) solid $orange;
+    border-right: $brdr-lg solid $orange;
     padding-right: rem(20);
   }
   // Subheading styles

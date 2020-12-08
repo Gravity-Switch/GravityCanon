@@ -53,9 +53,9 @@ a {
     // Creates arrow
     &::after {
       content: "";
-      border-top: rem(6) solid transparent;
-      border-bottom: rem(6) solid transparent;
-      border-left: rem(8) solid $orange;
+      border-top: $brdr-md solid transparent;
+      border-bottom: $brdr-md solid transparent;
+      border-left: $brdr-lg solid $orange;
       margin-left: rem(8);
       position: absolute;
       margin-top: rem(3); // Vertically centers arrow
@@ -79,7 +79,7 @@ a {
 --------------------------------------------------------------*/
   &--social {
     border-radius: 50%;
-    border: rem(1) solid $teal;
+    border: $brdr-xxs solid $teal;
     width: rem(46);
     height: rem(46);
     color: $teal-darkest;

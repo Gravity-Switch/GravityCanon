@@ -26,7 +26,7 @@
     &:focus {
       + .label--radio::before {
         box-shadow: 0 0 0 rem(3) $teal-light;
-        outline: rem(3) solid transparent; // For Windows high contrast mode.
+        outline: $brdr-sm solid transparent; // For Windows high contrast mode.
       }
     }
 

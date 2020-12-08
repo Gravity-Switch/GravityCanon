@@ -3,11 +3,11 @@
   flex-wrap: wrap;
   position: relative;
   z-index: 2;
- 
+
   @include brkpnt-md {
     justify-content: space-between;
     padding: rem(24) rem(24) rem(28);
-    border-bottom: rem(1) solid $charcoal-lighter;
+    border-bottom: $brdr-xxs solid $charcoal-lighter;
   }
 
   @media print {

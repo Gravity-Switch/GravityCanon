@@ -6,7 +6,7 @@
   display: flex;
   align-items: flex-start;
   margin-bottom: rem(28);
-  border-bottom: rem(1) solid $charcoal-light;
+  border-bottom: $brdr-xxs solid $charcoal-light;
   background-color: transparent;
   padding-bottom: rem(28);
 
@@ -99,7 +99,7 @@
     }
 
     &:last-child {
-      border-right: rem(1) solid $charcoal-light;
+      border-right: $brdr-xxs solid $charcoal-light;
       padding-left: rem(20);
     }
   }

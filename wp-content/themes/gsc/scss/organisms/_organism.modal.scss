@@ -118,7 +118,7 @@ body.modal-open {
 }
 
 [data-modal-x] {
-  border-right: rem(2) solid;
+  border-right: $brdr-xs solid;
   bottom: 0;
   display: block;
   height: 2em;
@@ -133,7 +133,7 @@ body.modal-open {
 }
 
 [data-modal-x]:after {
-  border-right: rem(2) solid;
+  border-right: $brdr-xs solid;
   content: "";
   height: 100%;
   left: 0;
@@ -217,7 +217,7 @@ body.modal-open {
 
   &--story {
     width: 98%;
-    border-left: rem(8) solid $orange;
+    border-left: $brdr-lg solid $orange;
     //height: 100%;
 
     @include brkpnt-sm {
@@ -242,7 +242,7 @@ body.modal-open {
 
         @include brkpnt-sm {
           background-color: $white;
-          border-left: rem(8) solid $orange;
+          border-left: $brdr-lg solid $orange;
           padding: rem(24);
           margin-left: rem(82);
         }
@@ -295,7 +295,7 @@ body.modal-open {
     height: rem(120);
 
     @include brkpnt-sm {
-      border: solid rem(4) $white;
+      border: solid $brdr-sm $white;
       width: rem(160);
       height: rem(160);
       margin: 0;

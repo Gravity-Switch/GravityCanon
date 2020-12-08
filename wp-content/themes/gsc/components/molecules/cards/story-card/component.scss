@@ -2,41 +2,41 @@
 # Card - Story card
 --------------------------------------------------------------*/
 .card--alt.card--story {
-	padding-top: rem(100);
-	border: none;
-	background: none;
+  padding-top: rem(100);
+  border: none;
+  background: none;
 
-	&:after {
-		display: none;
-		background: none;
-	}
+  &:after {
+    display: none;
+    background: none;
+  }
 
-	.card {
-		&__main {
-			padding: 0 13.063063063% rem(67) 15.765765766%;
-			border-left: rem(8) solid $orange;
-			background: $white;
-		}
+  .card {
+    &__main {
+      padding: 0 13.063063063% rem(67) 15.765765766%;
+      border-left: $brdr-lg solid $orange;
+      background: $white;
+    }
 
-		&__avatar {
-			margin-top: rem(-100);
-			width: rem(180);
-			height: rem(180);
-		}
+    &__avatar {
+      margin-top: rem(-100);
+      width: rem(180);
+      height: rem(180);
+    }
 
-		&__subtitle {
-			display: block;
-			margin-top: rem(50);
-		}
+    &__subtitle {
+      display: block;
+      margin-top: rem(50);
+    }
 
-		&__title {
-			@include typesetting(42, 42);
-			margin-top: rem(5);
-			color: $teal-darkest;
-		}
+    &__title {
+      @include typesetting(42, 42);
+      margin-top: rem(5);
+      color: $teal-darkest;
+    }
 
-		&__body {
-			color: $teal-darkest;
-		}
-	}
+    &__body {
+      color: $teal-darkest;
+    }
+  }
 }

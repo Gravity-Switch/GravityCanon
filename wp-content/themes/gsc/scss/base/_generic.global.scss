@@ -18,7 +18,7 @@ textarea,
 .btn {
   &:focus,
   &:active {
-    outline: rem(3) solid $teal-light;
+    outline: $brdr-sm solid $teal-light;
     outline-offset: rem(-2); // Prevents outline from getting cut off in Safari
   }
 }
@@ -27,7 +27,6 @@ a,
 button {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // Removes gray background when button or link is tapped in iOS
 }
-
 
 button {
   border: none;
@@ -52,7 +51,7 @@ svg {
 }
 
 /* Text meant only for screen readers. */
-.screen-reader-text { 
+.screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);

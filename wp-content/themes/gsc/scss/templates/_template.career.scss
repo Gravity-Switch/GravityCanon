@@ -1,174 +1,172 @@
 .career-info {
-	@include row;
-	padding-top: rem(96);
-	padding-bottom: rem(78);
-	border-bottom: 1px solid $charcoal-light;
-	&__aside {
-		@include columns(7, true);
-		.figure__img {
-			// width: 100%;
-			// height: auto;
-			@include brkpnt-sm {
-				// width: auto;
-			}
-		}
-	}
-	&__main {
-		@include columns(13, true);
-		margin-top: rem(40);
-		padding-right: $gutter-fluid;
-		@include brkpnt-sm {
-			border-right: 1px solid $charcoal-light;
-			margin-top: 0;
-		}
-	}
-	&__footer {
-		@include columns(4);
-		display: flex;
-		margin-top: $gutter-static;
-		padding-top: $gutter-static;
-		border-top: 1px solid $charcoal-light;
-		@include brkpnt-sm {
-			border-top: none;
-			margin-top: 0;
-			padding-top: 0;
-			flex-direction: column;
-		}
-		.stat {
-			padding-bottom: $gutter-static;
-			.stat__heading {
-				display: none;
-			}
-			&:last-child {
-				border-left: 1px solid $charcoal-light;
-				@include brkpnt-sm {
-					padding-top: $gutter-static;
-					border-left: none;
-					border-top: 1px solid $charcoal-light;
-				}
-			}
-		}
-	}
-
+  @include row;
+  padding-top: rem(96);
+  padding-bottom: rem(78);
+  border-bottom: $brdr-xxs solid $charcoal-light;
+  &__aside {
+    @include columns(7, true);
+    .figure__img {
+      // width: 100%;
+      // height: auto;
+      @include brkpnt-sm {
+        // width: auto;
+      }
+    }
+  }
+  &__main {
+    @include columns(13, true);
+    margin-top: rem(40);
+    padding-right: $gutter-fluid;
+    @include brkpnt-sm {
+      border-right: $brdr-xxs solid $charcoal-light;
+      margin-top: 0;
+    }
+  }
+  &__footer {
+    @include columns(4);
+    display: flex;
+    margin-top: $gutter-static;
+    padding-top: $gutter-static;
+    border-top: $brdr-xxs solid $charcoal-light;
+    @include brkpnt-sm {
+      border-top: none;
+      margin-top: 0;
+      padding-top: 0;
+      flex-direction: column;
+    }
+    .stat {
+      padding-bottom: $gutter-static;
+      .stat__heading {
+        display: none;
+      }
+      &:last-child {
+        border-left: $brdr-xxs solid $charcoal-light;
+        @include brkpnt-sm {
+          padding-top: $gutter-static;
+          border-left: none;
+          border-top: 1px solid $charcoal-light;
+        }
+      }
+    }
+  }
 }
 
 .skills-required {
-	padding: rem(77) 0;
-	@include row;
-	display: flex;
-	flex-direction: column;
-	@include brkpnt-sm {
-		flex-direction: row;
-	}
+  padding: rem(77) 0;
+  @include row;
+  display: flex;
+  flex-direction: column;
+  @include brkpnt-sm {
+    flex-direction: row;
+  }
   &__title {
     @include columns(7, true);
   }
   &__image {
-		@include columns(6);
-		order: 1;
-		width: 100%;
-		height: auto;
+    @include columns(6);
+    order: 1;
+    width: 100%;
+    height: auto;
   }
-	&__text {
-		@include columns(10);
-		@include brkpnt-sm {
-			margin-right: $column-fluid + ($gutter-fluid * 2);
-			ul {
-				margin-top: 0;
-			}
-		}
-	}
+  &__text {
+    @include columns(10);
+    @include brkpnt-sm {
+      margin-right: $column-fluid + ($gutter-fluid * 2);
+      ul {
+        margin-top: 0;
+      }
+    }
+  }
 }
 
 .lists-with-cards {
-	@extend .alt-bg;
-	&__inner {
-		padding: rem(77) 0;
-		@include row;
-	}
-	&__lists {
-		@include columns(7, true);
-		.list {
-			margin: 0;
-		}
-		// All this junk is just overriding the default .link__content styling
-		.link__content {
-			text-transform: none;
-			text-decoration: none;
-			color: $teal-darkest;
-			font-weight: 400;
-			letter-spacing: 0;
-			@include typesetting(16, 24);
-			@include brkpnt-xs {
-				@include typesetting(18, 28);
-			}
-			&:after {
-				margin-top: rem(7);
-			}
-		}
-	}
+  @extend .alt-bg;
+  &__inner {
+    padding: rem(77) 0;
+    @include row;
+  }
+  &__lists {
+    @include columns(7, true);
+    .list {
+      margin: 0;
+    }
+    // All this junk is just overriding the default .link__content styling
+    .link__content {
+      text-transform: none;
+      text-decoration: none;
+      color: $teal-darkest;
+      font-weight: 400;
+      letter-spacing: 0;
+      @include typesetting(16, 24);
+      @include brkpnt-xs {
+        @include typesetting(18, 28);
+      }
+      &:after {
+        margin-top: rem(7);
+      }
+    }
+  }
 
-	&__cards {
-		@include columns(17);
-		padding-top: rem(77);
-		@include brkpnt-sm {
-			padding-top: 0;
-		}
-		.card + .card {
-			margin-top: rem(32);
-		}
-	}
-
+  &__cards {
+    @include columns(17);
+    padding-top: rem(77);
+    @include brkpnt-sm {
+      padding-top: 0;
+    }
+    .card + .card {
+      margin-top: rem(32);
+    }
+  }
 }
 
 .multimedia-resources {
-	padding: rem(90) 0;
+  padding: rem(90) 0;
 }
 
 .career-story {
-	padding-top: rem(55);
-	padding-bottom: rem(88);
-	background: $teal-darker;
-	@include brkpnt-sm {
-		padding-top: rem(86);
-		padding-bottom: rem(99);
-		background-image: url('../images/idylic-countryside.jpg');
-		background-size: cover;
-	}
-	&__inner {
-		@include row;
-	}
-	.card {
-		margin: 0 auto;
-		@include brkpnt-sm {
-			@include columns(18);
-		}
-	}
+  padding-top: rem(55);
+  padding-bottom: rem(88);
+  background: $teal-darker;
+  @include brkpnt-sm {
+    padding-top: rem(86);
+    padding-bottom: rem(99);
+    background-image: url("../images/idylic-countryside.jpg");
+    background-size: cover;
+  }
+  &__inner {
+    @include row;
+  }
+  .card {
+    margin: 0 auto;
+    @include brkpnt-sm {
+      @include columns(18);
+    }
+  }
 }
 
 .career-navigation {
-	@include row;
-	padding: rem(50) 0;
-	@include brkpnt-sm {
-		align-items: center;
-	}
-	justify-content: space-between;
-	.link {
-		&--return {
-			@include columns(6);
-		}
-		&--previous,
-		&--next {
-			@include columns(9);
-			align-self: stretch;
-		}
-		&--previous {
-			border-right: 1px solid $charcoal-light;
-			padding-right: column-width(3);
-		}
-		&--next {
-			border-left: 1px solid $charcoal-light;
-			padding-left: column-width(3);
-		}
-	}
+  @include row;
+  padding: rem(50) 0;
+  @include brkpnt-sm {
+    align-items: center;
+  }
+  justify-content: space-between;
+  .link {
+    &--return {
+      @include columns(6);
+    }
+    &--previous,
+    &--next {
+      @include columns(9);
+      align-self: stretch;
+    }
+    &--previous {
+      border-right: $brdr-lg solid $charcoal-light;
+      padding-right: column-width(3);
+    }
+    &--next {
+      border-left: $brdr-lg solid $charcoal-light;
+      padding-left: column-width(3);
+    }
+  }
 }
