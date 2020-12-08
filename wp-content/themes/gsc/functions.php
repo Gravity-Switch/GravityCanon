@@ -339,7 +339,7 @@
    				'operator' => '==',
    				'value' => 'acf/button-block',
    			),
-   		),
+   		), 
    	),
    	'menu_order' => 0,
    	'position' => 'normal',
@@ -352,3 +352,4 @@
    ));
 
    endif;
+}
