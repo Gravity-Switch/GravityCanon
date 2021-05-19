@@ -8,8 +8,6 @@ add_action("wp_footer", function () {
   <?php
 });
 
-
-
 // save helpful total score for ordering
 add_action('save_post',function ($post_id) {
 	make_helpful_queryable($post_id);
