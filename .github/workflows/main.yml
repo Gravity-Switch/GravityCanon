@@ -33,5 +33,3 @@ jobs:
           remote_key: ${{ secrets.KINSTA_KEY }}
           remote_path: ${{ secrets.FTP_SERVER_DIR }}
           remote_port: ${{ secrets.FTP_PORT }}
-          ARGS: --verbose  
-
