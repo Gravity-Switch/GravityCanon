@@ -7,6 +7,10 @@
  * @package GS_Canon
 */
 
+// set global variable for google maps api key
+global $GMAPS_API_KEY;
+$GMAPS_API_KEY = 'AIzaSyCSs9Ip3jzJdmjBMx3drs7-mfKsJHHq_lo';
+
  if ( ! defined( '_S_VERSION' ) ) {
  	// Replace the version number of the theme on each release.
  	define( '_S_VERSION', '1.0.0' );
@@ -353,3 +357,10 @@
 
    endif;
 endif;
+
+// register api key for acf/google map integration
+function my_acf_google_map_api( $api ){
+    $api['key'] = 'AIzaSyCSs9Ip3jzJdmjBMx3drs7-mfKsJHHq_lo';
+    return $api;
+}
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
