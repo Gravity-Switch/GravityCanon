@@ -1,3 +1,10 @@
 # GravityCanon
 base setup for gs wp sites using gsc system
-commit test 001
+
+
+## GMap Component
+
+In order to use the component
+
+- Functions.php needs proper GMap API Keys
+- An ACF Google Maps field must be added to the options page
