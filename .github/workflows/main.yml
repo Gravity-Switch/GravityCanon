@@ -25,11 +25,11 @@ jobs:
       - name: cleanup node
         run: sudo rm -rf './wp-content/themes/${{ secrets.THEME_NAME }}/node_modules'
       - name: Deploy!
-        uses: Burnett01/rsync-deployments@4.1
+        uses: up9cloud/action-rsync@master
         env:
-          switches: -avzr
-          remote_host: ${{ secrets.FTP_SERVER }}
-          remote_user: ${{ secrets.FTP_USERNAME }}
-          remote_key: ${{ secrets.DEPLOY_KEY }}
-          remote_path: ${{ secrets.FTP_SERVER_DIR }}
-          remote_port: ${{ secrets.FTP_PORT }}
+          ARGS: -avzr
+          HOST: ${{ secrets.FTP_SERVER }}
+          USER: ${{ secrets.FTP_USERNAME }}
+          KEY: ${{ secrets.DEPLOY_KEY }}
+          TARGET: ${{ secrets.FTP_SERVER_DIR }}
+          PORT: ${{ secrets.FTP_PORT }}
