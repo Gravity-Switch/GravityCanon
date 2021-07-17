@@ -1,0 +1,214 @@
+/*--------------------------------------------------------------
+>>> BUTTONS - TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Primary button
+# Secondary button
+# Toggle button
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Primary button
+--------------------------------------------------------------*/
+.html-test {
+  appearance: none;
+  display: inline-block;
+  color: $white;
+  background-color: $color-secondary;
+  text-transform: uppercase;
+  @include typesetting(14, 17);
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: rem(0.4);
+  padding: rem(19) rem(32) rem(16);
+  border: none;
+  cursor: pointer;
+  transition: all $timing $easing;
+
+  &:visited {
+    color: $white;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $color-secondary-dark;
+    color: $white;
+  }
+
+  &:focus,
+  &:active {
+    outline: rem(3) solid $color-primary-light;
+  }
+}
+
+/*--------------------------------------------------------------
+# Secondary button
+--------------------------------------------------------------*/
+.html-test--secondary {
+  background-color: $color-primary-darkest;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $color-primary-darker;
+  }
+
+  @media print {
+    display: none;
+  }
+}
+
+/*--------------------------------------------------------------
+# Toggle button
+--------------------------------------------------------------*/
+
+.html-test {
+  &--toggle {
+    background-color: transparent;
+    color: $color-primary-darkest;
+    border: solid $brdr-xxs $color-primary;
+
+    .ico__path {
+      stroke: $color-primary;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $white;
+      background-color: $color-primary-darker;
+      border-color: $color-primary-darker;
+
+      .ico__path {
+        stroke: $white;
+      }
+    }
+
+    &:active,
+    &:focus {
+      outline: rem(3) solid $color-primary-light;
+    }
+
+    &:visited {
+      color: $color-primary-darkest;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $white;
+      }
+    }
+
+    &.is-active {
+      background-color: $color-primary;
+      color: $white;
+
+      .ico__path {
+        stroke: $white;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $color-primary-darker;
+        border-color: $color-primary-darker;
+      }
+
+      &:active,
+      &:focus {
+        outline: rem(3) solid $color-primary-light;
+      }
+    }
+  }
+
+  // Modal button (activates modal windows)
+  &--modal {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: $color-secondary;
+    padding: rem(4);
+    transition: color $timing $easing;
+
+    .html-test__txt {
+      margin-right: rem(8);
+      color: $color-secondary;
+      transition: color $timing $easing;
+    }
+
+    .html-test__txt,
+    .html-test__ico {
+      pointer-events: none;
+    }
+
+    .ico__path {
+      stroke: $color-secondary;
+      transition: stroke $timing $easing;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: transparent;
+      color: $color-primary-darkest;
+
+      .html-test__txt {
+        color: $color-primary-darkest;
+      }
+
+      .ico__path {
+        stroke: $color-primary-darkest;
+      }
+    }
+  }
+
+  // Leading icon html-tests
+  &--leading-icon {
+    display: inline-flex;
+    align-items: center;
+    padding: rem(19) rem(32) rem(15);
+
+    .html-test__txt,
+    .html-test__ico {
+      pointer-events: none;
+    }
+
+    .html-test__ico {
+      margin-right: rem(6);
+    }
+  }
+
+  // Close button
+  &--close {
+    background-color: $color-primary;
+    padding: rem(15) rem(16) rem(12);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $color-primary-darker;
+    }
+
+    &:active,
+    &:focus {
+      outline: rem(3) solid $color-primary-light;
+    }
+
+    .html-test__ico {
+      display: block;
+      margin-bottom: rem(4);
+
+      path {
+        stroke: $white;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: rem(1.5);
+      }
+    }
+  }
+
+  @media print {
+    display: none;
+  }
+}
