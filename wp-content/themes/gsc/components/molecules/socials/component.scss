@@ -1,0 +1,120 @@
+.socials {
+    list-style: none;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  
+    &__social {
+      margin: 0;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+  
+      &:before {
+        content: none;
+      }
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color var(--timing) var(--easing);
+  
+        &:before {
+          content: "";
+          display: block;
+          background-color: var(--color-secondary-lightest);
+          background-size: cover;
+        }
+  
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: unset;
+          &:before {
+            background-color: var(--color-base-darkest);
+          }
+        }
+      }
+      &--facebook a:before {
+        width: rem(12);
+        height: rem(23);
+        display: inline-block;
+        -webkit-mask: url(../Images/ico-fb-btn.svg) no-repeat 50% 50%;
+        mask: url(../Images/ico-fb-btn.svg) no-repeat 50% 50%;
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-color: var(--color-primary-lighter);
+        transition: background-color var(--timing) var(--easing);
+      }
+      &--email a:before {
+        width: rem(31);
+        height: rem(26);
+        display: inline-block;
+        -webkit-mask: url(../Images/ico-email-btn.svg) no-repeat 50% 50%;
+        mask: url(../Images/ico-email-btn.svg) no-repeat 50% 50%;
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-color: var(--color-primary-lighter);
+        transition: background-color var(--timing) var(--easing);
+      }
+      &--print a:before {
+        width: rem(31);
+        height: rem(29);
+        display: inline-block;
+        -webkit-mask: url(../Images/ico-print-btn.svg) no-repeat 50% 50%;
+        mask: url(../Images/ico-print-btn.svg) no-repeat 50% 50%;
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-color: var(--color-primary-lighter);
+        transition: background-color var(--timing) var(--easing);
+      }
+      &--twitter a:before {
+        width: rem(24);
+        height: rem(20);
+        display: inline-block;
+        -webkit-mask: url(../Images/ico-twitter-btn.svg) no-repeat 50% 50%;
+        mask: url(../Images/ico-twitter-btn.svg) no-repeat 50% 50%;
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-color: var(--color-primary-lighter);
+        transition: background-color var(--timing) var(--easing);
+      }
+      &--rss a:before {
+        width: rem(21);
+        height: rem(20);
+        display: inline-block;
+        -webkit-mask: url(../Images/ico-rss-btn.svg) no-repeat 50% 50%;
+        mask: url(../Images/ico-rss-btn.svg) no-repeat 50% 50%;
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-color: var(--color-primary-lighter);
+        transition: background-color var(--timing) var(--easing);
+      }
+  
+      &--linkedin a:before {
+        width: rem(21);
+        height: rem(20);
+        display: inline-block;
+        -webkit-mask: url(../Images/ico-linkedin-btn.svg) no-repeat 50% 50%;
+        mask: url(../Images/ico-linkedin-btn.svg) no-repeat 50% 50%;
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-color: var(--color-primary-lighter);
+        transition: background-color var(--timing) var(--easing);
+      }
+      &--instagram a:before {
+        width: rem(21);
+        height: rem(20);
+        display: inline-block;
+        -webkit-mask: url(../Images/ico-instagram-btn.svg) no-repeat 50% 50%;
+        mask: url(../Images/ico-instagram-btn.svg) no-repeat 50% 50%;
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-color: var(--color-primary-lighter);
+        transition: background-color var(--timing) var(--easing);
+      }
+    }
+  }
