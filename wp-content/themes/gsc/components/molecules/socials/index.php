@@ -1,12 +1,23 @@
 <?php
+/* 
+    The socials molecule can be used in WP templates to display social media links to a profile or to 
+    implement a share link for each of the socials supported by the molecule
+
+    Styling of the social icons can be done in component.scss, then when called within template
+    the 'type' will designate whether the icon is a link or a share link
+
+    Any links in the 'content' array that are set to false will not display, be sure to pass the proper site url in the 
+    content array for each social platform
+*/
+
 $defaults = [
   "content" => [
 		"facebook" => false,
-    "twitter" => false,
-    "instagram" => false,
-    "linkedin" => false,
-    "youtube" => false,
-    "rss" => false
+        "twitter" => false,
+        "instagram" => false,
+        "linkedin" => false,
+        "youtube" => false,
+        "rss" => false
 	],
   "style" => [
     "type" => "socials",
