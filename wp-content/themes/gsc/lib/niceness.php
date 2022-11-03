@@ -1,24 +1,5 @@
 <?php // make the theme feel right.  enable good core/standard plugin features, patch up holes in gutenberg/classic editor etc.
 
-
-add_action( 'after_setup_theme', 'canon_setup', function () {
-  add_theme_support( 'automatic-feed-links' );
-  add_theme_support( 'title-tag' );
-  add_theme_support( 'post-thumbnails' );
-  add_theme_support(
-  	'html5',
-  	array(
-  		'search-form',
-  		'comment-form',
-  		'comment-list',
-  		'gallery',
-  		'caption',
-  		'style',
-  		'script',
-  	)
-  );
-} );
-
 if( function_exists('acf_add_options_page') ) {
 	 acf_add_options_page();
 } 
